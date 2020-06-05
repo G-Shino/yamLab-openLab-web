@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5", //どのjsのバージョンで出力するか
+    "lib": ["dom", "dom.iterable", "esnext"], //コンパイルする際に使用する組み込みライブラリ PromiseとかsetTimeOutとか使うため
+    "module": "esnext", //出力するjsのモジュールの仕組みとして何を使用するか export defaultとかのイメージ
+    "moduleResolution": "node", //どのようにしてmoduleを解決するか importの参照手順の違い
+    "allowJs": true, //trueにすると.jsも.jsxもどちらもコンパイル対象になる
+    "noEmit": true, //babelでコンパイル処理するのでファイルは出力しないようにする
+    "skipLibCheck": false, //trueで型宣言ファイルの型チェックをスルーする ライブラリで不十分な型定義があるときとかにtrueにすると良さそう
+    "strict": true, //以下のコメント全てがtrueになる。
+    // --noImplicitAny：暗黙的なanyをエラー
+    // --noImplicitthis：使用しているthisが暗黙的にanyなときエラー
+    // --alwaysStrict：use Strictを全てのファイルの先頭に付与　潜在的な問題をエラーに（withの利用禁止・evalの変数スコープの厳格化など）
+    // --strictBindCallApply：bind call applyの厳密な型チェック
+    // --strictNullChecks：nullableなプロパティの呼び出しをエラーに
+    // --strictFunctionTypes：関数の引数の型チェックの挙動 trueでcontravariantlyを弾く 継承関係で親子の代入についてのルール
+    // --strictPropertyInitialization：インスタンス変数の初期化が行われているかのチェック
+    "noUnusedLocals": true, //宣言されたが未使用な変数をエラーにする
+    "noUnusedParameters": true, //定義されたが未使用な関数をエラーにする
+    "noImplicitReturns": true, //明示的なreturnがない場合エラーにする
+    "noFallthroughCasesInSwitch": true, //switchでbreakやreturnの入れ忘れをエラーにする
+    "forceConsistentCasingInFileNames": true, //ファイルの大文字小文字の違いをエラー
+    "esModuleInterop": true, //CommonJSモジュールとESモジュール間の相互運用性を,すべてのインポート用に名前空間オブジェクトを作成することで可能する
+    "resolveJsonModule": true, //型適宜せずともjsonをモジュールとして扱えるようになる
+    "isolatedModules": true, //全てのファイルが単一になるようにコンパイルする　すべてのファイルがexportをもつ必要がでてくる
+    "jsx": "preserve", //jsxをどのように変換するか
+    "sourceMap": true //.mapファイルを出力するか デバッガーツールで変換前のソースを表示するために必要
+  },
+  "exclude": ["node_modules"], //コンパイルから除外するファイルの指定
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"] //コンパイル対象の指定
+}
