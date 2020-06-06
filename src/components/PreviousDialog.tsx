@@ -31,6 +31,7 @@ const WrapperCSS = Styled.div`
 
 const LogoCSS = Styled.img`
   width:400px;
+  height:400px;
   justify-self:center;
   align-self:center;
   `;
