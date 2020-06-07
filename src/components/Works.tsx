@@ -108,8 +108,8 @@ const Works: React.FC = () => {
 
 //Styles---------------------------------------------------------------
 const WrapperCSS = styled.div`
-  width: 90%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1400px;
 `;
 
 const SectionTitleDiv = styled.div`

@@ -40,13 +40,48 @@ const WorkCard: React.FC<WorkCardProps> = ({ src, titleJP, titleEN, link }) => {
 const CardDiv = styled.div`
   width: 320px;
   height: auto;
-  transition: transform 0.1s linear;
   margin: 32px 0;
+  position: relative;
+
   @media (min-width: 1000px) {
     margin: 0 40px 80px;
   }
-  &:hover {
-    transform: scale(1.05);
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+    will-change: width height;
+    z-index: 2;
+  }
+
+  &::before {
+    right: -16px;
+    bottom: -16px;
+  }
+  &::after {
+    left: -16px;
+    top: -16px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: calc(28px + 100%);
+    height: calc(28px + 100%);
+    transition: height ease 0.3s, width ease 0.3s 0.3s;
+  }
+
+  &:hover:before {
+    border-right: 4px solid black;
+    border-top: 4px solid black;
+  }
+
+  &:hover:after {
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
   }
 `;
 
