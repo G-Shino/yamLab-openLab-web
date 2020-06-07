@@ -27,7 +27,6 @@ const Mainpage: React.FC = () => {
 const MainDiv = styled.div`
   background-image: url(${texture});
   height: auto;
-  padding-bottom: 320px;
 `;
 
 const ExplanationDiv = styled.div`
