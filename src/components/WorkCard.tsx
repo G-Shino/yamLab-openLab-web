@@ -53,28 +53,35 @@ const CardDiv = styled.div`
     position: absolute;
     width: 0;
     height: 0;
-    transition: all 0.5s;
-    will-change: width height;
+    transition: width ease 0.3s, height ease 0.3s 0.3s, border-color 0s 0.6s;
+    will-change: width height border-color;
     z-index: 2;
   }
 
   &::before {
     right: -16px;
     bottom: -16px;
+    border-right: 4px solid;
+    border-top: 4px solid;
+    border-color: transparent;
   }
   &::after {
     left: -16px;
     top: -16px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    border-color: transparent;
   }
 
   &:hover::before,
   &:hover::after {
     width: calc(28px + 100%);
     height: calc(28px + 100%);
-    transition: height ease 0.3s, width ease 0.3s 0.3s;
+    border-color: black;
+    transition: border-color 0s, height ease 0.3s, width ease 0.3s 0.3s;
   }
 
-  &:hover:before {
+  /* &:hover:before {
     border-right: 4px solid black;
     border-top: 4px solid black;
   }
@@ -82,7 +89,7 @@ const CardDiv = styled.div`
   &:hover:after {
     border-left: 4px solid black;
     border-bottom: 4px solid black;
-  }
+  } */
 `;
 
 const ImageDiv = styled.div`
