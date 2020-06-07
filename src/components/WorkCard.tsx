@@ -41,7 +41,10 @@ const CardDiv = styled.div`
   width: 320px;
   height: auto;
   transition: transform 0.1s linear;
-  margin: 0 40px 80px;
+  margin: 32px 0;
+  @media (min-width: 1000px) {
+    margin: 0 40px 80px;
+  }
   &:hover {
     transform: scale(1.05);
   }
@@ -80,6 +83,7 @@ const TitleJPDiv = styled.div`
 `;
 
 const TitleJP = styled.p`
+  width: 100%;
   font-size: 3.5rem;
   line-height: 4.2rem;
   color: ${Color.CAPTION_FONT_COLOR};
