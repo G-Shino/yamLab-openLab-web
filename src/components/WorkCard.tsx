@@ -53,7 +53,7 @@ const CardDiv = styled.div`
     position: absolute;
     width: 0;
     height: 0;
-    transition: width ease 0.3s, height ease 0.3s 0.3s, border-color 0s 0.6s;
+    transition: width ease 0.1s, height ease 0.1s 0.1s, border-color 0s 0.2s;
     will-change: width height border-color;
     z-index: 2;
   }
@@ -78,18 +78,8 @@ const CardDiv = styled.div`
     width: calc(28px + 100%);
     height: calc(28px + 100%);
     border-color: black;
-    transition: border-color 0s, height ease 0.3s, width ease 0.3s 0.3s;
+    transition: border-color 0s, height ease 0.2s, width ease 0.2s 0.2s;
   }
-
-  /* &:hover:before {
-    border-right: 4px solid black;
-    border-top: 4px solid black;
-  }
-
-  &:hover:after {
-    border-left: 4px solid black;
-    border-bottom: 4px solid black;
-  } */
 `;
 
 const ImageDiv = styled.div`
@@ -122,6 +112,7 @@ const TitleJPDiv = styled.div`
     display: none;
   }
   -ms-overflow-style: none;
+  z-index: 3;
 `;
 
 const TitleJP = styled.p`
@@ -140,6 +131,7 @@ const TitleENDiv = styled.div`
     display: none;
   }
   -ms-overflow-style: none;
+  z-index: 3;
 `;
 
 const TitleEN = styled.p`
