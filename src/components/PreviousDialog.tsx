@@ -1,8 +1,9 @@
 import React from "react";
 import Styled from "@emotion/styled";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const Logo = require("../images/oldLogo.svg");
 
-const PreviousDialog = () => {
+const PreviousDialog: React.FC = () => {
   return (
     <WrapperCSS>
       <LogoCSS src={Logo} />
@@ -12,7 +13,7 @@ const PreviousDialog = () => {
           <TimeCSS>
             15:00 - 19:00 (金・土・祝日 11:00 - 19:00) 入場無料{" "}
           </TimeCSS>
-          <JapaneseNameCSS>東京大学 　山中俊治研究室</JapaneseNameCSS>
+          <JapaneseNameCSS>東京大学 山中俊治研究室</JapaneseNameCSS>
           <EnglishNameCSS>UTokyo Prototyping & Design Lab</EnglishNameCSS>
         </ContentWrapperCSS>
       </ContentCSS>

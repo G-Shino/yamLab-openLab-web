@@ -1,8 +1,9 @@
 import React from "react";
 import Styled from "@emotion/styled";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const Logo = require("../images/Logo.svg");
 
-const WhatIsWebDialog = () => {
+const WhatIsWebDialog: React.FC = () => {
   return (
     <WrapperCSS>
       <LogoCSS src={Logo} />

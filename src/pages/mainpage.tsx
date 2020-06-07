@@ -5,7 +5,7 @@ import texture from "../images/mdftexture.jpg";
 import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 
-const Mainpage = () => {
+const Mainpage: React.FC = () => {
   return (
     <div style={{ backgroundImage: `url(${texture})` }}>
       <TitleScreen />
