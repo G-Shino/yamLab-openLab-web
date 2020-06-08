@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "@emotion/styled";
-const Introduction = () => {
+
+const Introduction: React.FC = () => {
   return (
     <IntroductionWrapper>
       <IntroductionCSS>

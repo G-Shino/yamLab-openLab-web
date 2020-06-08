@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "@emotion/styled";
 const Logo = require("../images/Logo.svg");
 
-const TitleScreen = () => {
+const TitleScreen: React.FC = () => {
   return (
     <TitleCSS>
       <LogoCSS src={Logo} />
