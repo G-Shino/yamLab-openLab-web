@@ -6,4 +6,6 @@ export enum Color {
   FONT_COLOR = "black",
   FONT_ACCENT_COLOR1 = "",
   FONT_ACCENT_COLOR2 = "",
+  CAPTION_COLOR = "black",
+  CAPTION_FONT_COLOR = "white",
 }
