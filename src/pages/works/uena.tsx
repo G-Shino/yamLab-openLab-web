@@ -105,7 +105,10 @@ const WorkOverViewDiv = styled.div`
 `;
 
 const WorkCaptionDiv = styled.div`
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  @media (min-width: 1000px) {
+    margin-bottom: 80px;
+  }
 `;
 
 const FootDiv = styled.div`
