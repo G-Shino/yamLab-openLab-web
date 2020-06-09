@@ -95,6 +95,7 @@ const Works: React.FC = () => {
         {LIST_IMG_OBJ.map((imgObj) => (
           <WorkCard
             key={imgObj.author}
+            author={imgObj.author}
             src={imgObj.src}
             titleJP={imgObj.titleJP}
             titleEN={imgObj.titleEN}

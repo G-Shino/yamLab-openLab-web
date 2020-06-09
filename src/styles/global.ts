@@ -37,6 +37,11 @@ const globalCSS = css`
     line-height: 3.2rem;
   }
 
+  button {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
   p {
     font-size: 1.6rem;
     line-height: 2.4rem;

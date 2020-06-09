@@ -4,15 +4,23 @@ import { Color } from "../constants/Color";
 import Router from "next/router";
 
 interface WorkCardProps {
+  author: string;
   src: string;
   titleJP: string;
   titleEN: string;
   link: string;
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({ src, titleJP, titleEN, link }) => {
+const WorkCard: React.FC<WorkCardProps> = ({
+  author,
+  src,
+  titleJP,
+  titleEN,
+  link,
+}) => {
   return (
     <CardDiv
+      id={author}
       onClick={() => {
         Router.push(link);
       }}
