@@ -22,7 +22,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
     <CardDiv
       id={author}
       onClick={() => {
-        Router.push(link);
+        Router.push(link).then(() => window.scrollTo(0, 0));
       }}
     >
       <ImageDiv>
