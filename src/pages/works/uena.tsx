@@ -7,6 +7,7 @@ import MainImage from "../../images/works/Uena/main.jpg";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
+import HandWritingImage from "../../images/works/Uena/handwriting.png";
 import { Color } from "../../constants/Color";
 
 const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
@@ -62,7 +63,9 @@ const Uena: React.FC = () => {
           />
         </WorkCaptionDiv>
       </MainDiv>
-      <FootDiv></FootDiv>
+      <FootDiv>
+        <HandwritingImg src={HandWritingImage} />
+      </FootDiv>
     </WrapperDiv>
   );
 };
@@ -107,6 +110,15 @@ const WorkCaptionDiv = styled.div`
 
 const FootDiv = styled.div`
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: ${Color.CAPTION_COLOR};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const HandwritingImg = styled.img`
+  width: 90%;
+  max-width: 500px;
+  filter: invert();
 `;
