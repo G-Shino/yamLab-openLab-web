@@ -10,7 +10,9 @@ const PreviousDialog: React.FC = () => {
         <ContentWrapperCSS>
           <DateCSS>2020.02.22 sat - 03.01 sun</DateCSS>
           <TimeCSS>
-            15:00 - 19:00 (金・土・祝日 11:00 - 19:00) 入場無料{" "}
+            <Time1CSS>15:00 - 19:00</Time1CSS>
+            <Time2CSS>(金・土・祝日 11:00 - 19:00)</Time2CSS>
+            <Time3CSS>入場無料</Time3CSS>
           </TimeCSS>
           <JapaneseNameCSS>東京大学 山中俊治研究室</JapaneseNameCSS>
           <EnglishNameCSS>UTokyo Prototyping & Design Lab</EnglishNameCSS>
@@ -22,42 +24,60 @@ const PreviousDialog: React.FC = () => {
 
 //Styles---------------------------------------------------------------
 const WrapperCSS = Styled.div`
-  height:600px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  justify-self:center;
-  align-self:center;
+  display:flex;
+  justify-content:space-evenly;
+  align-content:center;
+  @media (max-width: 1000px){
+    flex-direction:column;
+  }
   `;
 
 const LogoCSS = Styled.img`
   width:400px;
   height:400px;
-  justify-self:center;
   align-self:center;
+  @media (max-width: 1000px){
+    width:50%;
+    align-self:center;
+  }
   `;
 const ContentCSS = Styled.div`
-  display:grid;
+  display:flex;
   background-color:black;
   color:white;
   font-weight:bold;
-  font-size:16px;
+  font-size:1rem;
   width:775px;
   height:461px;
-  line-height:25px;
-
-  align-self:center;
-  justify-content:center;
-  align-content:center;
+  line-height:1.6rem;
+  @media (max-width: 1000px){
+    width:auto;
+    height:auto;
+    margin:5%;
+    padding:10%;
+  }
   `;
 const ContentWrapperCSS = Styled.div`
+  margin:auto;
   `;
 const DateCSS = Styled.div`
-  font-size:40px;
-  margin-bottom:30px;
+font-size:2.5rem;
+  margin-bottom:10%;
   font-weight:normal;
+  @media (max-width: 1000px){
+    font-size:1.2rem;
+  }
   `;
 const TimeCSS = Styled.div`
-  margin-bottom:30px;`;
+  margin-bottom:10%;
+  display:flex;
+  `;
+const Time1CSS = Styled.div`
+  `;
+const Time2CSS = Styled.div`
+  `;
+const Time3CSS = Styled.div`
+  `;
 const JapaneseNameCSS = Styled.div`
 text-align:right;
 `;

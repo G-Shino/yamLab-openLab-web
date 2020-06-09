@@ -39,48 +39,59 @@ const Introduction: React.FC = () => {
 
 //Styles-------------------------------------------------------------------------
 const IntroductionWrapper = Styled.div`
-height:1080px;
-display:grid;
+display:flex;
 justify-content:center;
-align-content:center;`;
+align-content:center;
+`;
 const IntroductionCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
-width:1086px;
-height:735px;
+width:1000px;
+height:1000px;
 justify-self:center;
-line-height:25px;
+line-height:2rem;
+@media (max-width: 1000px){
+  width:auto;
+height:auto;
+  margin:5%;
+}
 `;
 const TitleCSS = Styled.div`
-margin-top:100px;
-margin-bottom:50px;
-font-size:40px;
-font-kerning:35px;
+margin-top:10%;
+margin-bottom:5%;
+font-size:2.5rem;
+font-kerning:2rem;
 display:flex;
 justify-content:center;
+@media (max-width: 1000px){
+  font-size:1.2rem;
+  font-kerning:1rem;
+}
+
 `;
 const TitleJapaneseCSS = Styled.div`
-margin-right:70px;
+margin-right:3%;
 `;
 const TitleEnglishCSS = Styled.div`
-margin-left:70px;
+margin-left:3%;
 `;
 const JapaneseCSS = Styled.div`
-margin:0 150px 50px 150px;
-font-size:16px;
+margin:0 20% 5% 20%;
+font-size:1rem;
 `;
 const JapaneseContentCSS = Styled.p``;
 const JapaneseSenseiCSS = Styled.div`
 text-align:right;
 `;
 const EnglishCSS = Styled.div`
-margin:0 150px 0 150px;
-font-size:16px;
+margin:0 20% 0 20%;
+font-size:1rem;
 font-weight:normal;
 `;
 const EnglishContentCSS = Styled.p``;
 const EnglishSenseiCSS = Styled.div`
 text-align:right;
+margin-bottom:10%;
 `;
 export default Introduction;

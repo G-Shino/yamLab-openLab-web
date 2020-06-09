@@ -5,12 +5,12 @@ import { Color } from "./../constants/Color";
 const globalCSS = css`
   ${emotionReset}
   html {
-    font-size: 62.5%;
+    font-size: 16px;
   }
 
   body {
     color: ${Color.FONT_COLOR};
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: "Jost", "YuGothic", "Yu Gothic", "游ゴシック", "Meiryo",
       "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
       -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;

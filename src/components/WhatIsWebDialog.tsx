@@ -28,39 +28,56 @@ const WhatIsWebDialog: React.FC = () => {
 
 //Styles---------------------------------------------------------------
 const WrapperCSS = Styled.div`
-height:1080px;
-display:grid;
-grid-template-columns:1fr 1fr;
-justify-content:center;
+display:flex;
+justify-content:space-evenly;
 align-content:center;
+@media (max-width: 1000px){
+  flex-direction:column;
+}
 `;
 const ContentWrapperCSS = Styled.div`
-margin:70px 140px 70px 140px;`;
+margin:10% 20% 10% 20%;`;
 const LogoCSS = Styled.img`
 width:400px;
-justify-self:center;
-align-self:center;
+@media (max-width: 1000px){
+  width:50%;
+  align-self:center;
+}
 `;
 const ContentCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
-font-size:16px;
-width:775px;
-height:846px;
-line-height:25px;
+font-size:1rem;
+width:700px;
+height:700px;
+line-height:1.6rem;
+margin-top:20%;
+margin-bottom:20%;
+@media (max-width: 1000px){
+  width:auto;
+  height:auto;
+  margin:5%;
+}
 `;
 const TitleJapaneseCSS = Styled.div`
-font-size:40px;
-margin-bottom:30px;
+font-size:2.5rem;
+margin-bottom:10%;
+@media (max-width: 1000px){
+  font-size:1.2rem;
+  margin-bottom:5%;
+}
 `;
 const TitleEnglishCSS = Styled.div`
-font-size:40px;
+font-size:2.5rem;
 text-align:right;
-margin-bottom:50px;
+margin-bottom:10%;
+@media (max-width: 1000px){
+  font-size:1.2rem;
+}
 `;
 const WebDialogIntroductionCSS = Styled.div`
-margin-bottom:200px;`;
+margin-bottom:20%;`;
 const CommentIntroductionCSS = Styled.div``;
 
 export default WhatIsWebDialog;
