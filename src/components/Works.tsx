@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
 import WorkCard from "./WorkCard";
-const Uena = require("../images/works/Uena.jpg");
-const Takuro = require("../images/works/Takuro.jpg");
-const Shinogu = require("../images/works/Shinogu.jpg");
-const Oto = require("../images/works/Oto.jpg");
-const Oga = require("../images/works/Oga.jpg");
-const Kana = require("../images/works/Kana.jpg");
-const Heejun = require("../images/works/Heejun.jpg");
-const Hazuki = require("../images/works/Hazuki.jpg");
-const Fumin = require("../images/works/Fu-min.jpg");
+import Uena from "../images/works/Uena/main.jpg";
+import Takuro from "../images/works/Takuro.jpg";
+import Shinogu from "../images/works/Shinogu.jpg";
+import Oto from "../images/works/Oto.jpg";
+import Oga from "../images/works/Oga.jpg";
+import Kana from "../images/works/Kana.jpg";
+import Heejun from "../images/works/Heejun.jpg";
+import Hazuki from "../images/works/Hazuki.jpg";
+import Fumin from "../images/works/Fu-min.jpg";
 
 interface IMG_OBJ {
   src: string;

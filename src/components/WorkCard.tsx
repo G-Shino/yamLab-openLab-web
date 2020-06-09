@@ -40,7 +40,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ src, titleJP, titleEN, link }) => {
 const CardDiv = styled.div`
   width: 320px;
   height: auto;
-  margin: 32px 0;
+  margin: 32px 16px;
   position: relative;
 
   @media (min-width: 1000px) {
@@ -115,10 +115,8 @@ const TitleJPDiv = styled.div`
   z-index: 3;
 `;
 
-const TitleJP = styled.p`
+const TitleJP = styled.h2`
   width: 100%;
-  font-size: 3.5rem;
-  line-height: 4.2rem;
   color: ${Color.CAPTION_FONT_COLOR};
   white-space: nowrap;
 `;
@@ -134,10 +132,8 @@ const TitleENDiv = styled.div`
   z-index: 3;
 `;
 
-const TitleEN = styled.p`
+const TitleEN = styled.h2`
   width: 100%;
-  font-size: 3.5rem;
-  line-height: 4.2rem;
   color: ${Color.CAPTION_FONT_COLOR};
   white-space: nowrap;
 `;

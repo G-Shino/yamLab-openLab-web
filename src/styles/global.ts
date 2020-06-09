@@ -21,6 +21,26 @@ const globalCSS = css`
   ol {
     list-style: none;
   }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
 `;
 
 export default globalCSS;
