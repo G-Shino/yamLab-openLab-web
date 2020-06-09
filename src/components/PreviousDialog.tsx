@@ -71,6 +71,9 @@ font-size:2.5rem;
 const TimeCSS = Styled.div`
   margin-bottom:10%;
   display:flex;
+  @media (max-width: 1000px){
+    flex-direction:column;
+  }
   `;
 const Time1CSS = Styled.div`
   `;
