@@ -31,12 +31,20 @@ const FootSpace: React.FC<Props> = ({
                 if (prevLink === undefined) {
                   return;
                 }
-                Router.push(`${prevLink}`);
+                Router.push(`${prevLink}`).then(() => window.scrollTo(0, 0));
               }}
             >
               &lt;&lt; Prev
             </PrevButton>
-            <PrevImg src={prevImg} />
+            <PrevImg
+              src={prevImg}
+              onClick={() => {
+                if (prevLink === undefined) {
+                  return;
+                }
+                Router.push(`${prevLink}`).then(() => window.scrollTo(0, 0));
+              }}
+            />
           </PrevWrapperDiv>
           <HomeButton
             onClick={() => {
@@ -46,13 +54,21 @@ const FootSpace: React.FC<Props> = ({
             Home
           </HomeButton>
           <NextWrapperDiv visiblity={nextLink ? "visible" : "hidden"}>
-            <NextImg src={nextImg} />
+            <NextImg
+              src={nextImg}
+              onClick={() => {
+                if (nextLink === undefined) {
+                  return;
+                }
+                Router.push(`${nextLink}`).then(() => window.scrollTo(0, 0));
+              }}
+            />
             <NextButton
               onClick={() => {
                 if (nextLink === undefined) {
                   return;
                 }
-                Router.push(`${nextLink}`);
+                Router.push(`${nextLink}`).then(() => window.scrollTo(0, 0));
               }}
             >
               Next &gt;&gt;

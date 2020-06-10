@@ -54,7 +54,7 @@ export const getPrevAndNextByIndex = (
     prevLink = LIST_WORKS_BASE_INFO[index - 1].link;
     prevImg = LIST_WORKS_BASE_INFO[index - 1].src;
   }
-  if (index !== LIST_WORKS_BASE_INFO.length) {
+  if (index !== LIST_WORKS_BASE_INFO.length - 1) {
     nextLink = LIST_WORKS_BASE_INFO[index + 1].link;
     nextImg = LIST_WORKS_BASE_INFO[index + 1].src;
   }
