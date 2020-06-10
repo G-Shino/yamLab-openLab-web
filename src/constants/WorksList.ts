@@ -1,12 +1,12 @@
 import Uena from "../images/works/Uena/main.jpg";
-import Takuro from "../images/works/Takuro.jpg";
-import Shinogu from "../images/works/Shinogu.jpg";
-import Oto from "../images/works/Oto.jpg";
-import Oga from "../images/works/Oga.jpg";
-import Kana from "../images/works/Kana.jpg";
-import Heejun from "../images/works/Heejun.jpg";
-import Hazuki from "../images/works/Hazuki.jpg";
-import Fumin from "../images/works/Fu-min.jpg";
+import Takuro from "../images/works/Takuro/main.jpg";
+import Shinogu from "../images/works/Shinogu/main.jpg";
+import Oto from "../images/works/Oto/main.jpg";
+import Oga from "../images/works/Oga/main.jpg";
+import Kana from "../images/works/Kana/main.jpg";
+import Heejun from "../images/works/Heejun/main.jpg";
+import Hazuki from "../images/works/Hazuki/main.jpg";
+import Fumin from "../images/works/Fu-min/main.jpg";
 
 export interface WorksBaseInfo {
   src: string;
@@ -18,7 +18,9 @@ export interface WorksBaseInfo {
 
 export interface WorksBaseInfoWithPrevAndNextLink extends WorksBaseInfo {
   prevLink: string | undefined;
+  prevImg: string | undefined;
   nextLink: string | undefined;
+  nextImg: string | undefined;
 }
 
 export const getWorksInfoByAuthor = (
@@ -29,23 +31,34 @@ export const getWorksInfoByAuthor = (
     foundIndex = index;
     return worksInfo.author === author;
   });
-  const { prevLink, nextLink } = getPrevAndNextByIndex(foundIndex);
-  return { ...found, prevLink, nextLink };
+  const { prevLink, prevImg, nextLink, nextImg } = getPrevAndNextByIndex(
+    foundIndex
+  );
+  return { ...found, prevLink, prevImg, nextLink, nextImg };
 };
 
 //インデックスから前後のリンクを取得　最初ならprevがundefined　最後ならnextがundefined
 export const getPrevAndNextByIndex = (
   index: number
-): { prevLink: string | undefined; nextLink: string | undefined } => {
+): {
+  prevLink: string | undefined;
+  prevImg: string | undefined;
+  nextLink: string | undefined;
+  nextImg: string | undefined;
+} => {
   let prevLink = undefined;
+  let prevImg = undefined;
   let nextLink = undefined;
+  let nextImg = undefined;
   if (index !== 0) {
     prevLink = LIST_WORKS_BASE_INFO[index - 1].link;
+    prevImg = LIST_WORKS_BASE_INFO[index - 1].src;
   }
   if (index !== LIST_WORKS_BASE_INFO.length) {
     nextLink = LIST_WORKS_BASE_INFO[index + 1].link;
+    nextImg = LIST_WORKS_BASE_INFO[index + 1].src;
   }
-  return { prevLink, nextLink };
+  return { prevLink, prevImg, nextLink, nextImg };
 };
 
 export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [

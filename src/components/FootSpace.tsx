@@ -2,16 +2,24 @@ import React from "react";
 import styled from "@emotion/styled";
 import Router from "next/router";
 import { Color } from "../constants/Color";
-import Src from "../images/works/Uena/main.jpg";
 
 interface Props {
   src: string;
   prevLink: string;
+  prevImg: string;
   author: string;
   nextLink: string;
+  nextImg: string;
 }
 
-const FootSpace: React.FC<Props> = ({ src, prevLink, author, nextLink }) => {
+const FootSpace: React.FC<Props> = ({
+  src,
+  prevLink,
+  prevImg,
+  author,
+  nextLink,
+  nextImg,
+}) => {
   return (
     <Footer>
       <FootContentWrapperDiv>
@@ -28,7 +36,7 @@ const FootSpace: React.FC<Props> = ({ src, prevLink, author, nextLink }) => {
             >
               &lt;&lt; Prev
             </PrevButton>
-            <PrevImg src={Src} />
+            <PrevImg src={prevImg} />
           </PrevWrapperDiv>
           <HomeButton
             onClick={() => {
@@ -38,7 +46,7 @@ const FootSpace: React.FC<Props> = ({ src, prevLink, author, nextLink }) => {
             Home
           </HomeButton>
           <NextWrapperDiv visiblity={nextLink ? "visible" : "hidden"}>
-            <NextImg src={Src} />
+            <NextImg src={nextImg} />
             <NextButton
               onClick={() => {
                 if (nextLink === undefined) {
