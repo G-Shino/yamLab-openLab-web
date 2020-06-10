@@ -11,13 +11,7 @@ interface WorkCardProps {
   link: string;
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({
-  author,
-  src,
-  titleJP,
-  titleEN,
-  link,
-}) => {
+const WorkCard: React.FC<WorkCardProps> = ({ author, src, link }) => {
   return (
     <CardDiv
       id={author}
