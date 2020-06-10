@@ -8,7 +8,6 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
 import HandWritingImage from "../../images/works/Uena/handwriting.png";
-// import { Color } from "../../constants/Color";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -40,6 +39,9 @@ const Uena: React.FC = () => {
     <WrapperDiv>
       <MainDiv>
         <WorkOverViewDiv>
+          <ChapterTitle>
+            <BorderSpan>Overiew</BorderSpan>
+          </ChapterTitle>
           <WorkOverView
             titleJP={titleJP}
             titleEN={titleEN}
@@ -48,6 +50,9 @@ const Uena: React.FC = () => {
             imgSrc={src}
           />
         </WorkOverViewDiv>
+        <ChapterTitle>
+          <BorderSpan>Process</BorderSpan>
+        </ChapterTitle>
         <WorkCaptionDiv>
           <WorkCaption
             captionImage={Caption1Image}
@@ -112,6 +117,17 @@ const MainDiv = styled.div`
 
 const WorkOverViewDiv = styled.div`
   margin-bottom: 104px;
+`;
+
+const ChapterTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 32px;
+`;
+
+const BorderSpan = styled.span`
+  display: inline-block;
+  height: 100%;
+  border-bottom: 5px solid;
 `;
 
 const WorkCaptionDiv = styled.div`
