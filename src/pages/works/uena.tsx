@@ -12,6 +12,8 @@ import { Color } from "../../constants/Color";
 import Router from "next/router";
 
 const author = "Uena";
+const overViewTitleJP = `ゆらゆら`;
+const overViewTitleEN = `solid swing`;
 const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
 const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
 
@@ -29,9 +31,10 @@ const Uena: React.FC = () => {
   return (
     <WrapperDiv>
       <MainDiv>
-        <WorkTitleH1>ゆらゆら</WorkTitleH1>
         <WorkOverViewDiv>
           <WorkOverView
+            titleJP={overViewTitleJP}
+            titleEN={overViewTitleEN}
             captionJP={overViewCaptionJP}
             captionEN={overViewCaptionEN}
             imgSrc={MainImage}
@@ -103,12 +106,6 @@ const MainDiv = styled.div`
     min-width: 960px;
     max-width: 1400px;
   }
-`;
-
-const WorkTitleH1 = styled.h1`
-  width: 100%;
-  margin-bottom: 24px;
-  font-weight: bold;
 `;
 
 const WorkOverViewDiv = styled.div`
