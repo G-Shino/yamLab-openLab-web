@@ -50,6 +50,7 @@ const CardDiv = styled.div`
   height: auto;
   margin: 32px 16px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: 1000px) {
     margin: 0 40px 80px;

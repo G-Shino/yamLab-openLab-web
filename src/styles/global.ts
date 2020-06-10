@@ -40,6 +40,13 @@ const globalCSS = css`
   button {
     font-size: 2.4rem;
     line-height: 3.2rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
   }
 
   p {
