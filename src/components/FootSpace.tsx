@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Router from "next/router";
 import { Color } from "../constants/Color";
+import Src from "../images/works/Uena/main.jpg";
 
 interface Props {
   src: string;
@@ -12,21 +13,23 @@ interface Props {
 
 const FootSpace: React.FC<Props> = ({ src, prevLink, author, nextLink }) => {
   return (
-    <FootDiv>
+    <Footer>
       <FootContentWrapperDiv>
         <HandwritingImg src={src} />
         <ButtonsDiv>
-          <PrevButton
-            visiblity={prevLink ? "visible" : "hidden"}
-            onClick={() => {
-              if (prevLink === undefined) {
-                return;
-              }
-              Router.push(`${prevLink}`);
-            }}
-          >
-            &lt;&lt; Prev
-          </PrevButton>
+          <PrevWrapperDiv visiblity={prevLink ? "visible" : "hidden"}>
+            <PrevButton
+              onClick={() => {
+                if (prevLink === undefined) {
+                  return;
+                }
+                Router.push(`${prevLink}`);
+              }}
+            >
+              &lt;&lt; Prev
+            </PrevButton>
+            <PrevImg src={Src} />
+          </PrevWrapperDiv>
           <HomeButton
             onClick={() => {
               Router.push(`/#${author}`);
@@ -34,26 +37,28 @@ const FootSpace: React.FC<Props> = ({ src, prevLink, author, nextLink }) => {
           >
             Home
           </HomeButton>
-          <NextButton
-            visiblity={nextLink ? "visible" : "hidden"}
-            onClick={() => {
-              if (nextLink === undefined) {
-                return;
-              }
-              Router.push(`${nextLink}`);
-            }}
-          >
-            Next &gt;&gt;
-          </NextButton>
+          <NextWrapperDiv visiblity={nextLink ? "visible" : "hidden"}>
+            <NextImg src={Src} />
+            <NextButton
+              onClick={() => {
+                if (nextLink === undefined) {
+                  return;
+                }
+                Router.push(`${nextLink}`);
+              }}
+            >
+              Next &gt;&gt;
+            </NextButton>
+          </NextWrapperDiv>
         </ButtonsDiv>
       </FootContentWrapperDiv>
-    </FootDiv>
+    </Footer>
   );
 };
 
 export default FootSpace;
 
-const FootDiv = styled.div`
+const Footer = styled.footer`
   width: 100%;
   height: auto;
   background-color: ${Color.CAPTION_COLOR};
@@ -84,14 +89,25 @@ const ButtonsDiv = styled.div`
   align-items: center;
 `;
 
-const PrevButton = styled.button<{ visiblity: string }>`
+const PrevWrapperDiv = styled.div<{ visiblity: string }>`
+  position: relative;
+  visibility: ${(props) => props.visiblity};
+`;
+const PrevButton = styled.button`
   color: ${Color.CAPTION_FONT_COLOR};
   background-color: ${Color.CAPTION_COLOR};
   border-color: ${Color.CAPTION_COLOR};
   &:hover {
     opacity: 0.7;
   }
-  visibility: ${(props) => props.visiblity};
+`;
+
+const PrevImg = styled.img`
+  position: absolute;
+  width: 4.8rem;
+  border: 1px solid white;
+  top: -5rem;
+  right: 0px;
 `;
 
 const HomeButton = styled.button`
@@ -103,12 +119,24 @@ const HomeButton = styled.button`
   }
 `;
 
-const NextButton = styled.button<{ visiblity: string }>`
+const NextWrapperDiv = styled.div<{ visiblity: string }>`
+  position: relative;
+  visibility: ${(props) => props.visiblity};
+`;
+
+const NextButton = styled.button`
   color: ${Color.CAPTION_FONT_COLOR};
   background-color: ${Color.CAPTION_COLOR};
   border-color: ${Color.CAPTION_COLOR};
   &:hover {
     opacity: 0.7;
   }
-  visibility: ${(props) => props.visiblity};
+`;
+
+const NextImg = styled.img`
+  position: absolute;
+  width: 4.8rem;
+  border: 1px solid white;
+  top: -5rem;
+  left: 0px;
 `;
