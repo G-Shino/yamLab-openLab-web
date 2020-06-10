@@ -116,14 +116,14 @@ const ButtonsDiv = styled.div`
 const PrevWrapperDiv = styled.div<{ visiblity: string }>`
   position: relative;
   visibility: ${(props) => props.visiblity};
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 const PrevButton = styled.button`
   color: ${Color.CAPTION_FONT_COLOR};
   background-color: ${Color.CAPTION_COLOR};
   border-color: ${Color.CAPTION_COLOR};
-  &:hover {
-    opacity: 0.7;
-  }
 `;
 
 const PrevImg = styled.img`
@@ -146,15 +146,15 @@ const HomeButton = styled.button`
 const NextWrapperDiv = styled.div<{ visiblity: string }>`
   position: relative;
   visibility: ${(props) => props.visiblity};
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const NextButton = styled.button`
   color: ${Color.CAPTION_FONT_COLOR};
   background-color: ${Color.CAPTION_COLOR};
   border-color: ${Color.CAPTION_COLOR};
-  &:hover {
-    opacity: 0.7;
-  }
 `;
 
 const NextImg = styled.img`
