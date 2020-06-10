@@ -4,17 +4,25 @@ import styled from "@emotion/styled";
 import Router from "next/router";
 
 interface WorkCardProps {
+  author: string;
   src: string;
   titleJP: string;
   titleEN: string;
   link: string;
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({ src, link }) => {
+const WorkCard: React.FC<WorkCardProps> = ({
+  author,
+  src,
+  titleJP,
+  titleEN,
+  link,
+}) => {
   return (
     <CardDiv
+      id={author}
       onClick={() => {
-        Router.push(link);
+        Router.push(link).then(() => window.scrollTo(0, 0));
       }}
     >
       <ImageDiv>
@@ -27,8 +35,9 @@ const WorkCard: React.FC<WorkCardProps> = ({ src, link }) => {
 const CardDiv = styled.div`
   width: 320px;
   height: auto;
-  margin: 32px 0;
+  margin: 32px 16px;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: 1000px) {
     margin: 0 40px 80px;
