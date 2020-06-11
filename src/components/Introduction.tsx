@@ -55,10 +55,10 @@ line-height:2rem;
   width:auto;
 height:auto;
   margin:5%;
+  padding:5%;
 }
 `;
 const TitleCSS = Styled.div`
-margin-top:10%;
 margin-bottom:5%;
 font-size:2.5rem;
 font-kerning:2rem;
@@ -77,7 +77,7 @@ const TitleEnglishCSS = Styled.div`
 margin-left:3%;
 `;
 const JapaneseCSS = Styled.div`
-margin:0 20% 5% 20%;
+margin-bottom:5%;
 font-size:1rem;
 `;
 const JapaneseContentCSS = Styled.p``;
@@ -85,13 +85,11 @@ const JapaneseSenseiCSS = Styled.div`
 text-align:right;
 `;
 const EnglishCSS = Styled.div`
-margin:0 20% 0 20%;
 font-size:1rem;
 font-weight:normal;
 `;
 const EnglishContentCSS = Styled.p``;
 const EnglishSenseiCSS = Styled.div`
 text-align:right;
-margin-bottom:10%;
 `;
 export default Introduction;

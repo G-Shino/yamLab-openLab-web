@@ -36,10 +36,11 @@ align-content:center;
 }
 `;
 const ContentWrapperCSS = Styled.div`
-margin:10% 20% 10% 20%;`;
+margin:5%`;
 const LogoCSS = Styled.img`
 width:400px;
 @media (max-width: 1000px){
+  margin-top:30%;
   width:50%;
   align-self:center;
 }
