@@ -6,6 +6,7 @@ import texture from "../images/mdftexture200608v2.jpg";
 import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
+import Credits from "../components/credits";
 
 const Mainpage: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Mainpage: React.FC = () => {
       <WorksDiv>
         <Works />
       </WorksDiv>
+      <Credits />
     </MainDiv>
   );
 };

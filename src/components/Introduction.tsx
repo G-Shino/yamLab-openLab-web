@@ -47,10 +47,11 @@ const IntroductionCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
-width:1000px;
-height:1000px;
+width:800px;
+height:600px;
 justify-self:center;
 line-height:2rem;
+padding:100px;
 @media (max-width: 1000px){
   width:auto;
 height:auto;

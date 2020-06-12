@@ -33,9 +33,7 @@ const WrapperCSS = Styled.div`
   `;
 
 const LogoCSS = Styled.img`
-  width:400px;
-  margin-top:30%;
-  align-self:center;
+  width:350px;
   @media (max-width: 1000px){
     width:50%;
     align-self:center;
