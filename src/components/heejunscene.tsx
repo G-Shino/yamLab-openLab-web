@@ -10,7 +10,7 @@ const LoadedObject = dynamic(() => import("../components/loadgltf"), {
   ssr: false,
 });
 //threeのメインモジュール以外(OrbitControlsなど)を扱う場合は必ずdynamicを用いること
-const ChairScene = () => {
+const ChairScene: React.FC = () => {
   return (
     <ThreePageStyle>
       <CanvasStyle>
@@ -28,13 +28,19 @@ const ChairScene = () => {
 };
 const ThreePageStyle = styled.div`
   display: grid;
-  justify-content:center;
-  align-content:center;
-}
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  padding-top: 100%;
 `;
 const CanvasStyle = styled.div`
-  width: 800px;
-  height: 800px;
-  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  *:focus {
+    outline: none;
+  }
 `;
 export default ChairScene;

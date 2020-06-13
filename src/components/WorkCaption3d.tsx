@@ -19,7 +19,7 @@ const WorkCaption3d: React.FC<Props> = ({
 }) => {
   return (
     <CaptionWrapperDiv>
-      {Caption3dImage}
+      <Caption3dImg>{Caption3dImage}</Caption3dImg>
       <CaptionMessageDiv>
         <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
         <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
@@ -34,7 +34,7 @@ export default WorkCaption3d;
 
 const CaptionWrapperDiv = styled.div`
   width: 100%;
-
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
