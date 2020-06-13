@@ -28,22 +28,26 @@ const Credits = () => {
 
 //Styles----------------------------------------------------------------------
 const CreditCSS = Styled.div`
-background-color:black;
-color:white;
+  background-color:black;
+  color:white;
   font-size:1.9rem;
   line-height:4rem;
   padding:5%;
+  @media (max-aspect-ratio: 3/2){
+    display:flex;
+    justify-content:center;
+    align-content:center;
+  }
 `;
 const CreditWrapper = Styled.div`
-display:flex;
-font-size:2.5vmin;
-      line-height:5vmin;
-justify-content:space-evenly;
+  display:flex;
+  font-size:2.5vmin;
+  line-height:5vmin;
+  justify-content:space-evenly;
   align-content:center;
   @media (max-aspect-ratio: 3/2){
     flex-direction:column;
       justify-content:space-evenly;
-      align-content:center;
   }
 `;
 const CreditLeftCSS = Styled.p`
@@ -51,5 +55,8 @@ align-self:center;
 `;
 const CreditRightCSS = Styled.p`
 align-self:center;
+@media (max-aspect-ratio: 3/2){
+  align-self:first baseline;
+}
 `;
 export default Credits;
