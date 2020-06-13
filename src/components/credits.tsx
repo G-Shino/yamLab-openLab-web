@@ -29,8 +29,6 @@ const Credits = () => {
 const CreditCSS = Styled.div`
   background-color:black;
   color:white;
-  font-size:1.9rem;
-  line-height:4rem;
   padding:5%;
   @media (max-aspect-ratio: 3/2){
     display:flex;
@@ -56,6 +54,7 @@ const CreditRightCSS = Styled.p`
 align-self:center;
 @media (max-aspect-ratio: 3/2){
   align-self:first baseline;
+  margin-top:-5vmin;
 }
 `;
 export default Credits;
