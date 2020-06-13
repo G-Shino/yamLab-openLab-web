@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "@emotion/styled";
-const Logo = require("../images/Logo.svg");
+const Logo = require("../images/online dialog motion logo.gif");
 
 const TitleScreen: React.FC = () => {
   return (
@@ -16,23 +16,28 @@ const TitleScreen: React.FC = () => {
 
 //Styles--------------------------------------------------------------------------
 const TitleCSS = Styled.div`
-display:grid;
-grid-template-rows: auto 5% 15%;
+display:flex;
+flex-direction:column;
 justify-content:center;
-height:1080px;
+height:100vh;
+margin-bottom:20vh;
 `;
 const LogoCSS = Styled.img`
-margin-top:200px;
-justify-self:center;
-width:560px;
-height:560px;
+display:inline;
+margin-top:20vh;
+margin-left: auto;
+margin-right: auto;
+width:50vw;
 `;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
-font-size:30px;
+font-size:3rem;
+margin-top:5vh;
+margin-bottom:3vh;
 `;
 const TitleTextEnglishCSS = Styled.div`
 text-align:center;
-font-size:30px;
+font-size:3rem;
+margin-bottom:10vh;
 `;
 export default TitleScreen;
