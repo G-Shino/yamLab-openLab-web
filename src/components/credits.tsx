@@ -36,14 +36,14 @@ color:white;
 `;
 const CreditWrapper = Styled.div`
 display:flex;
+font-size:2.5vmin;
+      line-height:5vmin;
 justify-content:space-evenly;
   align-content:center;
-  @media (max-width: 1200px){
-      flex-direction:column;
+  @media (max-aspect-ratio: 3/2){
+    flex-direction:column;
       justify-content:space-evenly;
       align-content:center;
-      font-size:2.5vmin;
-      line-height:5vmin;
   }
 `;
 const CreditLeftCSS = Styled.p`
