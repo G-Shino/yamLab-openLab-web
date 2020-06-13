@@ -47,10 +47,12 @@ const IntroductionCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
+font-size:1.6rem;
+font-kerning:3.5rem;
+line-height:3rem;
 width:800px;
 height:600px;
 justify-self:center;
-line-height:2rem;
 padding:100px;
 @media (max-width: 1000px){
   width:auto;
@@ -61,13 +63,12 @@ height:auto;
 `;
 const TitleCSS = Styled.div`
 margin-bottom:5%;
-font-size:2.5rem;
-font-kerning:2rem;
+font-size:4rem;
 display:flex;
 justify-content:center;
 @media (max-width: 1000px){
-  font-size:1.2rem;
-  font-kerning:1rem;
+  font-size:1.6rem;
+  font-kerning:3.5rem;
 }
 
 `;
@@ -79,14 +80,12 @@ margin-left:3%;
 `;
 const JapaneseCSS = Styled.div`
 margin-bottom:5%;
-font-size:1rem;
 `;
 const JapaneseContentCSS = Styled.p``;
 const JapaneseSenseiCSS = Styled.div`
 text-align:right;
 `;
 const EnglishCSS = Styled.div`
-font-size:1rem;
 font-weight:normal;
 `;
 const EnglishContentCSS = Styled.p``;

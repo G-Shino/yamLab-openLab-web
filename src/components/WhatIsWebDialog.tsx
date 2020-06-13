@@ -49,10 +49,11 @@ const ContentCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
-font-size:1rem;
+font-size:1.6rem;
+font-kerning:3.5rem;
+line-height:3rem;
 width:700px;
 height:700px;
-line-height:1.6rem;
 margin-top:20%;
 margin-bottom:20%;
 @media (max-width: 1000px){
@@ -62,19 +63,19 @@ margin-bottom:20%;
 }
 `;
 const TitleJapaneseCSS = Styled.div`
-font-size:2.5rem;
+font-size:4rem;
 margin-bottom:10%;
 @media (max-width: 1000px){
-  font-size:1.2rem;
+  font-size:1.6rem;
   margin-bottom:5%;
 }
 `;
 const TitleEnglishCSS = Styled.div`
-font-size:2.5rem;
+font-size:4rem;
 text-align:right;
 margin-bottom:10%;
 @media (max-width: 1000px){
-  font-size:1.2rem;
+  font-size:1.6rem;
 }
 `;
 const WebDialogIntroductionCSS = Styled.div`

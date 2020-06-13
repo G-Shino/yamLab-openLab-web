@@ -31,13 +31,13 @@ width:50vw;
 `;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
-font-size:30px;
+font-size:3rem;
 margin-top:5vh;
 margin-bottom:3vh;
 `;
 const TitleTextEnglishCSS = Styled.div`
 text-align:center;
-font-size:30px;
+font-size:3rem;
 margin-bottom:10vh;
 `;
 export default TitleScreen;

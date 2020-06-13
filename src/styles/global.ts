@@ -5,7 +5,7 @@ import { Color } from "./../constants/Color";
 const globalCSS = css`
   ${emotionReset}
   html {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   body {

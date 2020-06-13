@@ -44,10 +44,11 @@ const ContentCSS = Styled.div`
   background-color:black;
   color:white;
   font-weight:bold;
-  font-size:1rem;
+  font-size:1.6rem;
+font-kerning:3.5rem;
+line-height:3rem;
   width:775px;
   height:461px;
-  line-height:1.6rem;
   @media (max-width: 1000px){
     width:auto;
     height:auto;
@@ -59,11 +60,11 @@ const ContentWrapperCSS = Styled.div`
   margin:auto;
   `;
 const DateCSS = Styled.div`
-font-size:2.5rem;
+font-size:4rem;
   margin-bottom:10%;
   font-weight:normal;
   @media (max-width: 1000px){
-    font-size:1.2rem;
+    font-size:1.6rem;
   }
   `;
 const TimeCSS = Styled.div`

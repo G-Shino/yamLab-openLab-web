@@ -38,7 +38,7 @@ const CreditWrapper = Styled.div`
 display:flex;
 justify-content:space-evenly;
   align-content:center;
-  @media (max-width: 1600px){
+  @media (max-width: 1200px){
       flex-direction:column;
       justify-content:space-evenly;
       align-content:center;
