@@ -36,7 +36,7 @@ align-content:center;
 }
 `;
 const ContentWrapperCSS = Styled.div`
-margin:5%`;
+margin:15%`;
 const LogoCSS = Styled.img`
 width:400px;
 @media (max-width: 1200px){
@@ -53,7 +53,7 @@ font-size:1.6rem;
 font-kerning:3.5rem;
 line-height:3rem;
 width:700px;
-height:700px;
+height:1000px;
 margin-top:20%;
 margin-bottom:20%;
 @media (max-width: 1200px){

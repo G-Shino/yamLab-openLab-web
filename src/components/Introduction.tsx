@@ -51,12 +51,12 @@ font-size:1.6rem;
 font-kerning:3.5rem;
 line-height:3rem;
 width:800px;
-height:600px;
+height:700px;
 justify-self:center;
 padding:100px;
 @media (max-width: 1200px){
   width:auto;
-height:auto;
+  height:auto;
   margin:5%;
   padding:5%;
 }
