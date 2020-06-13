@@ -2,10 +2,11 @@ import React from "react";
 import styled from "@emotion/styled";
 import TitleScreen from "../components/Titlescreen";
 import Introduction from "../components/Introduction";
-import texture from "../images/mdftexture.jpg";
+import texture from "../images/mdftexture200608v2.jpg";
 import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
+import Credits from "../components/credits";
 
 const Mainpage: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Mainpage: React.FC = () => {
       <WorksDiv>
         <Works />
       </WorksDiv>
+      <Credits />
     </MainDiv>
   );
 };
