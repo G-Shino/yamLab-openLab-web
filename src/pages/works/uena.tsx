@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import texture from "../../images/mdftexture.jpg";
+import texture from "../../images/mdftexture200608v2.jpg";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
