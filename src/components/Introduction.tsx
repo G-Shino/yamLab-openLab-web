@@ -54,7 +54,7 @@ width:800px;
 height:600px;
 justify-self:center;
 padding:100px;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   width:auto;
 height:auto;
   margin:5%;
@@ -66,7 +66,7 @@ margin-bottom:5%;
 font-size:4rem;
 display:flex;
 justify-content:center;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   font-size:1.6rem;
   font-kerning:3.5rem;
 }

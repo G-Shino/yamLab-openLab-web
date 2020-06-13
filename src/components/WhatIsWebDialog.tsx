@@ -31,7 +31,7 @@ const WrapperCSS = Styled.div`
 display:flex;
 justify-content:space-evenly;
 align-content:center;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   flex-direction:column;
 }
 `;
@@ -39,7 +39,7 @@ const ContentWrapperCSS = Styled.div`
 margin:5%`;
 const LogoCSS = Styled.img`
 width:400px;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   margin-top:30%;
   width:50%;
   align-self:center;
@@ -56,7 +56,7 @@ width:700px;
 height:700px;
 margin-top:20%;
 margin-bottom:20%;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   width:auto;
   height:auto;
   margin:5%;
@@ -65,7 +65,7 @@ margin-bottom:20%;
 const TitleJapaneseCSS = Styled.div`
 font-size:4rem;
 margin-bottom:10%;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   font-size:1.6rem;
   margin-bottom:5%;
 }
@@ -74,7 +74,7 @@ const TitleEnglishCSS = Styled.div`
 font-size:4rem;
 text-align:right;
 margin-bottom:10%;
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   font-size:1.6rem;
 }
 `;

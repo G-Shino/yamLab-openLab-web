@@ -27,14 +27,14 @@ const WrapperCSS = Styled.div`
   display:flex;
   justify-content:space-evenly;
   align-content:center;
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
     flex-direction:column;
   }
   `;
 
 const LogoCSS = Styled.img`
   width:350px;
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
     width:50%;
     align-self:center;
   }
@@ -49,7 +49,7 @@ font-kerning:3.5rem;
 line-height:3rem;
   width:775px;
   height:461px;
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
     width:auto;
     height:auto;
     margin:5%;
@@ -63,14 +63,14 @@ const DateCSS = Styled.div`
 font-size:4rem;
   margin-bottom:10%;
   font-weight:normal;
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
     font-size:1.6rem;
   }
   `;
 const TimeCSS = Styled.div`
   margin-bottom:10%;
   display:flex;
-  @media (max-width: 1000px){
+  @media (max-width: 1200px){
     flex-direction:column;
   }
   `;
