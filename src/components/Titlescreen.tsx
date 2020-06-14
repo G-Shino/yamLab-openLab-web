@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "@emotion/styled";
-const Logo = require("../images/online dialog motion logo.gif");
+const Logo = require("../images/200614logo.gif");
 
 const TitleScreen: React.FC = () => {
   return (
@@ -27,7 +27,8 @@ display:inline;
 margin-top:20vh;
 margin-left: auto;
 margin-right: auto;
-width:50vw;
+width:30vw;
+height:30vw;
 `;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
