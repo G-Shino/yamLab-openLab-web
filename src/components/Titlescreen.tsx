@@ -27,18 +27,24 @@ display:inline;
 margin-top:20vh;
 margin-left: auto;
 margin-right: auto;
-width:30vw;
-height:30vw;
+width:50vmin;
+height:50vmin;
 `;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
 font-size:3rem;
 margin-top:5vh;
 margin-bottom:3vh;
+@media (max-width: 1200px){
+  font-size:2rem;
+}
 `;
 const TitleTextEnglishCSS = Styled.div`
 text-align:center;
 font-size:3rem;
 margin-bottom:10vh;
+@media (max-width: 1200px){
+  font-size:2rem;
+}
 `;
 export default TitleScreen;
