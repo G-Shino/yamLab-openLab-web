@@ -62,12 +62,10 @@ const CaptionMessageDiv = styled.div`
 
 const CaptionTitleJP = styled.h3`
   width: 90%;
-  font-weight: bold;
   margin-top: 3.2rem;
 `;
 const CaptionTitleEN = styled.h3`
   width: 90%;
-  font-weight: bold;
   margin-bottom: 1.6rem;
 `;
 const CaptionMessageJP = styled.p`

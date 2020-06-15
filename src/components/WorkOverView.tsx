@@ -7,6 +7,8 @@ interface Props {
   titleEN: string;
   captionJP: string;
   captionEN: string;
+  creditJP: string;
+  creditEN: string;
   imgSrc: string;
 }
 
@@ -15,17 +17,25 @@ const WorkOverView: React.FC<Props> = ({
   titleEN,
   captionJP,
   captionEN,
+  creditJP,
+  creditEN,
   imgSrc,
 }) => {
   return (
     <WorkOverViewDiv>
       <MainWorkImg src={imgSrc} />
-      <OverViewCaptionDiv>
-        <OverViewTitleJP>{titleJP}</OverViewTitleJP>
-        <OverViewTitleEN>- {titleEN} -</OverViewTitleEN>
-        <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
-        <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>
-      </OverViewCaptionDiv>
+      <WrapperOverViewCaptionDiv>
+        <AreaOverViewCaptionDiv>
+          <OverViewCaptionDiv>
+            <OverViewTitleJP>{titleJP}</OverViewTitleJP>
+            <OverViewTitleEN>- {titleEN} -</OverViewTitleEN>
+            <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
+            <OverViewCreditJP>{creditJP}</OverViewCreditJP>
+            <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>
+            <OverViewCreditEN>{creditEN}</OverViewCreditEN>
+          </OverViewCaptionDiv>
+        </AreaOverViewCaptionDiv>
+      </WrapperOverViewCaptionDiv>
     </WorkOverViewDiv>
   );
 };
@@ -38,10 +48,10 @@ const WorkOverViewDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
 
   @media (min-width: 1000px) {
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 
@@ -49,43 +59,82 @@ const MainWorkImg = styled.img`
   width: 100%;
   height: auto;
   @media (min-width: 1000px) {
-    width: calc(50% - 16px);
-  }
-`;
-
-const OverViewCaptionDiv = styled.div`
-  width: 100%;
-  height: auto;
-  background-color: ${Color.CAPTION_COLOR};
-  color: ${Color.CAPTION_FONT_COLOR};
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  @media (min-width: 1000px) {
     width: 50%;
   }
 `;
 
-const OverViewTitleJP = styled.h3`
+const WrapperOverViewCaptionDiv = styled.div`
+  width: 100%;
+  height: auto;
+  background-color: ${Color.CAPTION_COLOR};
+  color: ${Color.CAPTION_FONT_COLOR};
+
+  @media (min-width: 1000px) {
+    width: 50%;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+`;
+
+const AreaOverViewCaptionDiv = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  @media (min-width: 1000px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  /* スクロールバーの削除 */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+const OverViewCaptionDiv = styled.div`
   width: 90%;
+  height: auto;
+`;
+
+const OverViewTitleJP = styled.h3`
+  width: 100%;
   margin-top: 3.2rem;
 `;
 
 const OverViewTitleEN = styled.h3`
-  width: 90%;
+  width: 100%;
   margin-bottom: 1.6rem;
 `;
 
 const OverViewCaptionJP = styled.p`
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin-bottom: 1.6rem;
 `;
 
 const OverViewCaptionEN = styled.p`
-  width: 90%;
+  width: 100%;
   height: auto;
+`;
+
+const OverViewCreditJP = styled.p`
+  width: 100%;
+  height: auto;
+  text-align: right;
+  margin-bottom: 1.6rem;
+`;
+
+const OverViewCreditEN = styled.p`
+  width: 100%;
+  height: auto;
+  text-align: right;
   margin-bottom: 3.2rem;
 `;
