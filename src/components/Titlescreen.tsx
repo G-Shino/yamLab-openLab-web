@@ -1,10 +1,10 @@
 import React from "react";
 import Styled from "@emotion/styled";
 import Lottie from "react-lottie";
-import animationData from "../images/online_motion_logo.json";
+import animationData from "../images/online_motion_logo_2.json";
 //const Logo = require("../images/200614logo.gif");
 const logoOptions = {
-  loop: true,
+  loop: false,
   autoplay: true,
   animationData,
   rendererSettings: {
@@ -15,7 +15,9 @@ const logoOptions = {
 const TitleScreen: React.FC = () => {
   return (
     <TitleCSS>
-      <Lottie options={logoOptions} height={400} width={400} />
+      <LogoCSS>
+        <Lottie options={logoOptions} />
+      </LogoCSS>
       <TitleTextJapaneseCSS>東京大学　山中俊治研究室</TitleTextJapaneseCSS>
       <TitleTextEnglishCSS>
         UTokyo Prototyping & Design Laboratory
@@ -31,6 +33,14 @@ flex-direction:column;
 justify-content:center;
 height:100vh;
 margin-bottom:20vh;
+`;
+const LogoCSS = Styled.div`
+display:inline;
+margin-top:20vh;
+margin-left: auto;
+margin-right: auto;
+width:50vmin;
+height:50vmin;
 `;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
