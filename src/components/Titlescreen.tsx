@@ -32,14 +32,6 @@ justify-content:center;
 height:100vh;
 margin-bottom:20vh;
 `;
-const LogoCSS = Styled.img`
-display:inline;
-margin-top:20vh;
-margin-left: auto;
-margin-right: auto;
-width:50vmin;
-height:50vmin;
-`;
 const TitleTextJapaneseCSS = Styled.div`
 text-align:center;
 font-size:3rem;
