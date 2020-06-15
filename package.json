@@ -18,10 +18,14 @@
     "file-loader": "^6.0.0",
     "next": "^9.4.4",
     "next-images": "^1.4.0",
+    "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-slick": "^0.26.1",
+    "slick-carousel": "^1.8.1",
     "react-three-fiber": "^4.2.10",
     "three": "^0.117.1"
+
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",

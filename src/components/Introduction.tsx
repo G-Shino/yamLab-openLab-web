@@ -39,44 +39,53 @@ const Introduction: React.FC = () => {
 
 //Styles-------------------------------------------------------------------------
 const IntroductionWrapper = Styled.div`
-height:1080px;
-display:grid;
+display:flex;
 justify-content:center;
-align-content:center;`;
+align-content:center;
+`;
 const IntroductionCSS = Styled.div`
 background-color:black;
 color:white;
 font-weight:bold;
-width:1086px;
-height:735px;
+font-size:1.6rem;
+font-kerning:3.5rem;
+line-height:3rem;
+width:800px;
+height:600px;
 justify-self:center;
-line-height:25px;
+padding:100px;
+@media (max-width: 1200px){
+  width:auto;
+height:auto;
+  margin:5%;
+  padding:5%;
+}
 `;
 const TitleCSS = Styled.div`
-margin-top:100px;
-margin-bottom:50px;
-font-size:40px;
-font-kerning:35px;
+margin-bottom:5%;
+font-size:4rem;
 display:flex;
 justify-content:center;
+@media (max-width: 1200px){
+  font-size:1.6rem;
+  font-kerning:3.5rem;
+}
+
 `;
 const TitleJapaneseCSS = Styled.div`
-margin-right:70px;
+margin-right:3%;
 `;
 const TitleEnglishCSS = Styled.div`
-margin-left:70px;
+margin-left:3%;
 `;
 const JapaneseCSS = Styled.div`
-margin:0 150px 50px 150px;
-font-size:16px;
+margin-bottom:5%;
 `;
 const JapaneseContentCSS = Styled.p``;
 const JapaneseSenseiCSS = Styled.div`
 text-align:right;
 `;
 const EnglishCSS = Styled.div`
-margin:0 150px 0 150px;
-font-size:16px;
 font-weight:normal;
 `;
 const EnglishContentCSS = Styled.p``;
