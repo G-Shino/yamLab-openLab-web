@@ -4,9 +4,11 @@ import texture from "../../images/mdftexture200608v2.jpg";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
+import WorkCaption3d from "../../components/WorkCaption3d";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
-import Caption3Image from "../../images/works/Uena/caption3.png";
+//import Caption3Image from "../../images/works/Uena/caption3.png";
+import ChairScene from "../../components/heejunscene";
 import HandWritingImage from "../../images/works/Uena/handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
@@ -74,8 +76,8 @@ const Uena: React.FC = () => {
           />
         </WorkCaptionDiv>
         <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption3Image}
+          <WorkCaption3d
+            Caption3dImage={<ChairScene />}
             captionTitleJP={workCaptionTitle2JP}
             captionTitleEN={workCaptionTitle2EN}
             captionMessageJP={workCaptionMessage2JP}

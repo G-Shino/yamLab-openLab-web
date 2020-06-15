@@ -1,80 +1,25 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Router from "next/router";
+import Carousel from "../components/Carousel";
 import { Color } from "../constants/Color";
 
 interface Props {
   src: string;
-  prevLink: string;
-  prevImg: string;
+  prevLink?: string;
+  prevImg?: string;
   author: string;
-  nextLink: string;
-  nextImg: string;
+  nextLink?: string;
+  nextImg?: string;
 }
 
-const FootSpace: React.FC<Props> = ({
-  src,
-  prevLink,
-  prevImg,
-  author,
-  nextLink,
-  nextImg,
-}) => {
+const FootSpace: React.FC<Props> = ({ src, author }) => {
   return (
     <Footer>
       <FootContentWrapperDiv>
         <HandwritingImg src={src} />
-        <ButtonsDiv>
-          <PrevWrapperDiv visiblity={prevLink ? "visible" : "hidden"}>
-            <PrevButton
-              onClick={() => {
-                if (prevLink === undefined) {
-                  return;
-                }
-                Router.push(`${prevLink}`).then(() => window.scrollTo(0, 0));
-              }}
-            >
-              &lt;&lt; Prev
-            </PrevButton>
-            <PrevImg
-              src={prevImg}
-              onClick={() => {
-                if (prevLink === undefined) {
-                  return;
-                }
-                Router.push(`${prevLink}`).then(() => window.scrollTo(0, 0));
-              }}
-            />
-          </PrevWrapperDiv>
-          <HomeButton
-            onClick={() => {
-              Router.push(`/#${author}`);
-            }}
-          >
-            Home
-          </HomeButton>
-          <NextWrapperDiv visiblity={nextLink ? "visible" : "hidden"}>
-            <NextImg
-              src={nextImg}
-              onClick={() => {
-                if (nextLink === undefined) {
-                  return;
-                }
-                Router.push(`${nextLink}`).then(() => window.scrollTo(0, 0));
-              }}
-            />
-            <NextButton
-              onClick={() => {
-                if (nextLink === undefined) {
-                  return;
-                }
-                Router.push(`${nextLink}`).then(() => window.scrollTo(0, 0));
-              }}
-            >
-              Next &gt;&gt;
-            </NextButton>
-          </NextWrapperDiv>
-        </ButtonsDiv>
+        <CarouselDiv>
+          <Carousel exclude={author} />
+        </CarouselDiv>
       </FootContentWrapperDiv>
     </Footer>
   );
@@ -106,61 +51,9 @@ const HandwritingImg = styled.img`
   display: block;
 `;
 
-const ButtonsDiv = styled.div`
+const CarouselDiv = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-const PrevWrapperDiv = styled.div<{ visiblity: string }>`
-  position: relative;
-  visibility: ${(props) => props.visiblity};
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-const PrevButton = styled.button`
-  color: ${Color.CAPTION_FONT_COLOR};
-  background-color: ${Color.CAPTION_COLOR};
-  border-color: ${Color.CAPTION_COLOR};
-`;
-
-const PrevImg = styled.img`
-  position: absolute;
-  width: 4.8rem;
-  border: 1px solid white;
-  top: -5rem;
-  right: 0px;
-`;
-
-const HomeButton = styled.button`
-  color: ${Color.CAPTION_FONT_COLOR};
-  background-color: ${Color.CAPTION_COLOR};
-  border-color: ${Color.CAPTION_COLOR};
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-const NextWrapperDiv = styled.div<{ visiblity: string }>`
-  position: relative;
-  visibility: ${(props) => props.visiblity};
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-const NextButton = styled.button`
-  color: ${Color.CAPTION_FONT_COLOR};
-  background-color: ${Color.CAPTION_COLOR};
-  border-color: ${Color.CAPTION_COLOR};
-`;
-
-const NextImg = styled.img`
-  position: absolute;
-  width: 4.8rem;
-  border: 1px solid white;
-  top: -5rem;
-  left: 0px;
 `;
