@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Carousel from "../components/Carousel";
+import FooterCarousel from "./FooterCarousel";
 import { Color } from "../constants/Color";
 
 interface Props {
@@ -18,7 +18,7 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
       <FootContentWrapperDiv>
         <HandwritingImg src={src} />
         <CarouselDiv>
-          <Carousel exclude={author} />
+          <FooterCarousel exclude={author} />
         </CarouselDiv>
       </FootContentWrapperDiv>
     </Footer>

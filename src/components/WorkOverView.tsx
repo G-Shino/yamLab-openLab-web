@@ -7,8 +7,8 @@ interface Props {
   titleEN: string;
   captionJP: string;
   captionEN: string;
-  creditJP: string;
-  creditEN: string;
+  creditJP?: string;
+  creditEN?: string;
   imgSrc: string;
 }
 
