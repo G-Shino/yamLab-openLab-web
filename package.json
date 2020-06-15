@@ -19,7 +19,8 @@
     "next": "^9.4.4",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-lottie": "^1.2.3"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
