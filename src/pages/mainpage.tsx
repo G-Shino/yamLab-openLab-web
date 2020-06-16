@@ -7,33 +7,20 @@ import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
 import Credits from "../components/credits";
-import Head from "next/head";
+import OGPHead from "../components/OGPHead";
 import LogoWhite from "../images/LogoWhite.png";
 
 const Mainpage: React.FC = () => {
   return (
     <>
-      <Head>
-        <meta
-          property="og:url"
-          content="https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="山中研究室OpenLab -Top Page-" />
-        <meta
-          property="og:description"
-          content="OpenLabに合わせて作成したwebページです"
-        />
-        <meta property="og:site_name" content="山中研究室OpenLab" />
-        <meta
-          property="og:image"
-          content={
-            "https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh/" +
-            LogoWhite
-          }
-        />
-        <meta name="twitter:card" content="Summary Card" />
-      </Head>
+      <OGPHead
+        title="山中研究室OpenLab -Top Page-"
+        type="website"
+        description="OpenLabに合わせて作成したwebページです"
+        keyword=""
+        image={LogoWhite}
+        url="https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh"
+      />
       <MainDiv>
         <ExplanationDiv>
           <TitleScreen />

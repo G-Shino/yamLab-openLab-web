@@ -1,0 +1,33 @@
+import React from "react";
+import Head from "next/head";
+
+interface Props {
+  title: string;
+  type: string;
+  description: string;
+  keyword: string;
+  image: string;
+  url: string;
+}
+
+const OGPHead = ({
+  title,
+  type,
+  description,
+  image,
+  url,
+}: Props): JSX.Element => {
+  return (
+    <Head>
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:site_name" content="山中研究室OpenLab" />
+      <meta property="og:image" content={url + image} />
+      <meta name="twitter:card" content="Summary Card" />
+    </Head>
+  );
+};
+
+export default OGPHead;
