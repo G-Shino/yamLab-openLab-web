@@ -97,7 +97,8 @@ const CarouselDiv = styled.div`
 `;
 
 const StyledTwitterButton = styled.div`
-  width: 50%;
+  width: 80%;
+  max-width: 296px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
