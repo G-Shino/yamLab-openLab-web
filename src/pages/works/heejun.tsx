@@ -44,7 +44,7 @@ const Uena: React.FC = () => {
       <MainDiv>
         <WorkOverViewDiv>
           <ChapterTitle>
-            <BorderSpan>Overiew</BorderSpan>
+            <BorderSpan>Overview</BorderSpan>
           </ChapterTitle>
           <WorkOverView
             titleJP={titleJP}
