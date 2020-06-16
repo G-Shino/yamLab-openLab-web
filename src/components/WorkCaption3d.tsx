@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Color } from "../constants/Color";
+import touchOK from "../images/20200616_touchOK.svg";
 
 interface Props {
   Caption3dImage?: React.ReactNode;
@@ -24,7 +25,7 @@ const WorkCaption3d: React.FC<Props> = ({
         <CaptionMessageWrapperDiv>
           <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
           <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-          <Caption3dInstruction>↑Touch!</Caption3dInstruction>
+          <Caption3dInstruction src={touchOK}></Caption3dInstruction>
           <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
           <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
         </CaptionMessageWrapperDiv>
@@ -63,14 +64,13 @@ const CaptionMessageWrapperDiv = styled.div`
   display: grid;
   grid-template-areas:
     "areaA areaC"
-    "areaB areaB"
+    "areaB areaC"
     "areaD areaD"
     "areaE areaE";
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr auto;
 `;
 const CaptionTitleJP = styled.h3`
   width: 100%;
-  font-weight: bold;
   grid-area: areaA;
   align-self: center;
   justify-self: center;
@@ -83,13 +83,13 @@ const CaptionTitleEN = styled.h3`
   align-self: center;
   justify-self: center;
 `;
-const Caption3dInstruction = styled.span`
-  width: 100%;
+const Caption3dInstruction = styled.img`
+  width: 70%;
   font-weight: bold;
   margin-bottom: 1rem;
   grid-area: areaC;
-  align-self: center;
-  justify-self: center;
+  align-self: top;
+  justify-self: right;
   text-align: right;
 `;
 const CaptionMessageJP = styled.p`
