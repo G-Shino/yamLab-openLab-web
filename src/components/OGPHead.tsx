@@ -25,7 +25,7 @@ const OGPHead = ({
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="山中研究室OpenLab" />
       <meta property="og:image" content={url + image} />
-      <meta name="twitter:card" content="Summary Card" />
+      <meta name="twitter:card" content="summary" />
     </Head>
   );
 };
