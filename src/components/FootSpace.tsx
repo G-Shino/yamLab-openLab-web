@@ -33,18 +33,18 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
         <StyledTwitterButton className="twitter-embed">
           <TwitterShareButton
             url="https://yam-lab-open-lab-web-sable.now.sh/"
-            hashtags={["#DiaLog"]}
+            hashtags={["DiaLog"]}
           >
-            <TwitterIcon size={64} round />
+            <TwitterIcon size={48} round />
           </TwitterShareButton>
           <FacebookShareButton
             url="https://yam-lab-open-lab-web-sable.now.sh/"
             hashtag="#DiaLog"
           >
-            <FacebookIcon size={64} round />
+            <FacebookIcon size={48} round />
           </FacebookShareButton>
           <LineShareButton url="https://yam-lab-open-lab-web-sable.now.sh/">
-            <LineIcon size={64} round />
+            <LineIcon size={48} round />
           </LineShareButton>
         </StyledTwitterButton>
         <CarouselDiv>
