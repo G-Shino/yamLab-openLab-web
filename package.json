@@ -22,9 +22,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lottie": "^1.2.3",
+    "react-share": "^4.2.0",
     "react-slick": "^0.26.1",
-    "slick-carousel": "^1.8.1",
     "react-three-fiber": "^4.2.10",
+    "slick-carousel": "^1.8.1",
     "three": "^0.117.1"
   },
   "devDependencies": {
