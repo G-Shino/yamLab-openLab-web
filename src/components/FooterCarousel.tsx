@@ -3,8 +3,8 @@ import css from "@emotion/css";
 import styled from "@emotion/styled";
 import Slider from "react-slick";
 import Router from "next/router";
+import LogoWhite from "../images/LogoWhite.png";
 import { LIST_WORKS_BASE_INFO } from "../constants/WorksList";
-const Logo = require("../images/Logo.svg");
 
 function NextArrow(props) {
   const { onClick } = props;
@@ -119,7 +119,7 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
                     );
                   }}
                 >
-                  <StyledImg src={Logo} />
+                  <StyledImg src={LogoWhite} />
                 </StyledContents>
               </div>
             );
@@ -170,7 +170,6 @@ const StyledContents = styled.div`
     width: 90%;
     padding-top: 90%;
     position: absolute;
-    background-color: white;
     z-index: 0;
   }
 `;
