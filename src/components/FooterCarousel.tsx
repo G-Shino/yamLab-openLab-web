@@ -1,7 +1,6 @@
 import React from "react";
 import css from "@emotion/css";
 import styled from "@emotion/styled";
-import { keyframes } from "@emotion/core";
 import Slider from "react-slick";
 import Router from "next/router";
 import { LIST_WORKS_BASE_INFO } from "../constants/WorksList";
@@ -94,13 +93,13 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
     swipeToSlide: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    initialSlide: currentIndex - 2 + 1,
+    initialSlide: currentIndex - 2,
     responsive: [
       {
         breakpoint: 800,
         settings: {
           slidesToShow: 3,
-          initialSlide: currentIndex,
+          initialSlide: currentIndex - 1,
         },
       },
     ],
@@ -109,28 +108,19 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
   return (
     <WrapperSlider>
       <Slider {...settings} css={CssSlider}>
-        <div key={"home"}>
-          <StyledContents
-            onClick={() => {
-              Router.push(`/#${exclude}`).then(() => window.scrollTo(0, 0));
-            }}
-          >
-            <StyledImg src={Logo} />
-          </StyledContents>
-        </div>
         {LIST_WORKS_BASE_INFO.map((baseInfo) => {
           if (baseInfo.author === exclude) {
             return (
-              <div key={baseInfo.author}>
-                <StyledCurrentContents
+              <div key={"home"}>
+                <StyledContents
                   onClick={() => {
-                    Router.push(`${baseInfo.link}`).then(() =>
+                    Router.push(`/#${exclude}`).then(() =>
                       window.scrollTo(0, 0)
                     );
                   }}
                 >
-                  <StyledCurrentImg src={baseInfo.src} css={CSSBlink} />
-                </StyledCurrentContents>
+                  <StyledImg src={Logo} />
+                </StyledContents>
               </div>
             );
           }
@@ -193,41 +183,4 @@ const StyledImg = styled.img`
     border-color: white;
   }
   z-index: 2;
-`;
-
-const Blink = keyframes`
-0% {opacity:0.3;}
-50% {opacity: 1;}
-100% {opacity:0.3;}
-`;
-
-const CSSBlink = css`
-  animation: ${Blink} 2s linear infinite;
-`;
-
-const StyledCurrentContents = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  &::before {
-    content: "";
-    display: block;
-    width: 90%;
-    padding-top: 90%;
-    position: absolute;
-    z-index: 5;
-    border: solid 3px;
-    border-color: transparent;
-  }
-  &:hover::before {
-    border-color: white;
-  }
-`;
-const StyledCurrentImg = styled.img`
-  width: 90%;
-  border: solid 3px;
-  border-color: transparent;
 `;
