@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
-import texture from "../../images/mdftexture200608v2.jpg";
+import texture from "../../images/mdftexture.jpg";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
@@ -24,7 +25,11 @@ const {
   nextImg,
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Uena");
 const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
+const overViewCreditJP = `制作：上岡直樹
+ディレクション：山中俊治`;
 const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
+const overViewCreditEN = `Designer: Naoki Ueoka
+Director: Shunji Yamanaka`;
 
 const workCaptionTitle1JP = `着地動作に着目`;
 const workCaptionTitle1EN = `Landing process`;
@@ -42,13 +47,15 @@ const Uena: React.FC = () => {
       <MainDiv>
         <WorkOverViewDiv>
           <ChapterTitle>
-            <BorderSpan>Overiew</BorderSpan>
+            <BorderSpan>Overview</BorderSpan>
           </ChapterTitle>
           <WorkOverView
             titleJP={titleJP}
             titleEN={titleEN}
             captionJP={overViewCaptionJP}
             captionEN={overViewCaptionEN}
+            creditJP={overViewCreditJP}
+            creditEN={overViewCreditEN}
             imgSrc={src}
           />
         </WorkOverViewDiv>
@@ -76,6 +83,15 @@ const Uena: React.FC = () => {
         <WorkCaptionDiv>
           <WorkCaption
             captionImage={Caption3Image}
+            captionTitleJP={workCaptionTitle2JP}
+            captionTitleEN={workCaptionTitle2EN}
+            captionMessageJP={workCaptionMessage2JP}
+            captionMessageEN={workCaptionMessage2EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaptionCarousel
+            captionImages={[Caption1Image, Caption2Image, Caption3Image]}
             captionTitleJP={workCaptionTitle2JP}
             captionTitleEN={workCaptionTitle2EN}
             captionMessageJP={workCaptionMessage2JP}

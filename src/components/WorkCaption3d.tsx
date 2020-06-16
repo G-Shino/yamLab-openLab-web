@@ -3,15 +3,15 @@ import styled from "@emotion/styled";
 import { Color } from "../constants/Color";
 
 interface Props {
-  captionImage: string;
+  Caption3dImage?: React.ReactNode;
   captionTitleJP: string;
   captionTitleEN: string;
   captionMessageJP: string;
   captionMessageEN: string;
 }
 
-const WorkCaption: React.FC<Props> = ({
-  captionImage,
+const WorkCaption3d: React.FC<Props> = ({
+  Caption3dImage,
   captionTitleJP,
   captionTitleEN,
   captionMessageJP,
@@ -19,7 +19,7 @@ const WorkCaption: React.FC<Props> = ({
 }) => {
   return (
     <CaptionWrapperDiv>
-      <CaptionImg src={captionImage} />
+      <Caption3dImg>{Caption3dImage}</Caption3dImg>
       <CaptionMessageDiv>
         <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
         <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
@@ -30,11 +30,11 @@ const WorkCaption: React.FC<Props> = ({
   );
 };
 
-export default WorkCaption;
+export default WorkCaption3d;
 
 const CaptionWrapperDiv = styled.div`
   width: 100%;
-
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +46,7 @@ const CaptionWrapperDiv = styled.div`
   }
 `;
 
-const CaptionImg = styled.img`
+const Caption3dImg = styled.div`
   width: 100%;
 `;
 
@@ -62,10 +62,12 @@ const CaptionMessageDiv = styled.div`
 
 const CaptionTitleJP = styled.h3`
   width: 90%;
+  font-weight: bold;
   margin-top: 3.2rem;
 `;
 const CaptionTitleEN = styled.h3`
   width: 90%;
+  font-weight: bold;
   margin-bottom: 1.6rem;
 `;
 const CaptionMessageJP = styled.p`

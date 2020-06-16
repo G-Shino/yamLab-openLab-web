@@ -35,6 +35,7 @@ const globalCSS = css`
   h3 {
     font-size: 2.4rem;
     line-height: 3.2rem;
+    font-weight: bold;
   }
 
   button {
@@ -52,6 +53,8 @@ const globalCSS = css`
   p {
     font-size: 1.6rem;
     line-height: 2.4rem;
+    white-space: pre-line;
+    text-align: justify;
   }
 `;
 
