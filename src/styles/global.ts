@@ -54,6 +54,7 @@ const globalCSS = css`
     font-size: 1.6rem;
     line-height: 2.4rem;
     white-space: pre-line;
+    text-align: justify;
   }
 `;
 

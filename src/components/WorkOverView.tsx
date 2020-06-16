@@ -118,17 +118,19 @@ const OverViewTitleEN = styled.h3`
 const OverViewCaptionJP = styled.p`
   width: 100%;
   height: auto;
-`;
-
-const OverViewCaptionEN = styled.p`
-  width: 100%;
-  height: auto;
+  margin-bottom: 1.6rem;
 `;
 
 const OverViewCreditJP = styled.p`
   width: 100%;
   height: auto;
   text-align: right;
+  margin-bottom: 1.6rem;
+`;
+
+const OverViewCaptionEN = styled.p`
+  width: 100%;
+  height: auto;
   margin-bottom: 1.6rem;
 `;
 

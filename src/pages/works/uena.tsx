@@ -4,6 +4,7 @@ import texture from "../../images/mdftexture.jpg";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
@@ -82,6 +83,15 @@ const Uena: React.FC = () => {
         <WorkCaptionDiv>
           <WorkCaption
             captionImage={Caption3Image}
+            captionTitleJP={workCaptionTitle2JP}
+            captionTitleEN={workCaptionTitle2EN}
+            captionMessageJP={workCaptionMessage2JP}
+            captionMessageEN={workCaptionMessage2EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaptionCarousel
+            captionImages={[Caption1Image, Caption2Image, Caption3Image]}
             captionTitleJP={workCaptionTitle2JP}
             captionTitleEN={workCaptionTitle2EN}
             captionMessageJP={workCaptionMessage2JP}
