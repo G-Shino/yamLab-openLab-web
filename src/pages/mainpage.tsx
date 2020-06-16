@@ -16,7 +16,7 @@ const Mainpage: React.FC = () => {
       <Head>
         <meta
           property="og:url"
-          content="https://yam-lab-open-lab-web-sable.now.sh"
+          content="https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh/"
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="山中研究室OpenLab -Top Page-" />
@@ -27,7 +27,10 @@ const Mainpage: React.FC = () => {
         <meta property="og:site_name" content="山中研究室OpenLab" />
         <meta
           property="og:image"
-          content={"https://yam-lab-open-lab-web-sable.now.sh" + LogoWhite}
+          content={
+            "https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh/" +
+            LogoWhite
+          }
         />
         <meta name="twitter:card" content="Summary Card" />
       </Head>
