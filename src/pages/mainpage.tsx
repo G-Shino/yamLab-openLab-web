@@ -19,7 +19,7 @@ const Mainpage: React.FC = () => {
         description="OpenLabに合わせて作成したwebページです"
         keyword=""
         image={LogoWhite}
-        url="https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh"
+        url=""
       />
       <MainDiv>
         <ExplanationDiv>
