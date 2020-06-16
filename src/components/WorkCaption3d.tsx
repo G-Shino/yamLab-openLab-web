@@ -78,13 +78,12 @@ const CaptionTitleJP = styled.h3`
 const CaptionTitleEN = styled.h3`
   width: 100%;
   font-weight: bold;
-  margin-bottom: 1.6rem;
   grid-area: areaB;
   align-self: center;
   justify-self: center;
 `;
 const Caption3dInstruction = styled.img`
-  width: 70%;
+  width: 100%;
   font-weight: bold;
   margin-bottom: 1rem;
   grid-area: areaC;
@@ -94,6 +93,7 @@ const Caption3dInstruction = styled.img`
 `;
 const CaptionMessageJP = styled.p`
   width: 100%;
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   grid-area: areaD;
   align-self: center;
