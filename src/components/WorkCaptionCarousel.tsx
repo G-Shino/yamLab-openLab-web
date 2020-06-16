@@ -115,7 +115,7 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
               Router.push(`/`).then(() => window.scrollTo(0, 0));
             }}
           >
-            <StyledImg src={Logo} />
+            <StyledImg src={Logo} style={{ width: "85%" }} />
           </StyledContents>
         </div>
         {LIST_WORKS_BASE_INFO.map((baseInfo) => {
@@ -123,13 +123,14 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
             return (
               <div key={baseInfo.author}>
                 <StyledCurrentContents
+                  css={CSSBlink}
                   onClick={() => {
                     Router.push(`${baseInfo.link}`).then(() =>
                       window.scrollTo(0, 0)
                     );
                   }}
                 >
-                  <StyledCurrentImg src={baseInfo.src} css={CSSBlink} />
+                  <StyledCurrentImg src={baseInfo.src} />
                 </StyledCurrentContents>
               </div>
             );
@@ -212,19 +213,6 @@ const StyledCurrentContents = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    width: 90%;
-    padding-top: 90%;
-    position: absolute;
-    z-index: 5;
-    border: solid 3px;
-    border-color: transparent;
-  }
-  &:hover::before {
-    border-color: white;
-  }
 `;
 const StyledCurrentImg = styled.img`
   width: 90%;
