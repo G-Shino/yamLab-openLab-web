@@ -21,10 +21,13 @@ const WorkCaption3d: React.FC<Props> = ({
     <CaptionWrapperDiv>
       <Caption3dImg>{Caption3dImage}</Caption3dImg>
       <CaptionMessageDiv>
-        <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-        <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-        <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-        <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        <CaptionMessageWrapperDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
+          <Caption3dInstruction>↑Touch!</Caption3dInstruction>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageWrapperDiv>
       </CaptionMessageDiv>
     </CaptionWrapperDiv>
   );
@@ -54,27 +57,51 @@ const CaptionMessageDiv = styled.div`
   width: 100%;
   color: ${Color.CAPTION_FONT_COLOR};
   background-color: ${Color.CAPTION_COLOR};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 `;
-
+const CaptionMessageWrapperDiv = styled.div`
+  margin: 3.2rem 5% 3.2rem 5%;
+  display: grid;
+  grid-template-areas:
+    "areaA areaC"
+    "areaB areaB"
+    "areaD areaD"
+    "areaE areaE";
+  grid-template-columns: 3fr 1fr;
+`;
 const CaptionTitleJP = styled.h3`
-  width: 90%;
+  width: 100%;
   font-weight: bold;
-  margin-top: 3.2rem;
+  grid-area: areaA;
+  align-self: center;
+  justify-self: center;
 `;
 const CaptionTitleEN = styled.h3`
-  width: 90%;
+  width: 100%;
   font-weight: bold;
   margin-bottom: 1.6rem;
+  grid-area: areaB;
+  align-self: center;
+  justify-self: center;
+`;
+const Caption3dInstruction = styled.span`
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  grid-area: areaC;
+  align-self: center;
+  justify-self: center;
+  text-align: right;
 `;
 const CaptionMessageJP = styled.p`
-  width: 90%;
+  width: 100%;
   margin-bottom: 1.6rem;
+  grid-area: areaD;
+  align-self: center;
+  justify-self: center;
 `;
 const CaptionMessageEN = styled.p`
-  width: 90%;
-  margin-bottom: 3.2rem;
+  width: 100%;
+  grid-area: areaE;
+  align-self: center;
+  justify-self: center;
 `;
