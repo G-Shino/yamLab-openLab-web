@@ -14,11 +14,13 @@ const OGPHead = ({
   title,
   type,
   description,
+  keyword,
   image,
   url,
 }: Props): JSX.Element => {
   return (
     <Head>
+      <meta name="keywords" content={keyword} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
