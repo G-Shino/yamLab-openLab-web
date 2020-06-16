@@ -1,15 +1,17 @@
 import React from "react";
+import css from "@emotion/css";
 import styled from "@emotion/styled";
 import FooterCarousel from "./FooterCarousel";
 import { Color } from "../constants/Color";
 import {
   FacebookShareButton,
-  FacebookIcon,
   TwitterShareButton,
-  TwitterIcon,
   LineShareButton,
-  LineIcon,
 } from "react-share";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+library.add(fab);
 
 interface Props {
   src: string;
@@ -21,11 +23,6 @@ interface Props {
 }
 
 const FootSpace: React.FC<Props> = ({ src, author }) => {
-  // React.useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.src = "https://platform.twitter.com/widgets.js";
-  //   document.getElementsByClassName("twitter-embed")[0].appendChild(script);
-  // }, []);
   return (
     <Footer>
       <FootContentWrapperDiv>
@@ -35,16 +32,24 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
             url="https://yam-lab-open-lab-web-sable.now.sh/"
             hashtags={["DiaLog"]}
           >
-            <TwitterIcon size={48} round />
+            <FontAwesomeIcon
+              css={IconCss}
+              icon={["fab", "twitter"]}
+              size="4x"
+            />
           </TwitterShareButton>
           <FacebookShareButton
             url="https://yam-lab-open-lab-web-sable.now.sh/"
             hashtag="#DiaLog"
           >
-            <FacebookIcon size={48} round />
+            <FontAwesomeIcon
+              css={IconCss}
+              icon={["fab", "facebook"]}
+              size="4x"
+            />
           </FacebookShareButton>
           <LineShareButton url="https://yam-lab-open-lab-web-sable.now.sh/">
-            <LineIcon size={48} round />
+            <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} size="4x" />
           </LineShareButton>
         </StyledTwitterButton>
         <CarouselDiv>
@@ -56,6 +61,10 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
 };
 
 export default FootSpace;
+
+const IconCss = css`
+  color: white;
+`;
 
 const Footer = styled.footer`
   width: 100%;

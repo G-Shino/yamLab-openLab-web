@@ -1,9 +1,12 @@
 import { css } from "@emotion/core";
 import emotionReset from "emotion-reset";
 import { Color } from "./../constants/Color";
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const globalCSS = css`
   ${emotionReset}
+  ${dom.css()}
   html {
     font-size: 62.5%;
   }
