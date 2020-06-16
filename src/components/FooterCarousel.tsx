@@ -112,7 +112,7 @@ const FooterCarousel: React.FC<Props> = ({ exclude }) => {
         <div key={"home"}>
           <StyledContents
             onClick={() => {
-              Router.push(`/`).then(() => window.scrollTo(0, 0));
+              Router.push(`/#${exclude}`).then(() => window.scrollTo(0, 0));
             }}
           >
             <StyledImg src={Logo} />
