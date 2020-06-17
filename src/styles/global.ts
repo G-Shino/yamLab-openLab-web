@@ -8,10 +8,12 @@ const globalCSS = css`
   ${emotionReset}
   ${dom.css()}
   html {
+    width: 100%;
     font-size: 62.5%;
   }
 
   body {
+    width: 100%;
     color: ${Color.FONT_COLOR};
     font-size: 1.4rem;
     font-family: "Jost", "YuGothic", "Yu Gothic", "游ゴシック", "Meiryo",
