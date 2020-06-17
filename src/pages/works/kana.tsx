@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import texture from "../../images/mdftexture200608v2.jpg";
-import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
@@ -28,83 +27,121 @@ const {
 const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
 const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
 
-const workCaptionTitle1JP = `着地動作に着目`;
-const workCaptionTitle1EN = `Landing process`;
-const workCaptionMessage1JP = `受動的かつしなやかに力を受け流す着地は、生き物らしさがよく現れている挙動であると考えました。`;
-const workCaptionMessage1EN = `We thought that the landing process which distributes the shock smoothly and passively well represents the bio-likeness.`;
+const workCaptionTitle1JP = `考察と発想`;
+const workCaptionTitle1EN = `Insights and ideas`;
+const workCaptionMessage1JP = `研究を進めるにあたり不安定なモノについて考察したことや、実現にあたり描いたアイデアスケッチです。`;
+const workCaptionMessage1EN = `This is a study of instable things in our research, and idea sketches drawn to realize it.`;
 
-const workCaptionTitle2JP = `着地する足の構造`;
-const workCaptionTitle2EN = `Leg structure`;
-const workCaptionMessage2JP = `着地時の屈伸運動のみで生き物らしさを表現するため、その他の部分では生き物らしさを除きました。最も安定する三本足かつ一ヶ所のダンパーのみで全体の屈伸を制御できる構造です。`;
-const workCaptionMessage2EN = `To express its bio-likeness with only its leg-bending motion during its landing process, we intended to make the other part of our prototype to be the opposite of it. As a result, we came up with this prototype, which has only three legs and a single damping component controlling the entire landing process.`;
+const workCaptionTitle2JP = `ビデオプロトタイプ`;
+const workCaptionTitle2EN = `Video prototype`;
+const workCaptionMessage2JP = `アイデアスケッチを元に、形状と動き方を簡易的なアニメーションで検討しました。`;
+const workCaptionMessage2EN = `Video prototype to consider the form and motion, based on idea sketches.`;
+
+const workCaptionTitle3JP = `プロトタイプ1`;
+const workCaptionTitle3EN = `Prototype 1`;
+const workCaptionMessage3JP = `地面に立った状態を想定した試作です。回転軸に支えがあるため不安定さがうまく引き出せませんでした。`;
+const workCaptionMessage3EN = `First prototype representing "Standing state". We couldn’t express instability, because of the support acting as a rotation axle.`;
+
+const workCaptionTitle4JP = `プロトタイプ2`;
+const workCaptionTitle4EN = `Prototype 2`;
+const workCaptionMessage4JP = `足元を玉乗りのような形状にすることで不安定さを強調し、腕の動きで頑張って元の状態に戻る様子を表現しました。`;
+const workCaptionMessage4EN = `We built this prototype representing "Balancing-on-a ball" state. With its arm movement trying to balance itself, we have strongly expressed its instability.`;
+
+const workCaptionTitle5JP = `強化学習の過程`;
+const workCaptionTitle5EN = `Reinforcement learning process`;
+const workCaptionMessage5JP = `腕の振り方を強化学習させることで、現実には起こりにくい不安定な動きの表現を試みました。`;
+const workCaptionMessage5EN = `By reinforcement learning process how to swing its arms, we tried to make it perform physically impossible action.`;
+
+const workCaptionTitle6JP = `プロトタイプ3`;
+const workCaptionTitle6EN = `Prototype 3`;
+const workCaptionMessage6JP = `強化学習を行った結果を反映したプロトタイプで、頂部を指でつつくとそれに反応してリアクションします。`;
+const workCaptionMessage6EN = `The latest prototype updated with the results of the reinforcement learning process. Please try poking its head and watching how it reacts.
+`;
 
 const Uena: React.FC = () => {
   return (
-    <>
-      <OGPHead
-        title={titleJP}
-        type="article"
-        description={overViewCaptionJP}
-        keyword=""
-        image={src}
-        page={link}
-      />
-      <WrapperDiv>
-        <MainDiv>
-          <WorkOverViewDiv>
-            <ChapterTitle>
-              <BorderSpan>Overview</BorderSpan>
-            </ChapterTitle>
-            <WorkOverView
-              titleJP={titleJP}
-              titleEN={titleEN}
-              captionJP={overViewCaptionJP}
-              captionEN={overViewCaptionEN}
-              imgSrc={src}
-            />
-          </WorkOverViewDiv>
+    <WrapperDiv>
+      <MainDiv>
+        <WorkOverViewDiv>
           <ChapterTitle>
-            <BorderSpan>Process</BorderSpan>
+            <BorderSpan>Overview</BorderSpan>
           </ChapterTitle>
-          <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
-              captionTitleJP={workCaptionTitle2JP}
-              captionTitleEN={workCaptionTitle2EN}
-              captionMessageJP={workCaptionMessage2JP}
-              captionMessageEN={workCaptionMessage2EN}
-            />
-          </WorkCaptionDiv>
-        </MainDiv>
-        <FootSpace
-          src={HandWritingImage}
-          prevImg={prevImg}
-          prevLink={prevLink}
-          author={author}
-          link={link}
-          nextLink={nextLink}
-          nextImg={nextImg}
-        />
-      </WrapperDiv>
-    </>
+          <WorkOverView
+            titleJP={titleJP}
+            titleEN={titleEN}
+            captionJP={overViewCaptionJP}
+            captionEN={overViewCaptionEN}
+            imgSrc={src}
+          />
+        </WorkOverViewDiv>
+        <ChapterTitle>
+          <BorderSpan>Process</BorderSpan>
+        </ChapterTitle>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption1Image}
+            captionTitleJP={workCaptionTitle1JP}
+            captionTitleEN={workCaptionTitle1EN}
+            captionMessageJP={workCaptionMessage1JP}
+            captionMessageEN={workCaptionMessage1EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption3Image}
+            captionTitleJP={workCaptionTitle2JP}
+            captionTitleEN={workCaptionTitle2EN}
+            captionMessageJP={workCaptionMessage2JP}
+            captionMessageEN={workCaptionMessage2EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption2Image}
+            captionTitleJP={workCaptionTitle3JP}
+            captionTitleEN={workCaptionTitle3EN}
+            captionMessageJP={workCaptionMessage3JP}
+            captionMessageEN={workCaptionMessage3EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption2Image}
+            captionTitleJP={workCaptionTitle4JP}
+            captionTitleEN={workCaptionTitle4EN}
+            captionMessageJP={workCaptionMessage4JP}
+            captionMessageEN={workCaptionMessage4EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption2Image}
+            captionTitleJP={workCaptionTitle5JP}
+            captionTitleEN={workCaptionTitle5EN}
+            captionMessageJP={workCaptionMessage5JP}
+            captionMessageEN={workCaptionMessage5EN}
+          />
+        </WorkCaptionDiv>
+        <WorkCaptionDiv>
+          <WorkCaption
+            captionImage={Caption2Image}
+            captionTitleJP={workCaptionTitle6JP}
+            captionTitleEN={workCaptionTitle6EN}
+            captionMessageJP={workCaptionMessage6JP}
+            captionMessageEN={workCaptionMessage6EN}
+          />
+        </WorkCaptionDiv>
+      </MainDiv>
+      <FootSpace
+        src={HandWritingImage}
+        prevImg={prevImg}
+        link={link}
+        prevLink={prevLink}
+        author={author}
+        nextLink={nextLink}
+        nextImg={nextImg}
+      />
+    </WrapperDiv>
   );
 };
 
