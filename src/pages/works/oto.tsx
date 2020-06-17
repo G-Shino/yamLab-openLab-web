@@ -7,7 +7,7 @@ import FootSpace from "../../components/FootSpace";
 import WorkCaptionYoutubeCarousel from "../../components/WorkCaptionYoutubeCarousel";
 import Image1_1 from "../../images/works/Oto/08-01-01.png";
 import Image1_2 from "../../images/works/Oto/08-01-02.png";
-import HandWritingImage from "../../images/works/Uena/handwriting.png";
+import HandWritingImage from "../../images/works/Oto/oto-handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,

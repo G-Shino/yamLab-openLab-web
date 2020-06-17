@@ -7,7 +7,7 @@ import WorkCaption from "../../components/WorkCaption";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
-import HandWritingImage from "../../images/works/Uena/handwriting.png";
+import HandWritingImage from "../../images/works/Fu-min/Fu-min-handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -23,11 +23,11 @@ const {
   prevImg,
   nextLink,
   nextImg,
-}: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Fu-min");
+}: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Fumin");
 const overViewCaptionJP = `ヴァイオリンを弾くときには一般的に顎当てと肩当てが使われますが、長時間演奏していると首元にあざができ、痛みを生じることがあります。また顎当て・肩当ては、身体と楽器が唯一つながる部分であり、身体から出る曲への想いを楽器に十分に伝えることが求められます。この作品では、演奏時の痛みを減らすとともに心地よく演奏できることを目指しました。演奏者の身体を3Dスキャンし身体にフィットした形状を作成、そして曲げ木の弾性を利用することで顎・肩当ての美しい一体構造を実現しました。`;
+const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
 const overViewCreditJP = `制作：髙田ふみ
 ディレクション：安次富 隆、山中俊治`;
-const overViewCaptionEN = `Chinrest and shoulder rest are typically used to relieve pain while playing the violin. They are also required to transfer player's feelings to the instrument properly while playing. However, when we play it for a long amount of time, they fail to relieve the stress enough, causing bruises around our neck. In this project, we tried to design comfortable chin & shoulder rest by carving and bending a single-piece wood, according to 3D-calibrated individual user's body geometry. By doing so, we achieved beautiful single-pieced form, while having comfortable, elastic property.`;
 const overViewCreditEN = `Designer: Fumi Takata
 Director: Takashi Ashitomi, Shunji Yamanaka`;
 

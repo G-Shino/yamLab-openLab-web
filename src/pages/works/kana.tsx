@@ -7,7 +7,7 @@ import WorkCaption from "../../components/WorkCaption";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
-import HandWritingImage from "../../images/works/Uena/handwriting.png";
+import HandWritingImage from "../../images/works/Kana/kana_munya-handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
