@@ -55,7 +55,6 @@ const Mainpage: React.FC = () => {
             <FontAwesomeIcon icon={["fab", "line"]} size="5x" />
           </LineShareButton>
         </StyledSNSButton>
-        <StyledSNSMessage>この展示会をシェアする</StyledSNSMessage>
         <Credits />
       </MainDiv>
     </>
@@ -84,11 +83,5 @@ const StyledSNSButton = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
-`;
-
-const StyledSNSMessage = styled.p`
-  width: 100%;
-  text-align: center;
   margin-bottom: 48px;
 `;

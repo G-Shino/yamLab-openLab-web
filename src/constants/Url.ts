@@ -1,2 +1,1 @@
-export const WebURL =
-  "https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh";
+export const WebURL = "https://yam-lab-open-lab.now.sh";

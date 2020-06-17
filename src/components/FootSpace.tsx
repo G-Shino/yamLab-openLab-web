@@ -51,7 +51,6 @@ const FootSpace: React.FC<Props> = ({ src, author, link }) => {
             <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} size="4x" />
           </LineShareButton>
         </StyledSNSButton>
-        <StyledSNSMessage>この作品をシェアする</StyledSNSMessage>
         <CarouselDiv>
           <FooterCarousel exclude={author} />
         </CarouselDiv>
@@ -98,16 +97,9 @@ const StyledSNSButton = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 48px;
 `;
 
 const IconCss = css`
   color: white;
-`;
-
-const StyledSNSMessage = styled.p`
-  width: 100%;
-  text-align: center;
-  color: ${Color.CAPTION_FONT_COLOR};
-  margin-bottom: 48px;
 `;
