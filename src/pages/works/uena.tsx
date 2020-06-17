@@ -18,6 +18,7 @@ import {
 const {
   src,
   author,
+  link,
   titleJP,
   titleEN,
   prevLink,
@@ -51,7 +52,7 @@ const Uena: React.FC = () => {
         description={overViewCaptionJP}
         keyword=""
         image={src}
-        page={`/works/${author}`}
+        page={link}
       />
       <WrapperDiv>
         <MainDiv>
@@ -114,6 +115,7 @@ const Uena: React.FC = () => {
           prevImg={prevImg}
           prevLink={prevLink}
           author={author}
+          link={link}
           nextLink={nextLink}
           nextImg={nextImg}
         />

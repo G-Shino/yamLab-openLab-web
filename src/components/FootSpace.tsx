@@ -19,11 +19,12 @@ interface Props {
   prevLink?: string;
   prevImg?: string;
   author: string;
+  link: string;
   nextLink?: string;
   nextImg?: string;
 }
 
-const FootSpace: React.FC<Props> = ({ src, author }) => {
+const FootSpace: React.FC<Props> = ({ src, author, link }) => {
   return (
     <Footer>
       <FootContentWrapperDiv>
@@ -31,7 +32,7 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
         <StyledSNSButton className="twitter-embed">
           <TwitterShareButton
             hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
-            url={`${WebURL}/works/${author}`}
+            url={WebURL + link}
           >
             <FontAwesomeIcon
               css={IconCss}
@@ -39,17 +40,14 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
               size="4x"
             />
           </TwitterShareButton>
-          <FacebookShareButton
-            url={`${WebURL}/works/${author}`}
-            hashtag="#DiaLog"
-          >
+          <FacebookShareButton url={WebURL + link} hashtag="#DiaLog">
             <FontAwesomeIcon
               css={IconCss}
               icon={["fab", "facebook"]}
               size="4x"
             />
           </FacebookShareButton>
-          <LineShareButton url={`${WebURL}/works/${author}`}>
+          <LineShareButton url={WebURL + link}>
             <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} size="4x" />
           </LineShareButton>
         </StyledSNSButton>
