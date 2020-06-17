@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { WebURL } from "../constants/Url";
 
 interface Props {
   title: string;
@@ -7,7 +8,7 @@ interface Props {
   description: string;
   keyword: string;
   image: string;
-  url: string;
+  page: string;
 }
 
 const OGPHead = ({
@@ -16,29 +17,17 @@ const OGPHead = ({
   description,
   keyword,
   image,
-  url,
+  page,
 }: Props): JSX.Element => {
   return (
     <Head>
       <meta name="keywords" content={keyword} />
-      <meta
-        property="og:url"
-        content={
-          "https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh" +
-          url
-        }
-      />
+      <meta property="og:url" content={WebURL + page} />
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={"山中研究室OpenLab:" + title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content="山中研究室OpenLab" />
-      <meta
-        property="og:image"
-        content={
-          "https://yam-lab-open-lab-web-git-feature-add-twitter.g-shino.now.sh" +
-          image
-        }
-      />
+      <meta property="og:image" content={WebURL + image} />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );

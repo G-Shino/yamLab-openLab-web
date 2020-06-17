@@ -47,11 +47,11 @@ const Uena: React.FC = () => {
     <>
       <OGPHead
         title={titleJP}
-        type="website"
+        type="article"
         description={overViewCaptionJP}
         keyword=""
         image={src}
-        url={`/works/${author}`}
+        page={`/works/${author}`}
       />
       <WrapperDiv>
         <MainDiv>

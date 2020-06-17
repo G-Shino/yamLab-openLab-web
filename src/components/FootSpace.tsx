@@ -3,6 +3,7 @@ import css from "@emotion/css";
 import styled from "@emotion/styled";
 import FooterCarousel from "./FooterCarousel";
 import { Color } from "../constants/Color";
+import { WebURL } from "../constants/Url";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -27,10 +28,10 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
     <Footer>
       <FootContentWrapperDiv>
         <HandwritingImg src={src} />
-        <StyledTwitterButton className="twitter-embed">
+        <StyledSNSButton className="twitter-embed">
           <TwitterShareButton
-            url="https://yam-lab-open-lab-web-sable.now.sh/"
-            hashtags={["DiaLog"]}
+            hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
+            url={`${WebURL}/works/${author}`}
           >
             <FontAwesomeIcon
               css={IconCss}
@@ -39,7 +40,7 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
             />
           </TwitterShareButton>
           <FacebookShareButton
-            url="https://yam-lab-open-lab-web-sable.now.sh/"
+            url={`${WebURL}/works/${author}`}
             hashtag="#DiaLog"
           >
             <FontAwesomeIcon
@@ -48,10 +49,11 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
               size="4x"
             />
           </FacebookShareButton>
-          <LineShareButton url="https://yam-lab-open-lab-web-sable.now.sh/">
+          <LineShareButton url={`${WebURL}/works/${author}`}>
             <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} size="4x" />
           </LineShareButton>
-        </StyledTwitterButton>
+        </StyledSNSButton>
+        <StyledSNSMessage>この作品をシェアする</StyledSNSMessage>
         <CarouselDiv>
           <FooterCarousel exclude={author} />
         </CarouselDiv>
@@ -61,10 +63,6 @@ const FootSpace: React.FC<Props> = ({ src, author }) => {
 };
 
 export default FootSpace;
-
-const IconCss = css`
-  color: white;
-`;
 
 const Footer = styled.footer`
   width: 100%;
@@ -96,11 +94,22 @@ const CarouselDiv = styled.div`
   align-items: center;
 `;
 
-const StyledTwitterButton = styled.div`
+const StyledSNSButton = styled.div`
   width: 80%;
   max-width: 296px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
+`;
+
+const IconCss = css`
+  color: white;
+`;
+
+const StyledSNSMessage = styled.p`
+  width: 100%;
+  text-align: center;
+  color: ${Color.CAPTION_FONT_COLOR};
   margin-bottom: 48px;
 `;
