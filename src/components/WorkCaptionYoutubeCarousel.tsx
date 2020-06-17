@@ -119,6 +119,7 @@ const StyledImgDiv = styled.div`
   left: 0;
   display: flex;
   align-items: center;
+  overflow: hidden;
 `;
 
 const StyledIframe = styled.iframe`
