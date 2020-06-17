@@ -25,8 +25,8 @@ const {
   nextLink,
   nextImg,
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Takuro");
-const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
-const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
+const overViewCaptionJP = `『Rami』は3Dプリンティングならではの立体構造となめらかな曲面を持つ、陸上競技用下腿義足です。機能的で美しいスポーツ用義足を、多くの人に届けるシステムを作るために研究開発しています。最初のマイルストーンとして、パラ短距離・走り幅跳び選手である高桑早生さんのための義足『Rami』を開発。そしてプロジェクトの次の段階としてユーザー数の増加と競技種目の拡大を目指し、走り高跳び選手のための義足『Rami S』を開発しました。`;
+const overViewCaptionEN = `"Rami" is a 3D printed below-knee prosthesis designed for track-and-field, which has 3D-print exclusive, smooth and curvaceous geometry. Our goal in this project is to design a system to deliver beautiful and properly engineered sport-purposed prosthesis to more people in need. As a first milestone, we designed a prosthesis for Saki Takakuwa: former Japanese national player for Rio and London Paralympics. And by using design scheme achieved by it, we were able to develop a prosthesis "Rami S" for high jump. It is one small leap for the mass-customization of beautiful prosthesis.`;
 
 const workCaptionTitle1JP = `従来の陸上競技用義足`;
 const workCaptionTitle1EN = `Conventional socket for track-and-field`;

@@ -24,8 +24,8 @@ const {
   nextLink,
   nextImg,
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Fu-min");
-const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
-const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
+const overViewCaptionJP = `ヴァイオリンを弾くときには一般的に顎当てと肩当てが使われますが、長時間演奏していると首元にあざができ、痛みを生じることがあります。また顎当て・肩当ては、身体と楽器が唯一つながる部分であり、身体から出る曲への想いを楽器に十分に伝えることが求められます。この作品では、演奏時の痛みを減らすとともに心地よく演奏できることを目指しました。演奏者の身体を3Dスキャンし身体にフィットした形状を作成、そして曲げ木の弾性を利用することで顎・肩当ての美しい一体構造を実現しました。`;
+const overViewCaptionEN = `Chinrest and shoulder rest are typically used to relieve pain while playing the violin. They are also required to transfer player's feelings to the instrument properly while playing. However, when we play it for a long amount of time, they fail to relieve the stress enough, causing bruises around our neck. In this project, we tried to design comfortable chin & shoulder rest by carving and bending a single-piece wood, according to 3D-calibrated individual user's body geometry. By doing so, we achieved beautiful single-pieced form, while having comfortable, elastic property.`;
 
 const workCaptionTitle1JP = `従来の顎当てと肩当て`;
 const workCaptionTitle1EN = `Traditional chinrest and shoulder rest`;
