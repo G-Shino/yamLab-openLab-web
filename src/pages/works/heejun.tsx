@@ -5,8 +5,9 @@ import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
 import WorkCaption3d from "../../components/WorkCaption3d";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 import Caption1Image from "../../images/works/Uena/caption1.png";
-import Caption2Image from "../../images/works/Uena/caption2.png";
+//import Caption2Image from "../../images/works/Uena/caption2.png";
 //import Caption3Image from "../../images/works/Uena/caption3.png";
 import ChairScene from "../../components/heejunscene";
 import HandWritingImage from "../../images/works/Uena/handwriting.png";
@@ -67,8 +68,8 @@ const Uena: React.FC = () => {
           />
         </WorkCaptionDiv>
         <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption2Image}
+          <WorkCaptionYoutube
+            captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
             captionTitleJP={workCaptionTitle1JP}
             captionTitleEN={workCaptionTitle1EN}
             captionMessageJP={workCaptionMessage1JP}
