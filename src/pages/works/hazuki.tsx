@@ -5,14 +5,23 @@ import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/caption1.png";
-import Caption2Image from "../../images/works/Uena/caption2.png";
-import Caption3Image from "../../images/works/Uena/caption3.png";
+import hazuki_1_1 from "../../images/works/Hazuki/hazuki_1-1.png";
+import hazuki_1_2 from "../../images/works/Hazuki/hazuki_1-2.png";
+import hazuki_2 from "../../images/works/Hazuki/hazuki_2.png";
+import hazuki_3_1 from "../../images/works/Hazuki/hazuki_3-1.png";
+import hazuki_3_2 from "../../images/works/Hazuki/hazuki_3-2.png";
+import hazuki_5 from "../../images/works/Hazuki/hazuki_5.png";
+import hazuki_6 from "../../images/works/Hazuki/hazuki_6.png";
+import hazuki_7 from "../../images/works/Hazuki/hazuki_7.png";
+import hazuki_8 from "../../images/works/Hazuki/hazuki_8.png";
+import hazuki_9 from "../../images/works/Hazuki/hazuki_9.png";
 import HandWritingImage from "../../images/works/Hazuki/hazuki-handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 
 const {
   src,
@@ -126,8 +135,8 @@ const Uena: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[hazuki_1_1, hazuki_1_2]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -136,7 +145,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption3Image}
+              captionImage={hazuki_2}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -144,8 +153,8 @@ const Uena: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[hazuki_3_1, hazuki_3_2]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -153,8 +162,8 @@ const Uena: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/YLnCXKA4O_c"}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -163,7 +172,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={hazuki_5}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -172,7 +181,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={hazuki_6}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
@@ -181,7 +190,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={hazuki_7}
               captionTitleJP={workCaptionTitle7JP}
               captionTitleEN={workCaptionTitle7EN}
               captionMessageJP={workCaptionMessage7JP}
@@ -190,7 +199,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={hazuki_8}
               captionTitleJP={workCaptionTitle8JP}
               captionTitleEN={workCaptionTitle8EN}
               captionMessageJP={workCaptionMessage8JP}
@@ -199,7 +208,7 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={hazuki_9}
               captionTitleJP={workCaptionTitle9JP}
               captionTitleEN={workCaptionTitle9EN}
               captionMessageJP={workCaptionMessage9JP}
