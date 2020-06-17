@@ -35,7 +35,7 @@ const WorkCaptionYoutubeCarousel: React.FC<Props> = ({
           <div key={index}>
             <StyledContents>
               <StyledImgDiv>
-                <StyledIframe src={captionImage} />
+                <StyledIframe src={captionImage} allow={"fullscreen"} />
               </StyledImgDiv>
             </StyledContents>
           </div>
