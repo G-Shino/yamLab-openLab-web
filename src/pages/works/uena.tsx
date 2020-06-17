@@ -84,15 +84,6 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaption
               captionImage={Caption3Image}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
