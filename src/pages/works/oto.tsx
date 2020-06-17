@@ -32,9 +32,10 @@ const overViewCreditJP = `制作：川又 音
 ディレクション：山中俊治
 制作協力：上岡直樹、長谷川彰宏、秋元海人、柳沢竜三`;
 const overViewCreditEN = `Designer: Oto Kawamata
+Director: Shunji Yamanaka
 Assistant: Naoki Ueoka, Akihiro Hasegawa, 
 Kaito Akimoto, Ryuzo Yanagisawa
-Director: Shunji Yamanaka`;
+`;
 
 const workCaptionTitle1JP = `『道具の暇』のストーリー`;
 const workCaptionTitle1EN = `Story`;

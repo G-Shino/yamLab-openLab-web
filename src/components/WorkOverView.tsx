@@ -28,7 +28,7 @@ const WorkOverView: React.FC<Props> = ({
         <AreaOverViewCaptionDiv>
           <OverViewCaptionDiv>
             <OverViewTitleJP>{titleJP}</OverViewTitleJP>
-            <OverViewTitleEN>- {titleEN} -</OverViewTitleEN>
+            <OverViewTitleEN> {titleEN} </OverViewTitleEN>
             <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
             <OverViewCreditJP>{creditJP}</OverViewCreditJP>
             <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>

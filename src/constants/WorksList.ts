@@ -77,7 +77,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
     src: Oga,
     author: "Oga",
     titleJP: "Scalable hand",
-    titleEN: "Scalable hand",
+    titleEN: "",
     link: "/works/oga",
   },
   {
@@ -112,7 +112,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
   {
     src: Fumin,
     author: "Fumin",
-    titleJP: "ヴァイオリイン用顎・肩当て",
+    titleJP: "ヴァイオリン用顎・肩当て",
     titleEN: "Chin & Shoulder Rest",
     link: "/works/fumin",
   },
@@ -120,7 +120,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
     src: Takuro,
     author: "Takuro",
     titleJP: "Rami S",
-    titleEN: "Rami S",
+    titleEN: "",
     link: "/works/takuro",
   },
   {
