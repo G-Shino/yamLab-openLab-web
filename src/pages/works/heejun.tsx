@@ -69,55 +69,45 @@ const Uena: React.FC = () => {
           <ChapterTitle>
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
-          <WorkOverView
-            titleJP={titleJP}
-            titleEN={titleEN}
-            captionJP={overViewCaptionJP}
-            captionEN={overViewCaptionEN}
-            imgSrc={src}
-          />
-        </WorkOverViewDiv>
-        <ChapterTitle>
-          <BorderSpan>Process</BorderSpan>
-        </ChapterTitle>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle1JP}
-            captionTitleEN={workCaptionTitle1EN}
-            captionMessageJP={workCaptionMessage1JP}
-            captionMessageEN={workCaptionMessage1EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaptionYoutube
-            captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
-            captionTitleJP={workCaptionTitle1JP}
-            captionTitleEN={workCaptionTitle1EN}
-            captionMessageJP={workCaptionMessage1JP}
-            captionMessageEN={workCaptionMessage1EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption3d
-            Caption3dImage={<ChairScene />}
-            captionTitleJP={workCaptionTitle2JP}
-            captionTitleEN={workCaptionTitle2EN}
-            captionMessageJP={workCaptionMessage2JP}
-            captionMessageEN={workCaptionMessage2EN}
-          />
-        </WorkCaptionDiv>
-      </MainDiv>
-      <FootSpace
-        src={HandWritingImage}
-        prevImg={prevImg}
-        prevLink={prevLink}
-        author={author}
-        nextLink={nextLink}
-        nextImg={nextImg}
-      />
-    </WrapperDiv>
-  </>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle1JP}
+              captionTitleEN={workCaptionTitle1EN}
+              captionMessageJP={workCaptionMessage1JP}
+              captionMessageEN={workCaptionMessage1EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
+              captionTitleJP={workCaptionTitle1JP}
+              captionTitleEN={workCaptionTitle1EN}
+              captionMessageJP={workCaptionMessage1JP}
+              captionMessageEN={workCaptionMessage1EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption3d
+              Caption3dImage={<ChairScene />}
+              captionTitleJP={workCaptionTitle2JP}
+              captionTitleEN={workCaptionTitle2EN}
+              captionMessageJP={workCaptionMessage2JP}
+              captionMessageEN={workCaptionMessage2EN}
+            />
+          </WorkCaptionDiv>
+        </MainDiv>
+        <FootSpace
+          src={HandWritingImage}
+          prevImg={prevImg}
+          prevLink={prevLink}
+          author={author}
+          link={link}
+          nextLink={nextLink}
+          nextImg={nextImg}
+        />
+      </WrapperDiv>
+    </>
   );
 };
 
