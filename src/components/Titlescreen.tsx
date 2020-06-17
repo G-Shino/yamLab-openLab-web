@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "@emotion/styled";
 import Lottie from "react-lottie";
-import animationData from "../images/online_motion_logo_2.json";
+import animationData from "../images/online_motion_logo_subtitle.json";
 //const Logo = require("../images/200614logo.gif");
 const logoOptions = {
   loop: false,
