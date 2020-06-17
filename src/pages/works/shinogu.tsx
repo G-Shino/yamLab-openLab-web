@@ -27,6 +27,12 @@ const {
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Shinogu");
 const overViewCaptionJP = `水の動きに見入ってしまった経験はありますか？雄大にしぶきを上げ流れ落ちる滝も、繊細に静かに滴り落ちる水滴も、思わず鑑賞し続けたくなる魅力があります。そしてこの魅力は、水の持つ「不定形さ」によってもたらされるのではないかと考えました。この作品では、小さな塊となった色水が、ひとつひとつ、流路に沿って滑らかに進みます。それは規則的でありながらどこか不安定さを感じさせる、不思議に満ちた動きです。しなやかな水が生み出す優美さを是非ご覧ください。`;
 const overViewCaptionEN = `There is some indescribable aesthetic inflow of water, ranging from breathtaking, giant waterfall to a single, tiny waterdrop. We thought what makes it such beautiful is the amorphous nature of liquid water. In this prototype, a tiny droplet of colored water travels through the channel smoothly, and calmly. It is well-regulated motion yet looks unstable in some respects. Please enjoy the elegance created by the sophisticated flow of the water.`;
+const overViewCreditJP = `制作：山本 凌
+ディレクション：山中俊治
+協力：木下晴之、三澤 徹`;
+const overViewCreditEN = `Designer: Shinogu Yamamoto
+Director: Shunji Yamanaka
+Collaborator: Haruyuki Kinoshita, Toru Misawa`;
 
 const workCaptionTitle1JP = `初めに`;
 const workCaptionTitle1EN = `Introduction`;
@@ -87,6 +93,8 @@ const Uena: React.FC = () => {
               titleEN={titleEN}
               captionJP={overViewCaptionJP}
               captionEN={overViewCaptionEN}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
               imgSrc={src}
             />
           </WorkOverViewDiv>

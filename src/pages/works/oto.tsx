@@ -28,6 +28,13 @@ const {
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Oto");
 const overViewCaptionJP = `人に使用されていない間には何も機能を果たしていない人工物が多く存在します。そんな人工物に生物らしい動きを与えることで注意や愛着を増やすことを目標にした”道具の暇”プロジェクトの二作品です。`;
 const overViewCaptionEN = `There are many artifacts that perform no function while not being used by humans. These two prototypes are the "Tool's Leisure Time" project that aims to increase attention and attachment by giving such artifacts a bio-like movement.`;
+const overViewCreditJP = `制作：川又 音
+ディレクション：山中俊治
+制作協力：上岡直樹、長谷川彰宏、秋元海人、柳沢竜三`;
+const overViewCreditEN = `Designer: Oto Kawamata
+Assistant: Naoki Ueoka, Akihiro Hasegawa, 
+Kaito Akimoto, Ryuzo Yanagisawa
+Director: Shunji Yamanaka`;
 
 const workCaptionTitle1JP = `『道具の暇』のストーリー`;
 const workCaptionTitle1EN = `Story`;
@@ -66,6 +73,8 @@ const Uena: React.FC = () => {
               titleEN={titleEN}
               captionJP={overViewCaptionJP}
               captionEN={overViewCaptionEN}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
               imgSrc={src}
             />
           </WorkOverViewDiv>

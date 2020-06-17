@@ -27,6 +27,10 @@ const {
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Hazuki");
 const overViewCaptionJP = `無意識のバイアスに気づくことは、簡単ではありません。生まれ育った環境や文化を通して、積み重なる学習によって根付いたものです。性別へのバイアスによって様々な可能性が阻まれている現状に対し、Co-Speculative Desginと言う理論を取り入れ、固定概念を覆し、内省を促すワークショップを設計しました。ワークショップ内では、起こりうる未来を想定しながらペルソナを作る過程でバイアスが露呈される仕掛けを用意し、参加者同士が対話することでバイアスに対する新たな問題への気づきを促しました。`;
 const overViewCaptionEN = `It is quite difficult to realize our unconscious bias. It develops in our subconsciousness, while we live through our own culture and environment. We designed a workshop to discover and self-examine our inner gender bias, by introducing co-speculative design theory. In this workshop, we designed to expose an individual's bias while each participant build persona simulating close future of themselves. And by each participant's conversation, we were able to make them perceive some new problems about bias.`;
+const overViewCreditJP = `制作：三好葉月
+ディレクション：山中俊治`;
+const overViewCreditEN = `Designer: Hazuki Miyoshi
+Director: Shunji Yamanaka`;
 
 const workCaptionTitle1JP = `着地動作に着目`;
 const workCaptionTitle1EN = `Landing process`;
@@ -61,6 +65,8 @@ const Uena: React.FC = () => {
               captionJP={overViewCaptionJP}
               captionEN={overViewCaptionEN}
               imgSrc={src}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
             />
           </WorkOverViewDiv>
           <ChapterTitle>

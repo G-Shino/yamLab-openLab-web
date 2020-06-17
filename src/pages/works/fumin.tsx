@@ -25,7 +25,11 @@ const {
   nextImg,
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Fu-min");
 const overViewCaptionJP = `ヴァイオリンを弾くときには一般的に顎当てと肩当てが使われますが、長時間演奏していると首元にあざができ、痛みを生じることがあります。また顎当て・肩当ては、身体と楽器が唯一つながる部分であり、身体から出る曲への想いを楽器に十分に伝えることが求められます。この作品では、演奏時の痛みを減らすとともに心地よく演奏できることを目指しました。演奏者の身体を3Dスキャンし身体にフィットした形状を作成、そして曲げ木の弾性を利用することで顎・肩当ての美しい一体構造を実現しました。`;
+const overViewCreditJP = `制作：髙田ふみ
+ディレクション：安次富 隆、山中俊治`;
 const overViewCaptionEN = `Chinrest and shoulder rest are typically used to relieve pain while playing the violin. They are also required to transfer player's feelings to the instrument properly while playing. However, when we play it for a long amount of time, they fail to relieve the stress enough, causing bruises around our neck. In this project, we tried to design comfortable chin & shoulder rest by carving and bending a single-piece wood, according to 3D-calibrated individual user's body geometry. By doing so, we achieved beautiful single-pieced form, while having comfortable, elastic property.`;
+const overViewCreditEN = `Designer: Fumi Takata
+Director: Takashi Ashitomi, Shunji Yamanaka`;
 
 const workCaptionTitle1JP = `従来の顎当てと肩当て`;
 const workCaptionTitle1EN = `Traditional chinrest and shoulder rest`;
@@ -70,6 +74,8 @@ const Fumin: React.FC = () => {
             titleEN={titleEN}
             captionJP={overViewCaptionJP}
             captionEN={overViewCaptionEN}
+            creditJP={overViewCreditJP}
+            creditEN={overViewCreditEN}
             imgSrc={src}
           />
         </WorkOverViewDiv>
