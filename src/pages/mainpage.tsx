@@ -7,23 +7,60 @@ import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
 import Credits from "../components/credits";
+import OGPHead from "../components/OGPHead";
+import LogoWhite from "../images/LogoWhite.png";
+import { WebURL } from "../constants/Url";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LineShareButton,
+} from "react-share";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+library.add(fab);
 
 const Mainpage: React.FC = () => {
   return (
-    <MainDiv>
-      <ExplanationDiv>
-        <TitleScreen />
-        <Introduction />
-        <WhatIsWebDialog />
-        <PreviousDialog />
-      </ExplanationDiv>
-      <WorksDiv>
-        <Works />
-      </WorksDiv>
-      <Credits />
-    </MainDiv>
+    <>
+      <OGPHead
+        title="山中研究室OpenLab -Top Page-"
+        type="website"
+        description="OpenLabに合わせて作成したwebページです"
+        keyword=""
+        image={LogoWhite}
+        page=""
+      />
+      <MainDiv>
+        <ExplanationDiv>
+          <TitleScreen />
+          <Introduction />
+          <WhatIsWebDialog />
+          <PreviousDialog />
+        </ExplanationDiv>
+        <WorksDiv>
+          <Works />
+        </WorksDiv>
+        <StyledSNSButton className="twitter-embed">
+          <TwitterShareButton
+            hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
+            url={WebURL}
+          >
+            <FontAwesomeIcon icon={["fab", "twitter"]} size="5x" />
+          </TwitterShareButton>
+          <FacebookShareButton url={WebURL} hashtag="#DiaLog">
+            <FontAwesomeIcon icon={["fab", "facebook"]} size="5x" />
+          </FacebookShareButton>
+          <LineShareButton url={WebURL}>
+            <FontAwesomeIcon icon={["fab", "line"]} size="5x" />
+          </LineShareButton>
+        </StyledSNSButton>
+        <Credits />
+      </MainDiv>
+    </>
   );
 };
+export default Mainpage;
 
 //Styles--------------------------------------------------------------------------
 const MainDiv = styled.div`
@@ -40,4 +77,11 @@ const WorksDiv = styled.div`
   justify-content: center;
 `;
 
-export default Mainpage;
+const StyledSNSButton = styled.div`
+  width: 80%;
+  max-width: 342px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+`;
