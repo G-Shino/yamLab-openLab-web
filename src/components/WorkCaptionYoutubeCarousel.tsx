@@ -119,12 +119,10 @@ const StyledImgDiv = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  overflow: hidden;
 `;
 
 const StyledIframe = styled.iframe`
   width: 100%;
   height: 100%;
-  object-fit: cover;
   z-index: 100;
 `;
