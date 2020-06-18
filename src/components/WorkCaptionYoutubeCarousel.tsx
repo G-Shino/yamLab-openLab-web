@@ -27,6 +27,15 @@ const WorkCaptionYoutubeCarousel: React.FC<Props> = ({
     swipeToSlide: true,
     initialSlide: 0,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          fade: false,
+          arrows: false,
+        },
+      },
+    ],
   };
   return (
     <CaptionWrapperDiv>
@@ -119,12 +128,12 @@ const StyledImgDiv = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  /* -webkit-overflow-scrolling: touch; */
 `;
 
 const StyledIframe = styled.iframe`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* pointer-events: none; */
   z-index: 100;
 `;

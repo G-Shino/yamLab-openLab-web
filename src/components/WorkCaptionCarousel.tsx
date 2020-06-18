@@ -27,6 +27,15 @@ const WorkCaptionCarousel: React.FC<Props> = ({
     swipeToSlide: true,
     initialSlide: 0,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          fade: false,
+          arrows: false,
+        },
+      },
+    ],
   };
   return (
     <CaptionWrapperDiv>
