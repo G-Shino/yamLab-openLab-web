@@ -5,10 +5,10 @@ import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/caption1.png";
-import Caption2Image from "../../images/works/Uena/caption2.png";
-import Caption3Image from "../../images/works/Uena/caption3.png";
-import HandWritingImage from "../../images/works/Shinogu/shinogood-handwriting.png";
+import Caption1Image from "../../images/works/Uena/uena_1.png";
+import Caption2Image from "../../images/works/Uena/uena_2.png";
+import Caption3Image from "../../images/works/Uena/uena_3.png";
+import HandWritingImage from "../../images/works/Shinogu/shinogood_handwriting.png";
 import OGPImage from "../../images/works/Shinogu/shinogu_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
