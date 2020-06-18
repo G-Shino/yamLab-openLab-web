@@ -128,7 +128,7 @@ const StyledImgDiv = styled.div`
   left: 0;
   display: flex;
   align-items: center;
-  -webkit-overflow-scrolling: touch;
+  /* -webkit-overflow-scrolling: touch; */
 `;
 
 const StyledIframe = styled.iframe`
