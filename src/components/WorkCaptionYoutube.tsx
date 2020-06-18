@@ -20,7 +20,7 @@ const WorkCaptionYoutube: React.FC<Props> = ({
   return (
     <CaptionWrapperDiv>
       <CaptionImgWrapper>
-        <CaptionImg src={captionImage} />
+        <CaptionImg src={captionImage} allow={"fullscreen"} />
       </CaptionImgWrapper>
       <CaptionMessageDiv>
         <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
@@ -50,7 +50,7 @@ const CaptionWrapperDiv = styled.div`
 const CaptionImgWrapper = styled.div`
   position: relative;
   width: 100%;
-  padding: calc(315 / 560 * 100%) 0 0;
+  padding: calc(2 / 3 * 100%) 0 0;
 `;
 const CaptionImg = styled.iframe`
   position: absolute;

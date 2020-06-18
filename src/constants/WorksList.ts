@@ -1,3 +1,4 @@
+/*
 import Uena from "../images/works/Uena/main.jpg";
 import Takuro from "../images/works/Takuro/main.jpg";
 import Shinogu from "../images/works/Shinogu/main.jpg";
@@ -7,6 +8,16 @@ import Kana from "../images/works/Kana/main.jpg";
 import Heejun from "../images/works/Heejun/main.jpg";
 import Hazuki from "../images/works/Hazuki/main.jpg";
 import Fumin from "../images/works/Fu-min/main.jpg";
+*/
+import Uena from "../images/works/Uena/Uena_small.png";
+import Takuro from "../images/works/Takuro/Takuro_small.png";
+import Shinogu from "../images/works/Shinogu/Shinogu_small.png";
+import Oto from "../images/works/Oto/Oto_small.png";
+import Oga from "../images/works/Oga/Oga_small.png";
+import Kana from "../images/works/Kana/Kana_small.png";
+import Heejun from "../images/works/Heejun/Heejun_small.png";
+import Hazuki from "../images/works/Hazuki/Hazuki_small.png";
+import Fumin from "../images/works/Fu-min/Fu-min_small.png";
 
 export interface WorksBaseInfo {
   src: string;
@@ -66,7 +77,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
     src: Oga,
     author: "Oga",
     titleJP: "Scalable hand",
-    titleEN: "Scalable hand",
+    titleEN: "",
     link: "/works/oga",
   },
   {
@@ -101,7 +112,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
   {
     src: Fumin,
     author: "Fumin",
-    titleJP: "ヴァイオリイン用顎・肩当て",
+    titleJP: "ヴァイオリン用顎・肩当て",
     titleEN: "Chin & Shoulder Rest",
     link: "/works/fumin",
   },
@@ -109,7 +120,7 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
     src: Takuro,
     author: "Takuro",
     titleJP: "Rami S",
-    titleEN: "Rami S",
+    titleEN: "",
     link: "/works/takuro",
   },
   {

@@ -8,7 +8,7 @@ import WorkCaption from "../../components/WorkCaption";
 import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
-import HandWritingImage from "../../images/works/Uena/handwriting.png";
+import HandWritingImage from "../../images/works/Oga/oga-handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -25,18 +25,32 @@ const {
   nextLink,
   nextImg,
 }: WorksBaseInfoWithPrevAndNextLink = getWorksInfoByAuthor("Oga");
-const overViewCaptionJP = `柔らかい素材やダンパーを用いずに柔らかさを表現することを試みる中で、この作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。 硬いけど柔らかい、そんな不思議なふるまいをご体験ください。`;
-const overViewCaptionEN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`;
+const overViewCaptionJP = `人にはそれぞれ、少しずつ違う手の大きさがあります。しかし、従来の義手やロボットハンドは大きさが段階的で、必ずしもあなたの欲しい手の大きさではないかもしれません。そこで私は、細かなサイズ調整を簡単に行える『Scalable hand』を制作しました。本来は硬いナイロン樹脂から形状を工夫することで、シリコンのように柔らかい指先・バネのような反発性のある関節を再現。これらの部品を3Dプリンタを用いて一度に造形することで組み立てにネジを使う必要がなく、3Dモデルを拡大・縮小するだけでサイズ調整が可能となります。`;
+const overViewCaptionEN = `There are many sizes of hand depending on people. However, the size of current humanoid hands are still limited and may not be a perfect size for each individual.  This scalable hand is a non-assembled robot hand that is created using PBF (Powder Bed Fusion) a type of 3D-printer. The changes of the size can be made limitlessly.  Nylon, the material used here is normally stiff. But, by devising its geometric shape, it can be very soft and supple. `;
+const overViewCreditJP = `制作：小笠原佑樹
+ディレクション：山中俊治`;
+const overViewCreditEN = `Designer: Yuki Ogasawara
+Director: Shunji Yamanaka`;
 
-const workCaptionTitle1JP = `着地動作に着目`;
-const workCaptionTitle1EN = `Landing process`;
-const workCaptionMessage1JP = `受動的かつしなやかに力を受け流す着地は、生き物らしさがよく現れている挙動であると考えました。`;
-const workCaptionMessage1EN = `We thought that the landing process which distributes the shock smoothly and passively well represents the bio-likeness.`;
+const workCaptionTitle1JP = `一体成型関節の試作`;
+const workCaptionTitle1EN = `A prototype of unibody joint`;
+const workCaptionMessage1JP = `最初期に試作した回転一自由度の一体成型関節です。内部のゼンマイばねの厚みを少しずつ変えています。`;
+const workCaptionMessage1EN = `The first prototype, multiple unibody joints with a single degree of freedom. Each of them has a spiral spring with various thicknesses.`;
 
-const workCaptionTitle2JP = `着地する足の構造`;
-const workCaptionTitle2EN = `Leg structure`;
-const workCaptionMessage2JP = `着地時の屈伸運動のみで生き物らしさを表現するため、その他の部分では生き物らしさを除きました。最も安定する三本足かつ一ヶ所のダンパーのみで全体の屈伸を制御できる構造です。`;
-const workCaptionMessage2EN = `To express its bio-likeness with only its leg-bending motion during its landing process, we intended to make the other part of our prototype to be the opposite of it. As a result, we came up with this prototype, which has only three legs and a single damping component controlling the entire landing process.`;
+const workCaptionTitle2JP = ``;
+const workCaptionTitle2EN = `Scalable hand (Ver.1.0）`;
+const workCaptionMessage2JP = `二指ハンドの構造として一般的な四節リンク構造の内部にゼンマイばねを組み込みました。`;
+const workCaptionMessage2EN = `A model with the 4-link mechanism, typical for the 2-fingered manipulator, along with spiral spring for joint elasticity.`;
+
+const workCaptionTitle3JP = ``;
+const workCaptionTitle3EN = `Scalable hand (Ver.2.0）`;
+const workCaptionMessage3JP = `取手を引くだけで物体を包み込むように掴んでくれる構造を採用した初期モデルです。指の腹に弾性構造を付与することで、柔らかい指先を再現しました。このモデルでは、輪ゴムで指関節の復元力を与えています。`;
+const workCaptionMessage3EN = `The model with the mechanism, which can grab the object gently with a single pull of the lever. Fingertip with the soft surface has been achieved, by applying the compliant structure on it. In this model, rubber bands are used to function as the antagonist.`;
+
+const workCaptionTitle4JP = ``;
+const workCaptionTitle4EN = `Scalable hand (Ver.2.1）`;
+const workCaptionMessage4JP = `前モデルにてゴムで与えていた復元力をゼンマイばねで代替。取手部分にもコイルばねを追加することで指が常に開くようになり、能動義手など牽引方向にしか力をかけられないものにも応用可能になりました。`;
+const workCaptionMessage4EN = `The rubber band joint part is replaced by a spiral spring joint mechanism. For the benefit of spring added around the lever acting as an antagonist, it could be applied to active prosthesis hand, which only provides a tensile force for actuation.`;
 
 const Uena: React.FC = () => {
   return (
@@ -60,6 +74,8 @@ const Uena: React.FC = () => {
               titleEN={titleEN}
               captionJP={overViewCaptionJP}
               captionEN={overViewCaptionEN}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
               imgSrc={src}
             />
           </WorkOverViewDiv>
@@ -77,20 +93,29 @@ const Uena: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaption
               captionImage={Caption3Image}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
               captionMessageEN={workCaptionMessage2EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle4JP}
+              captionTitleEN={workCaptionTitle4EN}
+              captionMessageJP={workCaptionMessage4JP}
+              captionMessageEN={workCaptionMessage4EN}
             />
           </WorkCaptionDiv>
         </MainDiv>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import texture from "../../images/mdftexture.jpg";
+import texture from "../../images/mdftexture200608v2.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
@@ -76,15 +76,6 @@ const Uena: React.FC = () => {
           <WorkCaptionDiv>
             <WorkCaption
               captionImage={Caption1Image}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
