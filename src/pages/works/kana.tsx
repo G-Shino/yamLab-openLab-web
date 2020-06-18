@@ -4,16 +4,24 @@ import texture from "../../images/mdftexture200608v2.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/caption1.png";
-import Caption2Image from "../../images/works/Uena/caption2.png";
-import Caption3Image from "../../images/works/Uena/caption3.png";
+import kana0301 from "../../images/works/Kana/05-03-01.png";
+import kana0302 from "../../images/works/Kana/05-03-02.png";
+import kana0303 from "../../images/works/Kana/05-03-03.png";
+import kana0304 from "../../images/works/Kana/05-03-04.png";
+import kana0401 from "../../images/works/Kana/05-04-01.png";
+import kana0402 from "../../images/works/Kana/05-04-02.png";
+import kana0403 from "../../images/works/Kana/05-04-03.png";
+import kana0601 from "../../images/works/Kana/05-06-01.png";
+import kana0602 from "../../images/works/Kana/05-06-02.png";
+import kana0603 from "../../images/works/Kana/05-06-03.png";
 import HandWritingImage from "../../images/works/Kana/kana_munya-handwriting.png";
 import OGPImage from "../../images/works/Kana/kana_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 
 const {
   src,
@@ -95,8 +103,8 @@ const Kana: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/7WoG9bZwbu0"}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -104,8 +112,8 @@ const Kana: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/9u5XmdjM_XE"}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -113,8 +121,8 @@ const Kana: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[kana0301, kana0302, kana0303, kana0304]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -122,8 +130,8 @@ const Kana: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[kana0401, kana0402, kana0403]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -131,8 +139,8 @@ const Kana: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/XI--qCDvohc"}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -140,8 +148,8 @@ const Kana: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[kana0601, kana0602, kana0603]}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
