@@ -8,7 +8,7 @@ import WorkCaption from "../../components/WorkCaption";
 import WorkCaption3d from "../../components/WorkCaption3d";
 import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 import Caption1Image from "../../images/works/Uena/uena_1.png";
-import ChairScene from "../../components/heejunscene";
+import ChairScene from "../../components/Heejunscene";
 import HandWritingImage from "../../images/works/Heejun/heejun_handwriting.png";
 import OGPImage from "../../images/works/Heejun/heejun_ogp.png";
 import {

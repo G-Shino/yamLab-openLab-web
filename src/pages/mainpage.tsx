@@ -6,7 +6,7 @@ import texture from "../images/mdftexture.jpg";
 import WhatIsWebDialog from "../components/WhatIsWebDialog";
 import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
-import Credits from "../components/credits";
+import Credits from "../components/Credits";
 import OGPHead from "../components/OGPHead";
 import LogoOGP from "../images/logo_ogp.png";
 import { WebURL } from "../constants/Url";
