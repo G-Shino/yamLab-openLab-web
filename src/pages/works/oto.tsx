@@ -8,6 +8,7 @@ import WorkCaptionYoutubeCarousel from "../../components/WorkCaptionYoutubeCarou
 import Image1_1 from "../../images/works/Oto/08-01-01.png";
 import Image1_2 from "../../images/works/Oto/08-01-02.png";
 import HandWritingImage from "../../images/works/Oto/oto-handwriting.png";
+import OGPImage from "../../images/works/Oto/oto_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -52,7 +53,7 @@ const workCaptionTitle3EN = `Furious to be stacked`;
 const workCaptionMessage3JP = `本の「暇」である積ん読に抵抗して、上に本を置かれると自らが開くことで落としてしまいます。本が利便性や効率から解放されて、人や他の本との交流を始めた時にあなたは何を感じるでしょうか。`;
 const workCaptionMessage3EN = `The book resists "loading", which is the "leisure" of books, and when books are placed on it, it drops them by opening itself. What do you feel when a book is released from convenience or efficiency and begins to interact with people and other books?`;
 
-const Uena: React.FC = () => {
+const Oto: React.FC = () => {
   return (
     <>
       <OGPHead
@@ -60,7 +61,7 @@ const Uena: React.FC = () => {
         type="article"
         description={overViewCaptionJP}
         keyword=""
-        image={src}
+        image={OGPImage}
         page={link}
       />
       <WrapperDiv>
@@ -127,7 +128,7 @@ const Uena: React.FC = () => {
   );
 };
 
-export default Uena;
+export default Oto;
 
 const WrapperDiv = styled.div`
   width: 100%;

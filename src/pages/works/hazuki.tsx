@@ -104,7 +104,7 @@ const workCaptionTitle9EN = `conclusion`;
 const workCaptionMessage9JP = `無意識のバイアスに気づくことは困難なため、自分を見つめ直す機会を持つことが重要であると考えました。`;
 const workCaptionMessage9EN = `Since unconscious bias can be difficult to recognize, we thought it was important to have an opportunity to reflect on ourselves.`;
 
-const Uena: React.FC = () => {
+const Hazuki: React.FC = () => {
   return (
     <>
       <OGPHead
@@ -230,7 +230,7 @@ const Uena: React.FC = () => {
   );
 };
 
-export default Uena;
+export default Hazuki;
 
 const WrapperDiv = styled.div`
   width: 100%;

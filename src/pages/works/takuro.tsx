@@ -9,6 +9,7 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
 import HandWritingImage from "../../images/works/Takuro/takuro-handwriting.png";
+import OGPImage from "../../images/works/Takuro/takuro_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -58,7 +59,7 @@ const workCaptionTitle5EN = `Rami S`;
 const workCaptionMessage5JP = `走り高跳び用下腿義足 Rami S ver.1。現在、走行試験に移行し、選手に合わせた調整を行っています。`;
 const workCaptionMessage5EN = `Rami S, a below-knee prosthesis for the high jump. We are planning to design the next model, based on the opinions gathered from the athletes.`;
 
-const Uena: React.FC = () => {
+const Takuro: React.FC = () => {
   return (
     <>
       <OGPHead
@@ -66,7 +67,7 @@ const Uena: React.FC = () => {
         type="article"
         description={overViewCaptionJP}
         keyword=""
-        image={src}
+        image={OGPImage}
         page={link}
       />
       <WrapperDiv>
@@ -148,7 +149,7 @@ const Uena: React.FC = () => {
   );
 };
 
-export default Uena;
+export default Takuro;
 
 const WrapperDiv = styled.div`
   width: 100%;
