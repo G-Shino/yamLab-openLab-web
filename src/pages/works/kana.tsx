@@ -4,7 +4,6 @@ import texture from "../../images/mdftexture200608v2.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
 import kana0301 from "../../images/works/Kana/05-03-01.png";
 import kana0302 from "../../images/works/Kana/05-03-02.png";
 import kana0303 from "../../images/works/Kana/05-03-03.png";
