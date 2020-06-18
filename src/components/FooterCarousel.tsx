@@ -3,7 +3,7 @@ import css from "@emotion/css";
 import styled from "@emotion/styled";
 import Slider from "react-slick";
 import Router from "next/router";
-import LogoWhite from "../images/LogoWhite.png";
+import LogoWhite from "../images/logo_white.png";
 import { LIST_WORKS_BASE_INFO } from "../constants/WorksList";
 
 function NextArrow(props) {

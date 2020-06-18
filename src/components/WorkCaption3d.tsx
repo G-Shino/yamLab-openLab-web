@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Color } from "../constants/Color";
-import touchOK from "../images/20200616_touchOK.svg";
+import touchOK from "../images/touchOK.svg";
 
 interface Props {
   Caption3dImage?: React.ReactNode;
