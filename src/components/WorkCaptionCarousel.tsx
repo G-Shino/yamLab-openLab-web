@@ -12,6 +12,17 @@ interface Props {
   captionMessageEN: string;
 }
 
+const StyledDots = styled.ul`
+  background-color: black;
+  padding-top: 7px;
+`;
+
+const appendDots = (dots) => (
+  <div>
+    <StyledDots> {dots} </StyledDots>
+  </div>
+);
+
 const WorkCaptionCarousel: React.FC<Props> = ({
   captionImages,
   captionTitleJP,
@@ -19,6 +30,10 @@ const WorkCaptionCarousel: React.FC<Props> = ({
   captionMessageJP,
   captionMessageEN,
 }) => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const customPaging = (i) => (
+    <StyledPaging css={i === currentSlide ? CssPaging : null}>●</StyledPaging>
+  );
   const settings = {
     class: "center",
     slidesToShow: 1,
@@ -36,6 +51,11 @@ const WorkCaptionCarousel: React.FC<Props> = ({
         },
       },
     ],
+    beforeChange: (_, next) => {
+      setTimeout(() => setCurrentSlide(next), 30);
+    },
+    appendDots: appendDots,
+    customPaging: customPaging,
   };
   return (
     <CaptionWrapperDiv>
@@ -107,7 +127,6 @@ const CaptionMessageEN = styled.p`
 const CssSlider = css`
   width: 100%;
   height: auto;
-  margin-bottom: 32px;
 `;
 
 const StyledContents = styled.div`
@@ -134,4 +153,20 @@ const StyledImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+// slider dots関係
+const StyledPaging = styled.div`
+  width: 30px;
+  color: gray;
+  &:hover {
+    color: ${Color.CAPTION_FONT_COLOR};
+  }
+  &:focus {
+    color: ${Color.CAPTION_FONT_COLOR};
+  }
+`;
+
+const CssPaging = css`
+  color: white !important;
 `;
