@@ -80,7 +80,7 @@ const WorksDiv = styled.div`
 const StyledSNSButton = styled.div`
   width: 80%;
   max-width: 342px;
-  margin: 0 auto;
+  margin: 50px auto 50px auto;
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
