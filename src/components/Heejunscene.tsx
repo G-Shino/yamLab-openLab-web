@@ -2,11 +2,11 @@ import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber"; //threejsをReactで使うためのモジュール
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
-const Controls = dynamic(() => import("../components/orbit"), {
+const Controls = dynamic(() => import("./Orbit"), {
   ssr: false,
 });
 
-const LoadedObject = dynamic(() => import("../components/loadgltf"), {
+const LoadedObject = dynamic(() => import("./Loadgltf"), {
   ssr: false,
 });
 //threeのメインモジュール以外(OrbitControlsなど)を扱う場合は必ずdynamicを用いること

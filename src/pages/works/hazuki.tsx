@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import texture from "../../images/mdftexture200608v2.jpg";
+import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
@@ -15,7 +15,7 @@ import hazuki_6 from "../../images/works/Hazuki/hazuki_6.png";
 import hazuki_7 from "../../images/works/Hazuki/hazuki_7.png";
 import hazuki_8 from "../../images/works/Hazuki/hazuki_8.png";
 import hazuki_9 from "../../images/works/Hazuki/hazuki_9.png";
-import HandWritingImage from "../../images/works/Hazuki/hazuki-handwriting.png";
+import HandWritingImage from "../../images/works/Hazuki/hazuki_handwriting.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,

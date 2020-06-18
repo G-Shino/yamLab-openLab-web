@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "@emotion/styled";
-const Logo = require("../images/Logo.svg");
+const Logo = require("../images/logo.svg");
 
 const WhatIsWebDialog: React.FC = () => {
   return (

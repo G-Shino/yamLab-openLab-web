@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
-import TitleScreen from "../components/Titlescreen";
-import Introduction from "../components/Introduction";
-import texture from "../images/mdftexture200608v2.jpg";
-import WhatIsWebDialog from "../components/WhatIsWebDialog";
-import PreviousDialog from "../components/PreviousDialog";
-import Works from "../components/Works";
-import Credits from "../components/credits";
-import OGPHead from "../components/OGPHead";
+import TitleScreen from "./Titlescreen";
+import Introduction from "./Introduction";
+import texture from "../images/mdftexture.jpg";
+import WhatIsWebDialog from "./WhatIsWebDialog";
+import PreviousDialog from "./PreviousDialog";
+import Works from "./Works";
+import Credits from "./Credits";
+import OGPHead from "./OGPHead";
 import LogoOGP from "../images/logo_ogp.png";
 import { WebURL } from "../constants/Url";
 import {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import texture from "../../images/mdftexture200608v2.jpg";
+import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
@@ -14,8 +14,8 @@ import kana0403 from "../../images/works/Kana/05-04-03.png";
 import kana0601 from "../../images/works/Kana/05-06-01.png";
 import kana0602 from "../../images/works/Kana/05-06-02.png";
 import kana0603 from "../../images/works/Kana/05-06-03.png";
-import HandWritingImage from "../../images/works/Kana/kana_munya-handwriting.png";
-import OGPImage from "../../images/works/Kana/kana_ogp.png";
+import HandWritingImage from "../../images/works/Kana/kana-munya_handwriting.png";
+import OGPImage from "../../images/works/Kana/kana-munya_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
