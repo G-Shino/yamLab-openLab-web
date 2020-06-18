@@ -65,6 +65,7 @@ font-size:4rem;
   font-weight:normal;
   @media (max-width: 1200px){
     font-size:1.6rem;
+    font-weight:bold;
   }
   `;
 const TimeCSS = Styled.div`

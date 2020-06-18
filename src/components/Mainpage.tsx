@@ -46,13 +46,13 @@ const Mainpage: React.FC = () => {
             hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
             url={WebURL}
           >
-            <FontAwesomeIcon icon={["fab", "twitter"]} size="5x" />
+            <FontAwesomeIcon icon={["fab", "twitter"]} />
           </TwitterShareButton>
           <FacebookShareButton url={WebURL} hashtag="#DiaLog">
-            <FontAwesomeIcon icon={["fab", "facebook"]} size="5x" />
+            <FontAwesomeIcon icon={["fab", "facebook"]} />
           </FacebookShareButton>
           <LineShareButton url={WebURL}>
-            <FontAwesomeIcon icon={["fab", "line"]} size="5x" />
+            <FontAwesomeIcon icon={["fab", "line"]} />
           </LineShareButton>
         </StyledSNSButton>
         <Credits />
@@ -84,4 +84,8 @@ const StyledSNSButton = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
+  font-size: 6rem;
+  @media (max-width: 1200px) {
+    font-size: 3rem;
+  }
 `;

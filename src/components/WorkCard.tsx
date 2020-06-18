@@ -74,7 +74,7 @@ const CardDiv = styled.div`
 
 const ImageDiv = styled.div`
   width: 100%;
-  height: 320px;
+  height: 100%;
 `;
 
 const Image = styled.img`
