@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import texture from "../../images/mdftexture200608v2.jpg";
+import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
@@ -8,6 +9,7 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
 import HandWritingImage from "../../images/works/Kana/kana_munya-handwriting.png";
+import OGPImage from "../../images/works/Kana/kana_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -62,96 +64,106 @@ const workCaptionMessage6JP = `強化学習を行った結果を反映したプ�
 const workCaptionMessage6EN = `The latest prototype updated with the results of the reinforcement learning process. Please try poking its head and watching how it reacts.
 `;
 
-const Uena: React.FC = () => {
+const Kana: React.FC = () => {
   return (
-    <WrapperDiv>
-      <MainDiv>
-        <WorkOverViewDiv>
-          <ChapterTitle>
-            <BorderSpan>Overview</BorderSpan>
-          </ChapterTitle>
-          <WorkOverView
-            titleJP={titleJP}
-            titleEN={titleEN}
-            captionJP={overViewCaptionJP}
-            captionEN={overViewCaptionEN}
-            creditJP={overViewCreditJP}
-            creditEN={overViewCreditEN}
-            imgSrc={src}
-          />
-        </WorkOverViewDiv>
-        <ChapterTitle>
-          <BorderSpan>Process</BorderSpan>
-        </ChapterTitle>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle1JP}
-            captionTitleEN={workCaptionTitle1EN}
-            captionMessageJP={workCaptionMessage1JP}
-            captionMessageEN={workCaptionMessage1EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption3Image}
-            captionTitleJP={workCaptionTitle2JP}
-            captionTitleEN={workCaptionTitle2EN}
-            captionMessageJP={workCaptionMessage2JP}
-            captionMessageEN={workCaptionMessage2EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption2Image}
-            captionTitleJP={workCaptionTitle3JP}
-            captionTitleEN={workCaptionTitle3EN}
-            captionMessageJP={workCaptionMessage3JP}
-            captionMessageEN={workCaptionMessage3EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption2Image}
-            captionTitleJP={workCaptionTitle4JP}
-            captionTitleEN={workCaptionTitle4EN}
-            captionMessageJP={workCaptionMessage4JP}
-            captionMessageEN={workCaptionMessage4EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption2Image}
-            captionTitleJP={workCaptionTitle5JP}
-            captionTitleEN={workCaptionTitle5EN}
-            captionMessageJP={workCaptionMessage5JP}
-            captionMessageEN={workCaptionMessage5EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption2Image}
-            captionTitleJP={workCaptionTitle6JP}
-            captionTitleEN={workCaptionTitle6EN}
-            captionMessageJP={workCaptionMessage6JP}
-            captionMessageEN={workCaptionMessage6EN}
-          />
-        </WorkCaptionDiv>
-      </MainDiv>
-      <FootSpace
-        src={HandWritingImage}
-        prevImg={prevImg}
-        link={link}
-        prevLink={prevLink}
-        author={author}
-        nextLink={nextLink}
-        nextImg={nextImg}
+    <>
+      <OGPHead
+        title={titleJP}
+        type="article"
+        description={overViewCaptionJP}
+        keyword=""
+        image={OGPImage}
+        page={link}
       />
-    </WrapperDiv>
+      <WrapperDiv>
+        <MainDiv>
+          <WorkOverViewDiv>
+            <ChapterTitle>
+              <BorderSpan>Overview</BorderSpan>
+            </ChapterTitle>
+            <WorkOverView
+              titleJP={titleJP}
+              titleEN={titleEN}
+              captionJP={overViewCaptionJP}
+              captionEN={overViewCaptionEN}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
+              imgSrc={src}
+            />
+          </WorkOverViewDiv>
+          <ChapterTitle>
+            <BorderSpan>Process</BorderSpan>
+          </ChapterTitle>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle1JP}
+              captionTitleEN={workCaptionTitle1EN}
+              captionMessageJP={workCaptionMessage1JP}
+              captionMessageEN={workCaptionMessage1EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption3Image}
+              captionTitleJP={workCaptionTitle2JP}
+              captionTitleEN={workCaptionTitle2EN}
+              captionMessageJP={workCaptionMessage2JP}
+              captionMessageEN={workCaptionMessage2EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle4JP}
+              captionTitleEN={workCaptionTitle4EN}
+              captionMessageJP={workCaptionMessage4JP}
+              captionMessageEN={workCaptionMessage4EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle5JP}
+              captionTitleEN={workCaptionTitle5EN}
+              captionMessageJP={workCaptionMessage5JP}
+              captionMessageEN={workCaptionMessage5EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption2Image}
+              captionTitleJP={workCaptionTitle6JP}
+              captionTitleEN={workCaptionTitle6EN}
+              captionMessageJP={workCaptionMessage6JP}
+              captionMessageEN={workCaptionMessage6EN}
+            />
+          </WorkCaptionDiv>
+        </MainDiv>
+        <FootSpace
+          src={HandWritingImage}
+          prevImg={prevImg}
+          link={link}
+          prevLink={prevLink}
+          author={author}
+          nextLink={nextLink}
+          nextImg={nextImg}
+        />
+      </WrapperDiv>
+    </>
   );
 };
 
-export default Uena;
+export default Kana;
 
 const WrapperDiv = styled.div`
   width: 100%;

@@ -9,6 +9,7 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
 import HandWritingImage from "../../images/works/Shinogu/shinogood-handwriting.png";
+import OGPImage from "../../images/works/Shinogu/shinogu_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -71,7 +72,7 @@ const workCaptionTitle7EN = `2-phase fluid`;
 const workCaptionMessage7JP = `水相には水を、油相には流動パラフィンを用いています。着色には絵具やキャンドル用染料を使用しました。`;
 const workCaptionMessage7EN = `2-phase fluid for our work is composed of water and mineral oil. We have dyed each with watercolor and candle pigment.`;
 
-const Uena: React.FC = () => {
+const Shinogu: React.FC = () => {
   return (
     <>
       <OGPHead
@@ -79,7 +80,7 @@ const Uena: React.FC = () => {
         type="article"
         description={overViewCaptionJP}
         keyword=""
-        image={src}
+        image={OGPImage}
         page={link}
       />
       <WrapperDiv>
@@ -179,7 +180,7 @@ const Uena: React.FC = () => {
   );
 };
 
-export default Uena;
+export default Shinogu;
 
 const WrapperDiv = styled.div`
   width: 100%;

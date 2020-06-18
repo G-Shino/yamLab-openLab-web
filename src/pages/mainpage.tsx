@@ -8,7 +8,7 @@ import PreviousDialog from "../components/PreviousDialog";
 import Works from "../components/Works";
 import Credits from "../components/credits";
 import OGPHead from "../components/OGPHead";
-import LogoWhite from "../images/LogoWhite.png";
+import LogoOGP from "../images/logo_ogp.png";
 import { WebURL } from "../constants/Url";
 import {
   FacebookShareButton,
@@ -28,7 +28,7 @@ const Mainpage: React.FC = () => {
         type="website"
         description="OpenLabに合わせて作成したwebページです"
         keyword=""
-        image={LogoWhite}
+        image={LogoOGP}
         page=""
       />
       <MainDiv>

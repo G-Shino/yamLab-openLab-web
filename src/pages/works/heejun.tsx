@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import texture from "../../images/mdftexture200608v2.jpg";
+import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
@@ -11,6 +12,7 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 //import Caption3Image from "../../images/works/Uena/caption3.png";
 import ChairScene from "../../components/heejunscene";
 import HandWritingImage from "../../images/works/Heejun/heejun-handwriting.png";
+import OGPImage from "../../images/works/Heejun/heejun_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -72,105 +74,115 @@ const workCaptionTitle7EN = `Titanium table`;
 const workCaptionMessage7JP = `これらのアイデアを組み合わせて、テーブルを制作しました。不規則なパターンで構成されている天板と、浮遊するような張力構造のフォルムにご注目ください。`;
 const workCaptionMessage7EN = `By integrating these ideas, this table was built. Please enjoy the organic construction of the upper board and floating-like outfit of the tensegrity structure.`;
 
-const Uena: React.FC = () => {
+const Heejun: React.FC = () => {
   return (
-    <WrapperDiv>
-      <MainDiv>
-        <WorkOverViewDiv>
-          <ChapterTitle>
-            <BorderSpan>Overview</BorderSpan>
-          </ChapterTitle>
-          <WorkOverView
-            titleJP={titleJP}
-            titleEN={titleEN}
-            captionJP={overViewCaptionJP}
-            captionEN={overViewCaptionEN}
-            creditJP={overViewCreditJP}
-            creditEN={overViewCreditEN}
-            imgSrc={src}
-          />
-        </WorkOverViewDiv>
-        <ChapterTitle>
-          <BorderSpan>Process</BorderSpan>
-        </ChapterTitle>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle1JP}
-            captionTitleEN={workCaptionTitle1EN}
-            captionMessageJP={workCaptionMessage1JP}
-            captionMessageEN={workCaptionMessage1EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaptionYoutube
-            captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
-            captionTitleJP={workCaptionTitle2JP}
-            captionTitleEN={workCaptionTitle2EN}
-            captionMessageJP={workCaptionMessage2JP}
-            captionMessageEN={workCaptionMessage2EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption3d
-            Caption3dImage={<ChairScene />}
-            captionTitleJP={workCaptionTitle3JP}
-            captionTitleEN={workCaptionTitle3EN}
-            captionMessageJP={workCaptionMessage3JP}
-            captionMessageEN={workCaptionMessage3EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle4JP}
-            captionTitleEN={workCaptionTitle4EN}
-            captionMessageJP={workCaptionMessage4JP}
-            captionMessageEN={workCaptionMessage4EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle5JP}
-            captionTitleEN={workCaptionTitle5EN}
-            captionMessageJP={workCaptionMessage5JP}
-            captionMessageEN={workCaptionMessage5EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle6JP}
-            captionTitleEN={workCaptionTitle6EN}
-            captionMessageJP={workCaptionMessage6JP}
-            captionMessageEN={workCaptionMessage6EN}
-          />
-        </WorkCaptionDiv>
-        <WorkCaptionDiv>
-          <WorkCaption
-            captionImage={Caption1Image}
-            captionTitleJP={workCaptionTitle7JP}
-            captionTitleEN={workCaptionTitle7EN}
-            captionMessageJP={workCaptionMessage7JP}
-            captionMessageEN={workCaptionMessage7EN}
-          />
-        </WorkCaptionDiv>
-      </MainDiv>
-      <FootSpace
-        src={HandWritingImage}
-        prevImg={prevImg}
-        link={link}
-        prevLink={prevLink}
-        author={author}
-        nextLink={nextLink}
-        nextImg={nextImg}
+    <>
+      <OGPHead
+        title={titleJP}
+        type="article"
+        description={overViewCaptionJP}
+        keyword=""
+        image={OGPImage}
+        page={link}
       />
-    </WrapperDiv>
+      <WrapperDiv>
+        <MainDiv>
+          <WorkOverViewDiv>
+            <ChapterTitle>
+              <BorderSpan>Overview</BorderSpan>
+            </ChapterTitle>
+            <WorkOverView
+              titleJP={titleJP}
+              titleEN={titleEN}
+              captionJP={overViewCaptionJP}
+              captionEN={overViewCaptionEN}
+              creditJP={overViewCreditJP}
+              creditEN={overViewCreditEN}
+              imgSrc={src}
+            />
+          </WorkOverViewDiv>
+          <ChapterTitle>
+            <BorderSpan>Process</BorderSpan>
+          </ChapterTitle>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle1JP}
+              captionTitleEN={workCaptionTitle1EN}
+              captionMessageJP={workCaptionMessage1JP}
+              captionMessageEN={workCaptionMessage1EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
+              captionTitleJP={workCaptionTitle2JP}
+              captionTitleEN={workCaptionTitle2EN}
+              captionMessageJP={workCaptionMessage2JP}
+              captionMessageEN={workCaptionMessage2EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption3d
+              Caption3dImage={<ChairScene />}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle4JP}
+              captionTitleEN={workCaptionTitle4EN}
+              captionMessageJP={workCaptionMessage4JP}
+              captionMessageEN={workCaptionMessage4EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle5JP}
+              captionTitleEN={workCaptionTitle5EN}
+              captionMessageJP={workCaptionMessage5JP}
+              captionMessageEN={workCaptionMessage5EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle6JP}
+              captionTitleEN={workCaptionTitle6EN}
+              captionMessageJP={workCaptionMessage6JP}
+              captionMessageEN={workCaptionMessage6EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaption
+              captionImage={Caption1Image}
+              captionTitleJP={workCaptionTitle7JP}
+              captionTitleEN={workCaptionTitle7EN}
+              captionMessageJP={workCaptionMessage7JP}
+              captionMessageEN={workCaptionMessage7EN}
+            />
+          </WorkCaptionDiv>
+        </MainDiv>
+        <FootSpace
+          src={HandWritingImage}
+          prevImg={prevImg}
+          link={link}
+          prevLink={prevLink}
+          author={author}
+          nextLink={nextLink}
+          nextImg={nextImg}
+        />
+      </WrapperDiv>
+    </>
   );
 };
 
-export default Uena;
+export default Heejun;
 
 const WrapperDiv = styled.div`
   width: 100%;

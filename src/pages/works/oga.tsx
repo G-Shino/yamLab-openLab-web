@@ -9,6 +9,7 @@ import Caption1Image from "../../images/works/Uena/caption1.png";
 import Caption2Image from "../../images/works/Uena/caption2.png";
 import Caption3Image from "../../images/works/Uena/caption3.png";
 import HandWritingImage from "../../images/works/Oga/oga-handwriting.png";
+import OGPImage from "../../images/works/Oga/oga_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
@@ -52,7 +53,7 @@ const workCaptionTitle4EN = `Scalable hand (Ver.2.1）`;
 const workCaptionMessage4JP = `前モデルにてゴムで与えていた復元力をゼンマイばねで代替。取手部分にもコイルばねを追加することで指が常に開くようになり、能動義手など牽引方向にしか力をかけられないものにも応用可能になりました。`;
 const workCaptionMessage4EN = `The rubber band joint part is replaced by a spiral spring joint mechanism. For the benefit of spring added around the lever acting as an antagonist, it could be applied to active prosthesis hand, which only provides a tensile force for actuation.`;
 
-const Uena: React.FC = () => {
+const Oga: React.FC = () => {
   return (
     <>
       <OGPHead
@@ -60,7 +61,7 @@ const Uena: React.FC = () => {
         type="article"
         description={overViewCaptionJP}
         keyword=""
-        image={src}
+        image={OGPImage}
         page={link}
       />
       <WrapperDiv>
@@ -133,7 +134,7 @@ const Uena: React.FC = () => {
   );
 };
 
-export default Uena;
+export default Oga;
 
 const WrapperDiv = styled.div`
   width: 100%;
