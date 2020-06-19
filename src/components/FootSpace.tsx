@@ -34,21 +34,13 @@ const FootSpace: React.FC<Props> = ({ src, author, link }) => {
             hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
             url={WebURL + link}
           >
-            <FontAwesomeIcon
-              css={IconCss}
-              icon={["fab", "twitter"]}
-              size="4x"
-            />
+            <FontAwesomeIcon css={IconCss} icon={["fab", "twitter"]} />
           </TwitterShareButton>
           <FacebookShareButton url={WebURL + link} hashtag="#DiaLog">
-            <FontAwesomeIcon
-              css={IconCss}
-              icon={["fab", "facebook"]}
-              size="4x"
-            />
+            <FontAwesomeIcon css={IconCss} icon={["fab", "facebook"]} />
           </FacebookShareButton>
           <LineShareButton url={WebURL + link}>
-            <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} size="4x" />
+            <FontAwesomeIcon css={IconCss} icon={["fab", "line"]} />
           </LineShareButton>
         </StyledSNSButton>
         <CarouselDiv>
@@ -98,6 +90,10 @@ const StyledSNSButton = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
+  font-size: 6rem;
+  @media (max-width: 1200px) {
+    font-size: 3rem;
+  }
 `;
 
 const IconCss = css`
