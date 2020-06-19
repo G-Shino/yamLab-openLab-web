@@ -5,9 +5,6 @@ import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/uena_1.png";
-import Caption2Image from "../../images/works/Uena/uena_2.png";
-import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Shinogu/shinogood_handwriting.png";
 
 import shinogu0201 from "../../images/works/Shinogu/02-02-01.png";
