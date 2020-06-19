@@ -57,17 +57,17 @@ const workCaptionMessage1JP = `最初期に試作した回転一自由度の一�
 const workCaptionMessage1EN = `The first prototype, multiple unibody joints with a single degree of freedom. Each of them has a spiral spring with various thicknesses.`;
 
 const workCaptionTitle2JP = ``;
-const workCaptionTitle2EN = `Scalable hand (Ver.1.0）`;
+const workCaptionTitle2EN = `Scalable hand (Ver.1.0)`;
 const workCaptionMessage2JP = `二指ハンドの構造として一般的な四節リンク構造の内部にゼンマイばねを組み込みました。`;
 const workCaptionMessage2EN = `A model with the 4-link mechanism, typical for the 2-fingered manipulator, along with spiral spring for joint elasticity.`;
 
 const workCaptionTitle3JP = ``;
-const workCaptionTitle3EN = `Scalable hand (Ver.2.0）`;
+const workCaptionTitle3EN = `Scalable hand (Ver.2.0)`;
 const workCaptionMessage3JP = `取手を引くだけで物体を包み込むように掴んでくれる構造を採用した初期モデルです。指の腹に弾性構造を付与することで、柔らかい指先を再現しました。このモデルでは、輪ゴムで指関節の復元力を与えています。`;
 const workCaptionMessage3EN = `The model with the mechanism, which can grab the object gently with a single pull of the lever. Fingertip with the soft surface has been achieved, by applying the compliant structure on it. In this model, rubber bands are used to function as the antagonist.`;
 
 const workCaptionTitle4JP = ``;
-const workCaptionTitle4EN = `Scalable hand (Ver.2.1）`;
+const workCaptionTitle4EN = `Scalable hand (Ver.2.1)`;
 const workCaptionMessage4JP = `前モデルにてゴムで与えていた復元力をゼンマイばねで代替。取手部分にもコイルばねを追加することで指が常に開くようになり、能動義手など牽引方向にしか力をかけられないものにも応用可能になりました。`;
 const workCaptionMessage4EN = `The rubber band joint part is replaced by a spiral spring joint mechanism. For the benefit of spring added around the lever acting as an antagonist, it could be applied to active prosthesis hand, which only provides a tensile force for actuation.`;
 

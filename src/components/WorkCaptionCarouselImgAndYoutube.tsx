@@ -40,7 +40,7 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
     class: "center",
     slidesToShow: 1,
     fade: true,
-    dots: false,
+    dots: true,
     swipeToSlide: true,
     initialSlide: 0,
     infinite: false,
@@ -56,6 +56,8 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
     beforeChange: (_, next) => {
       setTimeout(() => setCurrentSlide(next), 30);
     },
+    appendDots: appendDots,
+    customPaging: customPaging,
   };
   const settings2 = {
     class: "center",
@@ -162,6 +164,7 @@ const CaptionMessageEN = styled.p`
 const CssSlider = css`
   width: 100%;
   height: auto;
+  margin-bottom: 25px;
 `;
 
 const StyledContents = styled.div`
@@ -195,7 +198,6 @@ const StyledIframe = styled.iframe`
   /* pointer-events: none; */
   z-index: 100;
 `;
-
 // slider dots関係
 const StyledPaging = styled.div`
   width: 30px;
