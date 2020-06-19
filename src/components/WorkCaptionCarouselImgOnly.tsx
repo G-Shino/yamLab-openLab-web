@@ -6,11 +6,6 @@ import Slider from "react-slick";
 
 interface Props {
   captionImages: string[];
-  captionVideos: string[];
-  captionTitleJP: string;
-  captionTitleEN: string;
-  captionMessageJP: string;
-  captionMessageEN: string;
 }
 
 const StyledDots = styled.ul`
@@ -24,19 +19,12 @@ const appendDots = (dots) => (
   </div>
 );
 
-const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
-  captionImages,
-  captionVideos,
-  captionTitleJP,
-  captionTitleEN,
-  captionMessageJP,
-  captionMessageEN,
-}) => {
+const WorkCaptionCarouselImgOnly: React.FC<Props> = ({ captionImages }) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const customPaging = (i) => (
     <StyledPaging css={i === currentSlide ? CssPaging : null}>●</StyledPaging>
   );
-  const settings1 = {
+  const settings = {
     class: "center",
     slidesToShow: 1,
     fade: true,
@@ -59,33 +47,9 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
     appendDots: appendDots,
     customPaging: customPaging,
   };
-  const settings2 = {
-    class: "center",
-    slidesToShow: 1,
-    fade: true,
-    dots: true,
-    swipeToSlide: true,
-    initialSlide: 0,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          fade: false,
-          arrows: false,
-        },
-      },
-    ],
-    beforeChange: (_, next) => {
-      setTimeout(() => setCurrentSlide(next), 30);
-    },
-    appendDots: appendDots,
-    customPaging: customPaging,
-  };
-
   return (
     <CaptionWrapperDiv>
-      <Slider {...settings1} css={CssSlider}>
+      <Slider {...settings} css={CssSlider}>
         {captionImages.map((captionImage, index) => (
           <div key={index}>
             <StyledContents>
@@ -96,28 +60,11 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
           </div>
         ))}
       </Slider>
-      <Slider {...settings2} css={CssSlider}>
-        {captionVideos.map((captionImage, index) => (
-          <div key={index}>
-            <StyledContents>
-              <StyledImgDiv>
-                <StyledIframe src={captionImage} allow={"fullscreen"} />
-              </StyledImgDiv>
-            </StyledContents>
-          </div>
-        ))}
-      </Slider>
-      <CaptionMessageDiv>
-        <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-        <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-        <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-        <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
-      </CaptionMessageDiv>
     </CaptionWrapperDiv>
   );
 };
 
-export default WorkCaptionCarouselImgAndYoutube;
+export default WorkCaptionCarouselImgOnly;
 
 const CaptionWrapperDiv = styled.div`
   width: 100%;
@@ -131,33 +78,6 @@ const CaptionWrapperDiv = styled.div`
   @media (min-width: 1000px) {
     max-width: 50%;
   }
-`;
-
-const CaptionMessageDiv = styled.div`
-  width: 100%;
-  color: ${Color.CAPTION_FONT_COLOR};
-  background-color: ${Color.CAPTION_COLOR};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-`;
-
-const CaptionTitleJP = styled.h3`
-  width: 90%;
-  margin-top: 3.2rem;
-`;
-const CaptionTitleEN = styled.h3`
-  width: 90%;
-  margin-bottom: 1.6rem;
-`;
-const CaptionMessageJP = styled.p`
-  width: 90%;
-  margin-bottom: 1.6rem;
-`;
-const CaptionMessageEN = styled.p`
-  width: 90%;
-  margin-bottom: 3.2rem;
 `;
 
 //slider関係
@@ -192,12 +112,7 @@ const StyledImg = styled.img`
   height: 100%;
   object-fit: cover;
 `;
-const StyledIframe = styled.iframe`
-  width: 100%;
-  height: 100%;
-  /* pointer-events: none; */
-  z-index: 100;
-`;
+
 // slider dots関係
 const StyledPaging = styled.div`
   width: 30px;

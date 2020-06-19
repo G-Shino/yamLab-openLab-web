@@ -31,7 +31,8 @@ import {
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
 import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
-import WorkCaptionCarouselImgAndYoutube from "../../components/WorkCaptionCarouselImgAndYoutube";
+import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
+import WorkCaptionCarouselYoutube from "../../components/WorkCaptionYoutubeCarousel";
 
 const {
   src,
@@ -120,7 +121,7 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaptionCarouselImgAndYoutube
+            <WorkCaptionCarouselImgOnly
               captionImages={[
                 oga0301,
                 oga0302,
@@ -130,7 +131,9 @@ const Oga: React.FC = () => {
                 oga0306,
                 oga0307,
               ]}
-              captionVideos={[
+            />
+            <WorkCaptionCarouselYoutube
+              captionImages={[
                 "https://www.youtube.com/embed/xEYkd0KqGNo",
                 "https://www.youtube.com/embed/HkHoCw7BWyw",
                 "https://www.youtube.com/embed/Lhi__BrFwqk",
