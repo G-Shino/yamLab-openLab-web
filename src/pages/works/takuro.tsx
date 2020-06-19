@@ -4,16 +4,30 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/uena_1.png";
-import Caption2Image from "../../images/works/Uena/uena_2.png";
-import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Takuro/takuro_handwriting.png";
 import OGPImage from "../../images/works/Takuro/takuro_ogp.png";
+
+import takuro0101 from "../../images/works/Takuro/07-01-01.png";
+import takuro0102 from "../../images/works/Takuro/07-01-02.png";
+import takuro0103 from "../../images/works/Takuro/07-01-03.png";
+import takuro0104 from "../../images/works/Takuro/07-01-04.png";
+import takuro0201 from "../../images/works/Takuro/07-02-01.png";
+import takuro0202 from "../../images/works/Takuro/07-02-02.png";
+import takuro0301 from "../../images/works/Takuro/07-03-01.png";
+import takuro0302 from "../../images/works/Takuro/07-03-02.png";
+import takuro0303 from "../../images/works/Takuro/07-03-03.png";
+import takuro0304 from "../../images/works/Takuro/07-03-04.png";
+import takuro0305 from "../../images/works/Takuro/07-03-05.png";
+import takuro0501 from "../../images/works/Takuro/07-05-01.png";
+import takuro0502 from "../../images/works/Takuro/07-05-02.png";
+import takuro0503 from "../../images/works/Takuro/07-05-03.png";
+
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 
 const {
   src,
@@ -36,12 +50,12 @@ Collaborator: Tetsudo Kousaikai Foundation Prosthetic and Orthotic Care Center, 
 
 const workCaptionTitle1JP = `従来の陸上競技用義足`;
 const workCaptionTitle1EN = `Conventional socket for track-and-field`;
-const workCaptionMessage1JP = `義肢装具士によって作成されていた従来の義足ソケットは、切断部の採型および型修正されたものにカーボンを張り合わせることで制作され、切断部の形が如実に現れてしまいます。`;
-const workCaptionMessage1EN = `It is likely to expose the shape of an amputee, when it comes to the conventional prosthesis socket. It is made by plastering the amputee and covering the mold with CFRP.`;
+const workCaptionMessage1JP = `従来の義足ソケットは義肢装具士の手仕事によって制作されており、大量生産が困難であることや、義足ソケットに切断部の形が如実に現れてしまい、痛々しさを感じさせてしまうなどの課題がありました。`;
+const workCaptionMessage1EN = `Conventional prosthetic foot sockets were made by hand by prostheticists, and they were difficult to mass-produce, and the shape of the amputation on the sockets made them seem painful to look at.`;
 
 const workCaptionTitle2JP = `チェックソケット`;
 const workCaptionTitle2EN = `Checking socket`;
-const workCaptionMessage2JP = `3Dプリンタは従来の製造技術に比べて、造形時の形状の誤差が大きい欠点があります。そのため、設計初期に義足ソケットの内面の適合を確かめるためのチェックソケットを制作しました。`;
+const workCaptionMessage2JP = `3Dプリンタは従来の製造技術に比べてオーダーメイド品を作りやすい反面、造形時の形状誤差が大きい欠点があります。そのため、設計初期に義足ソケットの内面の適合を確かめるためのチェックソケットを制作しました。`;
 const workCaptionMessage2EN = `Since the geometric error of the 3D printer is usually more significant than traditional manufacturing technologies, we made this socket beforehand to test if the error is tolerable.`;
 
 const workCaptionTitle3JP = `重心位置の設計`;
@@ -90,8 +104,8 @@ const Takuro: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[takuro0101, takuro0102, takuro0103, takuro0104]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -99,8 +113,8 @@ const Takuro: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionCarousel
+              captionImages={[takuro0201, takuro0202]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -108,8 +122,14 @@ const Takuro: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[
+                takuro0301,
+                takuro0302,
+                takuro0303,
+                takuro0304,
+                takuro0305,
+              ]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -117,8 +137,8 @@ const Takuro: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/2c_vL9pehdA"}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -126,8 +146,8 @@ const Takuro: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[takuro0501, takuro0502, takuro0503]}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
