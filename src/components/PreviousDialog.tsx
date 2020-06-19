@@ -16,16 +16,16 @@ const PreviousDialog: React.FC = () => {
           </TimeCSS>
           <JapaneseNameCSS>東京大学 山中俊治研究室</JapaneseNameCSS>
           <EnglishNameCSS>UTokyo Prototyping & Design Lab</EnglishNameCSS>
-          <HonBunCSS>
+          <HonBunJPCSS>
             作品制作者と来場者との対話が生まれる場所をコンセプトに、学生が主体となって展示会を企画しましたが、開催を目前にCOVID-19の影響により一般公開を無期限延期という判断を致しました。
-          </HonBunCSS>
-          <HonBunCSS>
+          </HonBunJPCSS>
+          <HonBunENCSS>
             The concept of the exhibition is to create a place for dialogue
             between the designers of the prototypes and visitors, and students
             took the initiative in planning the exhibition "Dialog". However,
             due to the influence of COVID-19, we have decided to postpone the
             exhibition to the public indefinitely.
-          </HonBunCSS>
+          </HonBunENCSS>
         </ContentWrapperCSS>
       </ContentCSS>
     </WrapperCSS>
@@ -95,7 +95,11 @@ text-align:right;
 const EnglishNameCSS = Styled.div`
 text-align:right;
 `;
-const HonBunCSS = Styled.div`
+const HonBunJPCSS = Styled.div`
 margin-top:5%;
+`;
+const HonBunENCSS = Styled.div`
+margin-top:5%;
+font-weight:normal;
 `;
 export default PreviousDialog;

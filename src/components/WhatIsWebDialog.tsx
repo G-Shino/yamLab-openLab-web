@@ -84,6 +84,7 @@ margin-bottom:10%;
 `;
 const WebDialogIntroductionJPCSS = Styled.div`
 margin-bottom:10%;`;
-const WebDialogIntroductionENCSS = Styled.div``;
+const WebDialogIntroductionENCSS = Styled.div`
+font-weight:normal;`;
 
 export default WhatIsWebDialog;
