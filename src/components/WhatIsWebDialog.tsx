@@ -10,16 +10,21 @@ const WhatIsWebDialog: React.FC = () => {
         <ContentWrapperCSS>
           <TitleJapaneseCSS>Web Dialogとは</TitleJapaneseCSS>
           <TitleEnglishCSS>What is Web Dialog?</TitleEnglishCSS>
-          <WebDialogIntroductionCSS>
-            Web DiaLog とは… Web DiaLog とは…Web DiaLog とは…Web DiaLog
-            とはWebDiaLogとは…Web DiaLog とは…Web DiaLog とは…Web DiaLogとはWeb
-            DiaLog とは…Web DiaLog とは…Web DiaLog とはWeb DiaLogWeb DiaLog
-            とは…Web DiaLog とは…Web DiaLog とは…Web DiaLog とは…
-          </WebDialogIntroductionCSS>
-          <CommentIntroductionCSS>
-            コメント機能について
-            コメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能についてコメント機能について
-          </CommentIntroductionCSS>
+          <WebDialogIntroductionJPCSS>
+            展示会を通して実際に作品に触れて頂くことを研究発表の主な手段としてきた私達ですが、新たな発表方法を模索することを目的に、対話をコンセプトとしたオンライン展示『Dialog
+            きづく、つづる、つながる』を企画しました。東京大学大学院情報学環・学際情報学府主催のオープンラボ・ウィークの期間、先行公開致します。また、オフライン展示『Dialog
+            きく、はなす、すすむ』とオンライン展示『Dialog
+            きづく、つづる、つながる』を同時に開催できるよう、現在準備を進めています。
+          </WebDialogIntroductionJPCSS>
+          <WebDialogIntroductionENCSS>
+            Until now, our main way of presenting our researches was to have
+            visitors come into contact with our prototypes through our
+            exhibitions. The online exhibition "Dialog" is designed to explore a
+            new way of presentation with the concept of dialogue. We are pleased
+            to announce you that our online exhibition will be released during
+            this open lab week. We are also preparing to hold the offline
+            exhibition "Dialog" at the same time.
+          </WebDialogIntroductionENCSS>
         </ContentWrapperCSS>
       </ContentCSS>
     </WrapperCSS>
@@ -53,7 +58,6 @@ font-size:1.6rem;
 font-kerning:3.5rem;
 line-height:3rem;
 width:700px;
-height:1000px;
 margin-top:20%;
 margin-bottom:20%;
 @media (max-width: 1200px){
@@ -78,8 +82,8 @@ margin-bottom:10%;
   font-size:1.6rem;
 }
 `;
-const WebDialogIntroductionCSS = Styled.div`
-margin-bottom:20%;`;
-const CommentIntroductionCSS = Styled.div``;
+const WebDialogIntroductionJPCSS = Styled.div`
+margin-bottom:10%;`;
+const WebDialogIntroductionENCSS = Styled.div``;
 
 export default WhatIsWebDialog;
