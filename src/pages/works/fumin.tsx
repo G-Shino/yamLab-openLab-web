@@ -5,9 +5,6 @@ import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/uena_1.png";
-import Caption2Image from "../../images/works/Uena/uena_2.png";
-import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Fu-min/fu-min_handwriting.png";
 import OGPImage from "../../images/works/Fu-min/fu-min_ogp.png";
 import {
@@ -95,7 +92,7 @@ const Fumin: React.FC = () => {
           </ChapterTitle>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption1Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -104,7 +101,7 @@ const Fumin: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -113,7 +110,7 @@ const Fumin: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption3Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -122,7 +119,7 @@ const Fumin: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption3Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -131,7 +128,7 @@ const Fumin: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption3Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -140,7 +137,7 @@ const Fumin: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption3Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
