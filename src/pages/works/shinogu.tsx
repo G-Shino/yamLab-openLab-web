@@ -32,6 +32,7 @@ import {
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
 import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 
 const {
   src,
@@ -121,8 +122,8 @@ const Shinogu: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/ihsDc9Mm9is"}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
