@@ -83,8 +83,10 @@ const CaptionTitleEN = styled.h3`
 const CaptionMessageJP = styled.p`
   width: 90%;
   margin-bottom: 1.6rem;
+  text-align: left;
 `;
 const CaptionMessageEN = styled.p`
   width: 90%;
   margin-bottom: 3.2rem;
+  text-align: left;
 `;
