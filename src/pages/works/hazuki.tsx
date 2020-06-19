@@ -50,9 +50,9 @@ const workCaptionTitle2JP = `新しいワークショップの提案1
 -Co-Speculative Designを用いた
 ワークショップの開催`;
 const workCaptionTitle2EN = `New Workshop Proposal 1 - Workshop on Co-Speculative Design`;
-const workCaptionMessage2JP = `Co-Speculative Design（未来の可能性を提示し、問いを創造させるデザインの方法論）として、“Future Scientist”の映像制作を行い、「未来の評価システム」を考えることをコンセプトに設定しました。さらに、Co-Speculative Designを用いて参加者同士の議論や対話を通して、ワークショップのコンセプトにある問題提起以上の新たな問題が発見ないし再定義されることを目指しました。`;
-const workCaptionMessage2EN = `Future Scientist film production as Co-Speculative Design (design methodologies that present future possibilities and create questions) and set up the concept of thinking about the evaluation system of the future.
-Furthermore, we used Co-Speculative Design to help participants discover or redefine new issues beyond those raised in the workshop concept through discussion and dialogue.
+const workCaptionMessage2JP = `Speculative Design（未来の可能性を提示し、問題提起するデザインの方法論）として、“Future Scientist”の映像制作を行い、「未来の評価システム」を考えることをコンセプトに設定しました。映像観賞後、参加者それぞれから生まれた問いや疑問を元に、議論や対話を行います（Co-Speculative Design）。このフェーズで、参加者がワークショップのコンセプトにある問題提起以上の新たな問題が発見ないし再定義されることを目指しました。`;
+const workCaptionMessage2EN = `Future Scientist film production as Speculative Design (design methodologies that present future possibilities and create questions) and set up the concept of thinking about the evaluation system of the future.
+After watching the film, participants will discuss and have a dialogue based on the questions and doubts raised by each of them (Co-Speculative Design).In this phase, the aim was for participants to discover or redefine new issues beyond those raised in the workshop concept.
 `;
 
 const workCaptionTitle3JP = `新しいワークショップの提案2 

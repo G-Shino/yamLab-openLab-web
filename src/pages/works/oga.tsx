@@ -4,16 +4,35 @@ import OGPHead from "../../components/OGPHead";
 import texture from "../../images/mdftexture.jpg";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
-import Caption1Image from "../../images/works/Uena/uena_1.png";
-import Caption2Image from "../../images/works/Uena/uena_2.png";
-import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Oga/oga_handwriting.png";
+
+import oga0101 from "../../images/works/Oga/01-01-01.png";
+import oga0102 from "../../images/works/Oga/01-01-02.png";
+import oga0103 from "../../images/works/Oga/01-01-03.png";
+import oga0104 from "../../images/works/Oga/01-01-04.png";
+import oga0201 from "../../images/works/Oga/01-02-01.png";
+import oga0202 from "../../images/works/Oga/01-02-02.png";
+import oga0203 from "../../images/works/Oga/01-02-03.png";
+import oga0204 from "../../images/works/Oga/01-02-04.png";
+import oga0301 from "../../images/works/Oga/01-03-01.png";
+import oga0302 from "../../images/works/Oga/01-03-02.png";
+import oga0303 from "../../images/works/Oga/01-03-03.png";
+import oga0304 from "../../images/works/Oga/01-03-04.png";
+import oga0305 from "../../images/works/Oga/01-03-05.png";
+import oga0306 from "../../images/works/Oga/01-03-06.png";
+import oga0307 from "../../images/works/Oga/01-03-07.png";
+import oga0401 from "../../images/works/Oga/01-04-01.png";
+import oga0402 from "../../images/works/Oga/01-04-02.png";
+import oga0403 from "../../images/works/Oga/01-04-03.png";
+
 import OGPImage from "../../images/works/Oga/oga_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
+import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
+import WorkCaptionCarouselYoutube from "../../components/WorkCaptionYoutubeCarousel";
 
 const {
   src,
@@ -39,17 +58,17 @@ const workCaptionMessage1JP = `最初期に試作した回転一自由度の一�
 const workCaptionMessage1EN = `The first prototype, multiple unibody joints with a single degree of freedom. Each of them has a spiral spring with various thicknesses.`;
 
 const workCaptionTitle2JP = ``;
-const workCaptionTitle2EN = `Scalable hand (Ver.1.0）`;
+const workCaptionTitle2EN = `Scalable hand (Ver.1.0)`;
 const workCaptionMessage2JP = `二指ハンドの構造として一般的な四節リンク構造の内部にゼンマイばねを組み込みました。`;
 const workCaptionMessage2EN = `A model with the 4-link mechanism, typical for the 2-fingered manipulator, along with spiral spring for joint elasticity.`;
 
 const workCaptionTitle3JP = ``;
-const workCaptionTitle3EN = `Scalable hand (Ver.2.0）`;
+const workCaptionTitle3EN = `Scalable hand (Ver.2.0)`;
 const workCaptionMessage3JP = `取手を引くだけで物体を包み込むように掴んでくれる構造を採用した初期モデルです。指の腹に弾性構造を付与することで、柔らかい指先を再現しました。このモデルでは、輪ゴムで指関節の復元力を与えています。`;
 const workCaptionMessage3EN = `The model with the mechanism, which can grab the object gently with a single pull of the lever. Fingertip with the soft surface has been achieved, by applying the compliant structure on it. In this model, rubber bands are used to function as the antagonist.`;
 
 const workCaptionTitle4JP = ``;
-const workCaptionTitle4EN = `Scalable hand (Ver.2.1）`;
+const workCaptionTitle4EN = `Scalable hand (Ver.2.1)`;
 const workCaptionMessage4JP = `前モデルにてゴムで与えていた復元力をゼンマイばねで代替。取手部分にもコイルばねを追加することで指が常に開くようになり、能動義手など牽引方向にしか力をかけられないものにも応用可能になりました。`;
 const workCaptionMessage4EN = `The rubber band joint part is replaced by a spiral spring joint mechanism. For the benefit of spring added around the lever acting as an antagonist, it could be applied to active prosthesis hand, which only provides a tensile force for actuation.`;
 
@@ -84,8 +103,8 @@ const Oga: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0101, oga0102, oga0103, oga0104]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -93,8 +112,8 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0201, oga0202, oga0203, oga0204]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -102,8 +121,24 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarouselImgOnly
+              captionImages={[
+                oga0301,
+                oga0302,
+                oga0303,
+                oga0304,
+                oga0305,
+                oga0306,
+                oga0307,
+              ]}
+            />
+            <WorkCaptionCarouselYoutube
+              captionImages={[
+                "https://www.youtube.com/embed/xEYkd0KqGNo",
+                "https://www.youtube.com/embed/HkHoCw7BWyw",
+                "https://www.youtube.com/embed/Lhi__BrFwqk",
+                "https://www.youtube.com/embed/zCjqANIKhXE",
+              ]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -111,8 +146,8 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0401, oga0402, oga0403]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
