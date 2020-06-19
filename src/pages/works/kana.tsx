@@ -68,8 +68,8 @@ const workCaptionMessage5EN = `By reinforcement learning process how to swing it
 
 const workCaptionTitle6JP = `プロトタイプ3`;
 const workCaptionTitle6EN = `Prototype 3`;
-const workCaptionMessage6JP = `強化学習を行った結果を反映したプロトタイプで、頂部を指でつつくとそれに反応してリアクションします。`;
-const workCaptionMessage6EN = `The latest prototype updated with the results of the reinforcement learning process. Please try poking its head and watching how it reacts.
+const workCaptionMessage6JP = `強化学習の結果を反映する予定のプロトタイプです。頂部を指でつつくとそれに反応してリアクションできることを想定しています。`;
+const workCaptionMessage6EN = `The latest prototype will be updated with the results of the reinforcement learning process. If you try poking its head, it will react.
 `;
 
 const Kana: React.FC = () => {
