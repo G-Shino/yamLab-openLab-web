@@ -36,7 +36,28 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
   const customPaging = (i) => (
     <StyledPaging css={i === currentSlide ? CssPaging : null}>●</StyledPaging>
   );
-  const settings = {
+  const settings1 = {
+    class: "center",
+    slidesToShow: 1,
+    fade: true,
+    dots: false,
+    swipeToSlide: true,
+    initialSlide: 0,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          fade: false,
+          arrows: false,
+        },
+      },
+    ],
+    beforeChange: (_, next) => {
+      setTimeout(() => setCurrentSlide(next), 30);
+    },
+  };
+  const settings2 = {
     class: "center",
     slidesToShow: 1,
     fade: true,
@@ -59,9 +80,10 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
     appendDots: appendDots,
     customPaging: customPaging,
   };
+
   return (
     <CaptionWrapperDiv>
-      <Slider {...settings} css={CssSlider}>
+      <Slider {...settings1} css={CssSlider}>
         {captionImages.map((captionImage, index) => (
           <div key={index}>
             <StyledContents>
@@ -72,7 +94,7 @@ const WorkCaptionCarouselImgAndYoutube: React.FC<Props> = ({
           </div>
         ))}
       </Slider>
-      <Slider {...settings} css={CssSlider}>
+      <Slider {...settings2} css={CssSlider}>
         {captionVideos.map((captionImage, index) => (
           <div key={index}>
             <StyledContents>
