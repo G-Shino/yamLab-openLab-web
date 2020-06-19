@@ -9,11 +9,32 @@ import Caption1Image from "../../images/works/Uena/uena_1.png";
 import Caption2Image from "../../images/works/Uena/uena_2.png";
 import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Oga/oga_handwriting.png";
+
+import oga0101 from "../../images/works/Oga/01-01-01.png";
+import oga0102 from "../../images/works/Oga/01-01-02.png";
+import oga0103 from "../../images/works/Oga/01-01-03.png";
+import oga0104 from "../../images/works/Oga/01-01-04.png";
+import oga0201 from "../../images/works/Oga/01-02-01.png";
+import oga0202 from "../../images/works/Oga/01-02-02.png";
+import oga0203 from "../../images/works/Oga/01-02-03.png";
+import oga0204 from "../../images/works/Oga/01-02-04.png";
+import oga0301 from "../../images/works/Oga/01-03-01.png";
+import oga0302 from "../../images/works/Oga/01-03-02.png";
+import oga0303 from "../../images/works/Oga/01-03-03.png";
+import oga0304 from "../../images/works/Oga/01-03-04.png";
+import oga0305 from "../../images/works/Oga/01-03-05.png";
+import oga0306 from "../../images/works/Oga/01-03-06.png";
+import oga0307 from "../../images/works/Oga/01-03-07.png";
+import oga0401 from "../../images/works/Oga/01-04-01.png";
+import oga0402 from "../../images/works/Oga/01-04-02.png";
+import oga0403 from "../../images/works/Oga/01-04-03.png";
+
 import OGPImage from "../../images/works/Oga/oga_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 
 const {
   src,
@@ -84,8 +105,8 @@ const Oga: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0101, oga0102, oga0103, oga0104]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -93,8 +114,8 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0201, oga0202, oga0203, oga0204]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -102,8 +123,16 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[
+                oga0301,
+                oga0302,
+                oga0303,
+                oga0304,
+                oga0305,
+                oga0306,
+                oga0307,
+              ]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -111,8 +140,8 @@ const Oga: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[oga0401, oga0402, oga0403]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}

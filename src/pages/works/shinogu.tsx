@@ -9,11 +9,32 @@ import Caption1Image from "../../images/works/Uena/uena_1.png";
 import Caption2Image from "../../images/works/Uena/uena_2.png";
 import Caption3Image from "../../images/works/Uena/uena_3.png";
 import HandWritingImage from "../../images/works/Shinogu/shinogood_handwriting.png";
+
+import shinogu0201 from "../../images/works/Shinogu/02-02-01.png";
+import shinogu0202 from "../../images/works/Shinogu/02-02-02.png";
+import shinogu0301 from "../../images/works/Shinogu/02-03-01.png";
+import shinogu0302 from "../../images/works/Shinogu/02-03-02.png";
+import shinogu0303 from "../../images/works/Shinogu/02-03-03.png";
+import shinogu0304 from "../../images/works/Shinogu/02-03-04.png";
+import shinogu0401 from "../../images/works/Shinogu/02-04-01.png";
+import shinogu0402 from "../../images/works/Shinogu/02-04-02.png";
+import shinogu0403 from "../../images/works/Shinogu/02-04-03.png";
+import shinogu0501 from "../../images/works/Shinogu/02-05-01.png";
+import shinogu0502 from "../../images/works/Shinogu/02-05-02.png";
+import shinogu0503 from "../../images/works/Shinogu/02-05-03.png";
+import shinogu0504 from "../../images/works/Shinogu/02-05-04.png";
+import shinogu0601 from "../../images/works/Shinogu/02-06-01.png";
+import shinogu0602 from "../../images/works/Shinogu/02-06-02.png";
+import shinogu0603 from "../../images/works/Shinogu/02-06-03.png";
+import shinogu0604 from "../../images/works/Shinogu/02-06-04.png";
+import shinogu0701 from "../../images/works/Shinogu/02-07-01.png";
+
 import OGPImage from "../../images/works/Shinogu/shinogu_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 
 const {
   src,
@@ -104,7 +125,7 @@ const Shinogu: React.FC = () => {
           </ChapterTitle>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption1Image}
+              captionImage={""}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -112,8 +133,8 @@ const Shinogu: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionCarousel
+              captionImages={[shinogu0201, shinogu0202]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -121,8 +142,13 @@ const Shinogu: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[
+                shinogu0301,
+                shinogu0302,
+                shinogu0303,
+                shinogu0304,
+              ]}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -130,8 +156,8 @@ const Shinogu: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[shinogu0401, shinogu0402, shinogu0403]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -139,8 +165,13 @@ const Shinogu: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[
+                shinogu0501,
+                shinogu0502,
+                shinogu0503,
+                shinogu0504,
+              ]}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -148,8 +179,13 @@ const Shinogu: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption2Image}
+            <WorkCaptionCarousel
+              captionImages={[
+                shinogu0601,
+                shinogu0602,
+                shinogu0603,
+                shinogu0604,
+              ]}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
@@ -158,7 +194,7 @@ const Shinogu: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption2Image}
+              captionImage={shinogu0701}
               captionTitleJP={workCaptionTitle7JP}
               captionTitleEN={workCaptionTitle7EN}
               captionMessageJP={workCaptionMessage7JP}

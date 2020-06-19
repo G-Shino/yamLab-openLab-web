@@ -11,10 +11,24 @@ import Caption1Image from "../../images/works/Uena/uena_1.png";
 import ChairScene from "../../components/Heejunscene";
 import HandWritingImage from "../../images/works/Heejun/heejun_handwriting.png";
 import OGPImage from "../../images/works/Heejun/heejun_ogp.png";
+
+import heejun0101 from "../../images/works/Heejun/09-01-01.png";
+import heejun0102 from "../../images/works/Heejun/09-01-02.png";
+import heejun0301 from "../../images/works/Heejun/09-03-01.png";
+import heejun0401 from "../../images/works/Heejun/09-04-01.png";
+import heejun0402 from "../../images/works/Heejun/09-04-02.png";
+import heejun0501 from "../../images/works/Heejun/09-05-01.png";
+import heejun0502 from "../../images/works/Heejun/09-05-02.png";
+import heejun0601 from "../../images/works/Heejun/09-06-01.png";
+import heejun0701 from "../../images/works/Heejun/09-07-01.png";
+import heejun0702 from "../../images/works/Heejun/09-07-02.png";
+import heejun0703 from "../../images/works/Heejun/09-07-03.png";
+
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 
 const {
   src,
@@ -103,8 +117,8 @@ const Heejun: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[heejun0101, heejun0102]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -112,8 +126,8 @@ const Heejun: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaptionYoutube
-              captionImage={"https://www.youtube.com/embed/hgKQauS0qME"}
+            <WorkCaption
+              captionImage={""}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -121,8 +135,8 @@ const Heejun: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption3d
-              Caption3dImage={<ChairScene />}
+            <WorkCaption
+              captionImage={heejun0301}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
@@ -130,8 +144,8 @@ const Heejun: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[heejun0401, heejun0402]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -139,8 +153,8 @@ const Heejun: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[heejun0501, heejun0502]}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -149,7 +163,7 @@ const Heejun: React.FC = () => {
           </WorkCaptionDiv>
           <WorkCaptionDiv>
             <WorkCaption
-              captionImage={Caption1Image}
+              captionImage={heejun0601}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
@@ -157,8 +171,8 @@ const Heejun: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionCarousel
+              captionImages={[heejun0701, heejun0702, heejun0703]}
               captionTitleJP={workCaptionTitle7JP}
               captionTitleEN={workCaptionTitle7EN}
               captionMessageJP={workCaptionMessage7JP}
