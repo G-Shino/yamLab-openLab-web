@@ -4,17 +4,19 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
-import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
-import Caption1Image from "../../images/works/Uena/uena_1.png";
-import Caption2Image from "../../images/works/Uena/uena_2.png";
-import Caption3Image from "../../images/works/Uena/uena_3.png";
+import WorkCaptionYoutubeCarousel from "../../components/WorkCaptionYoutubeCarousel";
 import HandWritingImage from "../../images/works/Uena/uena_handwriting.png";
 import OGPImage from "../../images/works/Uena/uena_ogp.png";
+
+import uena0301 from "../../images/works/Uena/04-03-01.png";
+import uena0302 from "../../images/works/Uena/04-03-02.png";
+
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
+import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
 
 const {
   src,
@@ -44,6 +46,10 @@ const workCaptionTitle2EN = `Leg structure`;
 const workCaptionMessage2JP = `着地時の屈伸運動のみで生き物らしさを表現するため、その他の部分では生き物らしさを除きました。最も安定する三本足かつ一ヶ所のダンパーのみで全体の屈伸を制御できる構造です。`;
 const workCaptionMessage2EN = `To express its bio-likeness with only its leg-bending motion during its landing process, we intended to make the other part of our prototype to be the opposite of it. As a result, we came up with this prototype, which has only three legs and a single damping component controlling the entire landing process.`;
 
+const workCaptionTitle3JP = `ゆらゆら`;
+const workCaptionTitle3EN = `solid swing`;
+const workCaptionMessage3JP = `重力との釣り合いに注目し、柔らかさの表現を試みる中でこの作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。`;
+const workCaptionMessage3EN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component.`;
 const Uena: React.FC = () => {
   return (
     <>
@@ -75,8 +81,8 @@ const Uena: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption1Image}
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/uV4uMk2rvJg"}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -84,8 +90,12 @@ const Uena: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={Caption3Image}
+            <WorkCaptionYoutubeCarousel
+              captionImages={[
+                "https://www.youtube.com/embed/KQlnPpaEH1c",
+                "https://www.youtube.com/embed/VYwwWftebRo",
+                "https://www.youtube.com/embed/o7o0t-S7_MA",
+              ]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -93,12 +103,16 @@ const Uena: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaptionCarousel
-              captionImages={[Caption1Image, Caption2Image, Caption3Image]}
-              captionTitleJP={workCaptionTitle2JP}
-              captionTitleEN={workCaptionTitle2EN}
-              captionMessageJP={workCaptionMessage2JP}
-              captionMessageEN={workCaptionMessage2EN}
+            <WorkCaptionCarouselImgOnly captionImages={[uena0301, uena0302]} />
+            <WorkCaptionYoutubeCarousel
+              captionImages={[
+                "https://www.youtube.com/embed/TL-H9QozGec",
+                "https://www.youtube.com/embed/2TuRATVRZc4",
+              ]}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
             />
           </WorkCaptionDiv>
         </MainDiv>

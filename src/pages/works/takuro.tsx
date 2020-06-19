@@ -8,7 +8,6 @@ import HandWritingImage from "../../images/works/Takuro/takuro_handwriting.png";
 import OGPImage from "../../images/works/Takuro/takuro_ogp.png";
 
 import takuro0101 from "../../images/works/Takuro/07-01-01.png";
-import takuro0102 from "../../images/works/Takuro/07-01-02.png";
 import takuro0103 from "../../images/works/Takuro/07-01-03.png";
 import takuro0104 from "../../images/works/Takuro/07-01-04.png";
 import takuro0201 from "../../images/works/Takuro/07-02-01.png";
@@ -105,7 +104,7 @@ const Takuro: React.FC = () => {
           </ChapterTitle>
           <WorkCaptionDiv>
             <WorkCaptionCarousel
-              captionImages={[takuro0101, takuro0102, takuro0103, takuro0104]}
+              captionImages={[takuro0101, takuro0103, takuro0104]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
