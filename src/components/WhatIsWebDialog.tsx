@@ -86,7 +86,6 @@ margin-bottom:10%;
 `;
 const DateCSS = Styled.div`
 font-size:1.6rem;
-  margin-bottom:5%;
   font-weight:normal;
   @media (max-width: 1200px){
     font-size:1.6rem;
