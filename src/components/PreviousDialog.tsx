@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "@emotion/styled";
-const Logo = require("../images/logo_old.svg");
+const Logo = require("../images/200620_logo_old.svg");
 
 const PreviousDialog: React.FC = () => {
   return (
