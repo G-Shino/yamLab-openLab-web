@@ -57,27 +57,51 @@ const WorkCaptionYoutubeCarousel: React.FC<Props> = ({
     appendDots: appendDots,
     customPaging: customPaging,
   };
-  return (
-    <CaptionWrapperDiv>
-      <Slider {...settings} css={CssSlider}>
-        {captionImages.map((captionImage, index) => (
-          <div key={index}>
-            <StyledContents>
-              <StyledImgDiv>
-                <StyledIframe src={captionImage} allow={"fullscreen"} />
-              </StyledImgDiv>
-            </StyledContents>
-          </div>
-        ))}
-      </Slider>
-      <CaptionMessageDiv>
-        <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-        <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-        <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-        <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
-      </CaptionMessageDiv>
-    </CaptionWrapperDiv>
-  );
+  if (captionTitleJP === "") {
+    return (
+      <CaptionWrapperDiv>
+        <Slider {...settings} css={CssSlider}>
+          {captionImages.map((captionImage, index) => (
+            <div key={index}>
+              <StyledContents>
+                <StyledImgDiv>
+                  <StyledIframe src={captionImage} allow={"fullscreen"} />
+                </StyledImgDiv>
+              </StyledContents>
+            </div>
+          ))}
+        </Slider>
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>{captionTitleEN}</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  } else {
+    return (
+      <CaptionWrapperDiv>
+        <Slider {...settings} css={CssSlider}>
+          {captionImages.map((captionImage, index) => (
+            <div key={index}>
+              <StyledContents>
+                <StyledImgDiv>
+                  <StyledIframe src={captionImage} allow={"fullscreen"} />
+                </StyledImgDiv>
+              </StyledContents>
+            </div>
+          ))}
+        </Slider>
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  }
 };
 
 export default WorkCaptionYoutubeCarousel;

@@ -18,20 +18,37 @@ const WorkCaption3d: React.FC<Props> = ({
   captionMessageJP,
   captionMessageEN,
 }) => {
-  return (
-    <CaptionWrapperDiv>
-      <Caption3dImg>{Caption3dImage}</Caption3dImg>
-      <CaptionMessageDiv>
-        <CaptionMessageWrapperDiv>
-          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-          <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-          <Caption3dInstruction src={touchOK}></Caption3dInstruction>
-          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
-        </CaptionMessageWrapperDiv>
-      </CaptionMessageDiv>
-    </CaptionWrapperDiv>
-  );
+  if (captionTitleJP === "") {
+    return (
+      <CaptionWrapperDiv>
+        <Caption3dImg>{Caption3dImage}</Caption3dImg>
+        <CaptionMessageDiv>
+          <CaptionMessageWrapperDiv>
+            <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+            <CaptionTitleEN>{captionTitleEN}</CaptionTitleEN>
+            <Caption3dInstruction src={touchOK}></Caption3dInstruction>
+            <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+            <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+          </CaptionMessageWrapperDiv>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  } else {
+    return (
+      <CaptionWrapperDiv>
+        <Caption3dImg>{Caption3dImage}</Caption3dImg>
+        <CaptionMessageDiv>
+          <CaptionMessageWrapperDiv>
+            <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+            <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
+            <Caption3dInstruction src={touchOK}></Caption3dInstruction>
+            <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+            <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+          </CaptionMessageWrapperDiv>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  }
 };
 
 export default WorkCaption3d;

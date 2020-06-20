@@ -17,19 +17,35 @@ const WorkCaptionYoutube: React.FC<Props> = ({
   captionMessageJP,
   captionMessageEN,
 }) => {
-  return (
-    <CaptionWrapperDiv>
-      <CaptionImgWrapper>
-        <CaptionImg src={captionImage} allow={"fullscreen"} />
-      </CaptionImgWrapper>
-      <CaptionMessageDiv>
-        <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-        <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-        <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-        <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
-      </CaptionMessageDiv>
-    </CaptionWrapperDiv>
-  );
+  if (captionTitleJP === "") {
+    return (
+      <CaptionWrapperDiv>
+        <CaptionImgWrapper>
+          <CaptionImg src={captionImage} allow={"fullscreen"} />
+        </CaptionImgWrapper>
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>{captionTitleEN}</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  } else {
+    return (
+      <CaptionWrapperDiv>
+        <CaptionImgWrapper>
+          <CaptionImg src={captionImage} allow={"fullscreen"} />
+        </CaptionImgWrapper>
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  }
 };
 
 export default WorkCaptionYoutube;

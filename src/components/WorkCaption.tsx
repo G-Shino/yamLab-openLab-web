@@ -17,17 +17,31 @@ const WorkCaption: React.FC<Props> = ({
   captionMessageJP,
   captionMessageEN,
 }) => {
-  return (
-    <CaptionWrapperDiv>
-      <CaptionImg src={captionImage} />
-      <CaptionMessageDiv>
-        <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
-        <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
-        <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
-        <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
-      </CaptionMessageDiv>
-    </CaptionWrapperDiv>
-  );
+  if (captionTitleJP === "") {
+    return (
+      <CaptionWrapperDiv>
+        <CaptionImg src={captionImage} />
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>{captionTitleEN}</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  } else {
+    return (
+      <CaptionWrapperDiv>
+        <CaptionImg src={captionImage} />
+        <CaptionMessageDiv>
+          <CaptionTitleJP>{captionTitleJP}</CaptionTitleJP>
+          <CaptionTitleEN>- {captionTitleEN} -</CaptionTitleEN>
+          <CaptionMessageJP>{captionMessageJP}</CaptionMessageJP>
+          <CaptionMessageEN>{captionMessageEN}</CaptionMessageEN>
+        </CaptionMessageDiv>
+      </CaptionWrapperDiv>
+    );
+  }
 };
 
 export default WorkCaption;
