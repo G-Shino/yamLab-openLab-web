@@ -69,7 +69,7 @@ const MainDiv = styled.div`
 `;
 
 const ExplanationDiv = styled.div`
-  margin-bottom: 320px;
+  margin-bottom: 20vh;
 `;
 
 const WorksDiv = styled.div`
