@@ -84,18 +84,18 @@ const TimeCSS = Styled.div`
     flex-direction:column;
   }
   `;
-const Time1CSS = Styled.div`
-  `;
-const Time2CSS = Styled.div`
-  `;
-const Time3CSS = Styled.div`
-  `;
-const JapaneseNameCSS = Styled.div`
-text-align:right;
-`;
-const EnglishNameCSS = Styled.div`
-text-align:right;
-`;
+// const Time1CSS = Styled.div`
+//   `;
+// const Time2CSS = Styled.div`
+//   `;
+// const Time3CSS = Styled.div`
+//   `;
+// const JapaneseNameCSS = Styled.div`
+// text-align:right;
+// `;
+// const EnglishNameCSS = Styled.div`
+// text-align:right;
+// `;
 const HonBunJPCSS = Styled.p`
 margin-top:5%;
 `;
