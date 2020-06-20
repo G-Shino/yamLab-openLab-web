@@ -31,7 +31,7 @@ const CreditCSS = Styled.div`
   background-color:black;
   color:white;
   padding:5%;
-  @media (max-aspect-ratio: 3/2){
+  @media (max-width: 1000px){
     display:flex;
     justify-content:center;
     align-content:center;
@@ -41,21 +41,29 @@ const CreditWrapper = Styled.div`
   display:flex;
   justify-content:space-evenly;
   align-content:center;
-  @media (max-aspect-ratio: 3/2){
+  @media (max-width: 1000px){
     flex-direction:column;
     justify-content:space-evenly;
   }
 `;
 const CreditLeftCSS = Styled.p`
-font-size:2.5vmin;
-  line-height:5vmin;
 align-self:center;
+font-size:1.6rem;
+line-height:3rem;
+@media (max-width: 1000px){
+  font-size:2.5vmin;
+  line-height:5vmin;
+}
+
 `;
 const CreditRightCSS = Styled.p`
 align-self:center;
-font-size:2.5vmin;
+font-size:1.6rem;
+line-height:3rem;
+
+@media (max-width: 1000px){
+  font-size:2.5vmin;
   line-height:5vmin;
-@media (max-aspect-ratio: 3/2){
   align-self:first baseline;
   margin-top:-5vmin;
 }
