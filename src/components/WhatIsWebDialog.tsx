@@ -73,7 +73,7 @@ font-size:4rem;
 margin-bottom:5%;
 @media (max-width: 1200px){
   font-size:1.6rem;
-  margin-bottom:5%;
+  margin-bottom:0%;
 }
 `;
 const SubTitleCSS = Styled.div`
@@ -85,7 +85,7 @@ margin-bottom:10%;
 }
 `;
 const DateCSS = Styled.div`
-font-size:4rem;
+font-size:1.6rem;
   margin-bottom:5%;
   font-weight:normal;
   @media (max-width: 1200px){
@@ -95,8 +95,10 @@ font-size:4rem;
   `;
 const PlaceCSS = Styled.div`
   margin-bottom:5%;
+  font-size:1.6rem;
   display:flex;
   @media (max-width: 1200px){
+    font-size:1.6rem;
     flex-direction:column;
   }
   `;
