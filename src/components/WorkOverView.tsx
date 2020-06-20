@@ -82,11 +82,10 @@ const WrapperOverViewCaptionDiv = styled.div`
 
 const AreaOverViewCaptionDiv = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   overflow-x: scroll;
-  height: auto;
   @media (min-width: 1000px) {
     position: absolute;
     top: 0;
@@ -102,7 +101,7 @@ const AreaOverViewCaptionDiv = styled.div`
 `;
 
 const OverViewCaptionDiv = styled.div`
-  margin: 5%;
+  margin: 20% 5% 5% 5%;
   height: auto;
 `;
 
