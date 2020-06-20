@@ -82,7 +82,7 @@ const WrapperOverViewCaptionDiv = styled.div`
 
 const AreaOverViewCaptionDiv = styled.div`
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: top;
   justify-content: center;
   overflow-x: scroll;
