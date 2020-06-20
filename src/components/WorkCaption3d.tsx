@@ -98,12 +98,12 @@ const CaptionMessageJP = styled.p`
   grid-area: areaD;
   align-self: center;
   justify-self: center;
-  text-align: left;
+  text-align: justify;
 `;
 const CaptionMessageEN = styled.p`
   width: 100%;
   grid-area: areaE;
   align-self: center;
   justify-self: center;
-  text-align: left;
+  text-align: justify;
 `;

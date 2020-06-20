@@ -37,8 +37,9 @@ const SectionTitleDiv = styled.div`
   margin-bottom: 104px;
 `;
 
-const SectionTitle = styled.p`
+const SectionTitle = styled.span`
   font-size: 4rem;
+  border-bottom: 5px solid;
 `;
 
 const SectionWorksDiv = styled.div`

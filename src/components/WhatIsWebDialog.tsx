@@ -83,8 +83,12 @@ margin-bottom:10%;
 }
 `;
 const WebDialogIntroductionJPCSS = Styled.div`
-margin-bottom:10%;`;
+margin-bottom:10%;
+text-align:justify;
+`;
 const WebDialogIntroductionENCSS = Styled.div`
-font-weight:normal;`;
+font-weight:normal;
+text-align:justify;
+`;
 
 export default WhatIsWebDialog;

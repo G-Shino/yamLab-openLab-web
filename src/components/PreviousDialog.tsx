@@ -9,15 +9,10 @@ const PreviousDialog: React.FC = () => {
       <ContentCSS>
         <ContentWrapperCSS>
           <DateCSS>2020.02.22 sat - 03.01 sun</DateCSS>
-          <TimeCSS>
-            <Time1CSS>15:00 - 19:00</Time1CSS>
-            <Time2CSS>(金・土・祝日 11:00 - 19:00)</Time2CSS>
-            <Time3CSS>入場無料</Time3CSS>
-          </TimeCSS>
-          <JapaneseNameCSS>東京大学 山中俊治研究室</JapaneseNameCSS>
-          <EnglishNameCSS>UTokyo Prototyping & Design Lab</EnglishNameCSS>
+          <PlaceCSS>東京大学生産技術研究所S棟1階ギャラリー</PlaceCSS>
           <HonBunJPCSS>
-            作品制作者と来場者との対話が生まれる場所をコンセプトに、学生が主体となって展示会を企画しましたが、開催を目前にCOVID-19の影響により一般公開を無期限延期という判断を致しました。
+            作品制作者と来場者との対話が生まれる場所をコンセプトに、学生が主体となって展示会『DiaLog
+            きく、はなす、すすむ』を企画しました。しかしCOVID-19の影響により、開催を目前に一般公開を延期という判断を致しました。
           </HonBunJPCSS>
           <HonBunENCSS>
             The concept of the exhibition is to create a place for dialogue
@@ -37,6 +32,7 @@ const WrapperCSS = Styled.div`
   display:flex;
   justify-content:space-evenly;
   align-content:center;
+  margin-top:400px;
   @media (max-width: 1200px){
     flex-direction:column;
   }
@@ -76,30 +72,20 @@ font-size:4rem;
     font-weight:bold;
   }
   `;
-const TimeCSS = Styled.div`
+const PlaceCSS = Styled.div`
   margin-bottom:5%;
   display:flex;
   @media (max-width: 1200px){
     flex-direction:column;
   }
   `;
-const Time1CSS = Styled.div`
-  `;
-const Time2CSS = Styled.div`
-  `;
-const Time3CSS = Styled.div`
-  `;
-const JapaneseNameCSS = Styled.div`
-text-align:right;
-`;
-const EnglishNameCSS = Styled.div`
-text-align:right;
-`;
 const HonBunJPCSS = Styled.div`
 margin-top:5%;
+text-align:justify;
 `;
 const HonBunENCSS = Styled.div`
 margin-top:5%;
 font-weight:normal;
+text-align:justify;
 `;
 export default PreviousDialog;

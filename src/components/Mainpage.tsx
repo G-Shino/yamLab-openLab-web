@@ -35,8 +35,8 @@ const Mainpage: React.FC = () => {
         <ExplanationDiv>
           <TitleScreen />
           <Introduction />
-          <WhatIsWebDialog />
           <PreviousDialog />
+          <WhatIsWebDialog />
         </ExplanationDiv>
         <WorksDiv>
           <Works />
