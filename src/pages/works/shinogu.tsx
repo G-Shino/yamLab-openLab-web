@@ -54,8 +54,8 @@ const overViewCreditEN = `Designer: Shinogu Yamamoto
 Director: Shunji Yamanaka
 Collaborator: Haruyuki Kinoshita, Toru Misawa`;
 
-const workCaptionTitle1JP = `初めに`;
-const workCaptionTitle1EN = `Introduction`;
+const workCaptionTitle1JP = `プロトタイプ映像`;
+const workCaptionTitle1EN = `Prototype Movie`;
 const workCaptionMessage1JP = `本作品では、「スラグ流」という現象を用いています。本映像は、現象の簡単な説明と表現検討のために作成しました。`;
 const workCaptionMessage1EN = `Slug flow phenomenon is a major concept of this protype. This is the video demonstration that contains a brief explanation of the phenomenon and rough video prototype to review the expression.`;
 
@@ -66,10 +66,8 @@ const workCaptionMessage2EN = `Acrylic flow channel and mini pump for the first 
 
 const workCaptionTitle3JP = `プロトタイプ2`;
 const workCaptionTitle3EN = `Prototype 2`;
-const workCaptionMessage3JP = `定期的に実演を行います．実演の合間には，こちらの動画をご覧ください。
-※流体の循環ができないシリンジポンプを使用しているため，長時間の実演を行えません。ご了承願います。`;
+const workCaptionMessage3JP = `立体的な構造での見た目を検討するために作成したプロトタイプです。脈動のない安定的な流体の供給を実現するため、シリンジポンプを利用しています。`;
 const workCaptionMessage3EN = `Notice: Please watch this video while preparing the demonstration. We are sorry that the demonstration requires regular maintenance to function.`;
-//このキャプション、入れるかしのぐが判断してください
 
 const workCaptionTitle4JP = `アクリル流路の検討1`;
 const workCaptionTitle4EN = `Trial: Acrylic flow channel 1`;
@@ -122,35 +120,12 @@ const Shinogu: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaptionYoutube
-              captionImage={"https://www.youtube.com/embed/ihsDc9Mm9is"}
-              captionTitleJP={workCaptionTitle1JP}
-              captionTitleEN={workCaptionTitle1EN}
-              captionMessageJP={workCaptionMessage1JP}
-              captionMessageEN={workCaptionMessage1EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
             <WorkCaptionCarousel
               captionImages={[shinogu0201, shinogu0202]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
               captionMessageEN={workCaptionMessage2EN}
-            />
-          </WorkCaptionDiv>
-          <WorkCaptionDiv>
-            <WorkCaptionCarousel
-              captionImages={[
-                shinogu0301,
-                shinogu0302,
-                shinogu0303,
-                shinogu0304,
-              ]}
-              captionTitleJP={workCaptionTitle3JP}
-              captionTitleEN={workCaptionTitle3EN}
-              captionMessageJP={workCaptionMessage3JP}
-              captionMessageEN={workCaptionMessage3EN}
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
@@ -197,6 +172,29 @@ const Shinogu: React.FC = () => {
               captionTitleEN={workCaptionTitle7EN}
               captionMessageJP={workCaptionMessage7JP}
               captionMessageEN={workCaptionMessage7EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaptionCarousel
+              captionImages={[
+                shinogu0301,
+                shinogu0302,
+                shinogu0303,
+                shinogu0304,
+              ]}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
+            />
+          </WorkCaptionDiv>
+          <WorkCaptionDiv>
+            <WorkCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/ihsDc9Mm9is"}
+              captionTitleJP={workCaptionTitle1JP}
+              captionTitleEN={workCaptionTitle1EN}
+              captionMessageJP={workCaptionMessage1JP}
+              captionMessageEN={workCaptionMessage1EN}
             />
           </WorkCaptionDiv>
         </MainDiv>
