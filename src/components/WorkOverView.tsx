@@ -102,7 +102,7 @@ const AreaOverViewCaptionDiv = styled.div`
 `;
 
 const OverViewCaptionDiv = styled.div`
-  width: 90%;
+  margin: 5%;
   height: auto;
 `;
 
