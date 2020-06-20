@@ -108,11 +108,13 @@ const OverViewCaptionDiv = styled.div`
 
 const OverViewTitleJP = styled.h3`
   width: 100%;
+  height: auto;
   margin-top: 3.2rem;
 `;
 
 const OverViewTitleEN = styled.h3`
   width: 100%;
+  height: auto;
   margin-bottom: 1.6rem;
 `;
 
