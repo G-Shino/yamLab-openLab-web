@@ -102,7 +102,6 @@ const AreaOverViewCaptionDiv = styled.div`
 
 const OverViewCaptionDiv = styled.div`
   margin: 20% 5% 5% 5%;
-  height: auto;
 `;
 
 const OverViewTitleJP = styled.h3`
