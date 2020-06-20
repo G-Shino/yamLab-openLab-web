@@ -34,7 +34,7 @@ const WrapperCSS = styled.div`
 const SectionTitleDiv = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 104px;
+  margin-bottom: 32px;
 `;
 
 const SectionTitle = styled.span`

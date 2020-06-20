@@ -83,7 +83,7 @@ const HonBunJPCSS = Styled.div`
 margin-top:5%;
 text-align:justify;
 `;
-const HonBunENCSS = Styled.div`
+const HonBunENCSS = Styled.p`
 margin-top:5%;
 font-weight:normal;
 text-align:justify;
