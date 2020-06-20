@@ -83,9 +83,9 @@ const WrapperOverViewCaptionDiv = styled.div`
 const AreaOverViewCaptionDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: top;
   justify-content: center;
-  overflow-y: scroll;
+  overflow-x: scroll;
   @media (min-width: 1000px) {
     position: absolute;
     top: 0;
@@ -107,11 +107,13 @@ const OverViewCaptionDiv = styled.div`
 
 const OverViewTitleJP = styled.h3`
   width: 100%;
+  height: auto;
   margin-top: 3.2rem;
 `;
 
 const OverViewTitleEN = styled.h3`
   width: 100%;
+  height: auto;
   margin-bottom: 1.6rem;
 `;
 
