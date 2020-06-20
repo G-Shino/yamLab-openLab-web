@@ -84,14 +84,18 @@ margin-left:3%;
 const JapaneseCSS = Styled.div`
 margin-bottom:5%;
 `;
-const JapaneseContentCSS = Styled.div``;
+const JapaneseContentCSS = Styled.div`
+text-align:justify;
+`;
 const JapaneseSenseiCSS = Styled.div`
 text-align:right;
 `;
 const EnglishCSS = Styled.div`
 font-weight:normal;
 `;
-const EnglishContentCSS = Styled.div``;
+const EnglishContentCSS = Styled.div`
+text-align:justify;
+`;
 const EnglishSenseiCSS = Styled.div`
 text-align:right;
 `;
