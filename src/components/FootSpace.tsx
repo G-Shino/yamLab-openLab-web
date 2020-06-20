@@ -31,7 +31,7 @@ const FootSpace: React.FC<Props> = ({ src, author, link }) => {
         <HandwritingImg src={src} />
         <StyledSNSButton className="twitter-embed">
           <TwitterShareButton
-            hashtags={["山中研究室", "DiaLog", "生産研OpenLab"]}
+            hashtags={["DiaLog", "山中研", "yamlab"]}
             url={WebURL + link}
           >
             <FontAwesomeIcon css={IconCss} icon={["fab", "twitter"]} />
