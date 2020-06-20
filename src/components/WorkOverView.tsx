@@ -21,23 +21,43 @@ const WorkOverView: React.FC<Props> = ({
   creditEN,
   imgSrc,
 }) => {
-  return (
-    <WorkOverViewDiv>
-      <MainWorkImg src={imgSrc} />
-      <WrapperOverViewCaptionDiv>
-        <AreaOverViewCaptionDiv>
-          <OverViewCaptionDiv>
-            <OverViewTitleJP>{titleJP}</OverViewTitleJP>
-            <OverViewTitleEN> {titleEN} </OverViewTitleEN>
-            <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
-            <OverViewCreditJP>{creditJP}</OverViewCreditJP>
-            <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>
-            <OverViewCreditEN>{creditEN}</OverViewCreditEN>
-          </OverViewCaptionDiv>
-        </AreaOverViewCaptionDiv>
-      </WrapperOverViewCaptionDiv>
-    </WorkOverViewDiv>
-  );
+  if (titleJP === "") {
+    return (
+      <WorkOverViewDiv>
+        <MainWorkImg src={imgSrc} />
+        <WrapperOverViewCaptionDiv>
+          <AreaOverViewCaptionDiv>
+            <OverViewCaptionDiv>
+              <OverViewTitleJP>{titleJP}</OverViewTitleJP>
+              <OverViewTitleEN> {titleEN} </OverViewTitleEN>
+              <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
+              <OverViewCreditJP>{creditJP}</OverViewCreditJP>
+              <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>
+              <OverViewCreditEN>{creditEN}</OverViewCreditEN>
+            </OverViewCaptionDiv>
+          </AreaOverViewCaptionDiv>
+        </WrapperOverViewCaptionDiv>
+      </WorkOverViewDiv>
+    );
+  } else {
+    return (
+      <WorkOverViewDiv>
+        <MainWorkImg src={imgSrc} />
+        <WrapperOverViewCaptionDiv>
+          <AreaOverViewCaptionDiv>
+            <OverViewCaptionDiv>
+              <OverViewTitleJP>{titleJP}</OverViewTitleJP>
+              <OverViewTitleEN>- {titleEN} -</OverViewTitleEN>
+              <OverViewCaptionJP>{captionJP}</OverViewCaptionJP>
+              <OverViewCreditJP>{creditJP}</OverViewCreditJP>
+              <OverViewCaptionEN>{captionEN}</OverViewCaptionEN>
+              <OverViewCreditEN>{creditEN}</OverViewCreditEN>
+            </OverViewCaptionDiv>
+          </AreaOverViewCaptionDiv>
+        </WrapperOverViewCaptionDiv>
+      </WorkOverViewDiv>
+    );
+  }
 };
 
 export default WorkOverView;

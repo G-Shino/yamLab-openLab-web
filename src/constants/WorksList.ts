@@ -65,8 +65,8 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
   {
     src: Oga,
     author: "Oga",
-    titleJP: "Scalable hand",
-    titleEN: "",
+    titleJP: "",
+    titleEN: "Scalable hand",
     link: "/works/oga",
   },
   {
@@ -108,8 +108,8 @@ export const LIST_WORKS_BASE_INFO: WorksBaseInfo[] = [
   {
     src: Takuro,
     author: "Takuro",
-    titleJP: "Rami S",
-    titleEN: "",
+    titleJP: "",
+    titleEN: "Rami S",
     link: "/works/takuro",
   },
   {
