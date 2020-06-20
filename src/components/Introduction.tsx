@@ -21,15 +21,15 @@ const Introduction: React.FC = () => {
               Discovery often occurs during a ”dialogue”. It also help us to
               clarify the vague image of our concepts. Those idea evolve
               steadily, sometimes dramatically with our engagement with others.
-              Likewise,conversation and discussion are also critical for running
-              our projects. A broader viewpoint, objective opinion and iteration
-              of dialogue, pursuing new vision are always required. What is most
-              important is the diversity of ideas. Our goal in this exhibition
-              is to open a dialogue between you and us. The displayed prototypes
-              are made upon our visions and values. If you have any questions or
-              insights you would like to share with us, please feel free to ask.
-              We would be very glad to hear your thoughts and opinions. Enjoy
-              the short journey with our vision to the future.
+              Likewise, conversation and discussion are also critical for
+              running our projects. A broader viewpoint, objective opinion and
+              iteration of dialogue, pursuing new vision are always required.
+              What is most important is the diversity of ideas. Our goal in this
+              exhibition is to open a dialogue between you and us. The displayed
+              prototypes are made upon our visions and values. If you have any
+              questions or insights you would like to share with us, please feel
+              free to ask. We would be very glad to hear your thoughts and
+              opinions. Enjoy the short journey with our vision to the future.
             </EnglishContentCSS>
             <EnglishSenseiCSS>Shunji Yamanaka</EnglishSenseiCSS>
           </EnglishCSS>
