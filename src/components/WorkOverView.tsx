@@ -140,5 +140,5 @@ const OverViewCreditEN = styled.p`
   width: 100%;
   height: auto;
   text-align: right;
-  margin-bottom: 6.4rem;
+  margin-bottom: 3.2rem;
 `;
