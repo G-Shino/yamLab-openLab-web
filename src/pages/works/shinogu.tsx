@@ -81,7 +81,7 @@ const workCaptionMessage7EN = `2-phase fluid for our work is composed of water a
 
 const workCaptionTitle3JP = `プロトタイプ2`;
 const workCaptionTitle3EN = `Prototype 2`;
-const workCaptionMessage3JP = `立体的な構造での見た目を検討するために作成したプロトタイプです。脈動のない安定的な流体の供給を実現するため、シリンジポンプを利用しています。`;
+const workCaptionMessage3JP = `立体的な流路を検討するために制作したプロトタイプです。脈動のない安定的な流体の供給を実現するため、シリンジポンプを利用しました。`;
 const workCaptionMessage3EN = `Notice: Please watch this video while preparing the demonstration. We are sorry that the demonstration requires regular maintenance to function.`;
 
 const workCaptionTitle1JP = `プロトタイプ映像`;
