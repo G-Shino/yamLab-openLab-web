@@ -131,14 +131,18 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaptionCarousel
+            <WorkCaptionCarouselImgOnly
               captionImages={[fumin0301, fumin0302]}
-              captionTitleJP={workCaptionTitle3JP}
-              captionTitleEN={workCaptionTitle3EN}
-              captionMessageJP={workCaptionMessage3JP}
-              captionMessageEN={workCaptionMessage3EN}
+            />
+            <WorksCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/oKKxsPIA680"}
+              captionTitleJP={workCaptionTitle6JP}
+              captionTitleEN={workCaptionTitle6EN}
+              captionMessageJP={workCaptionMessage6JP}
+              captionMessageEN={workCaptionMessage6EN}
             />
           </WorkCaptionDiv>
+
           <WorkCaptionDiv>
             <WorkCaptionCarousel
               captionImages={[fumin0401, fumin0402, fumin0403]}
@@ -158,15 +162,12 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaptionCarouselImgOnly
+            <WorkCaptionCarousel
               captionImages={[fumin0601, fumin0602, fumin0603, fumin0604]}
-            />
-            <WorksCaptionYoutube
-              captionImage={"https://www.youtube.com/embed/oKKxsPIA680"}
-              captionTitleJP={workCaptionTitle6JP}
-              captionTitleEN={workCaptionTitle6EN}
-              captionMessageJP={workCaptionMessage6JP}
-              captionMessageEN={workCaptionMessage6EN}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
             />
           </WorkCaptionDiv>
         </MainDiv>
