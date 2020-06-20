@@ -86,6 +86,7 @@ const AreaOverViewCaptionDiv = styled.div`
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   @media (min-width: 1000px) {
     position: absolute;
     top: 0;
