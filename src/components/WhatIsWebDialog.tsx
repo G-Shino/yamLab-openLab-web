@@ -82,9 +82,9 @@ margin-bottom:10%;
   font-size:1.6rem;
 }
 `;
-const WebDialogIntroductionJPCSS = Styled.div`
+const WebDialogIntroductionJPCSS = Styled.p`
 margin-bottom:10%;`;
-const WebDialogIntroductionENCSS = Styled.div`
+const WebDialogIntroductionENCSS = Styled.p`
 font-weight:normal;`;
 
 export default WhatIsWebDialog;
