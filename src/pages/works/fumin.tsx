@@ -4,13 +4,35 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaption from "../../components/WorkCaption";
+import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
+import WorksCaptionYoutube from "../../components/WorkCaptionYoutube";
+import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 import HandWritingImage from "../../images/works/Fu-min/fu-min_handwriting.png";
 import OGPImage from "../../images/works/Fu-min/fu-min_ogp.png";
 import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
+import fumin0101 from "../../images/works/Fu-min/06-01-01.png";
+import fumin0102 from "../../images/works/Fu-min/06-01-02.png";
+import fumin0103 from "../../images/works/Fu-min/06-01-03.png";
+import fumin0104 from "../../images/works/Fu-min/06-01-04.png";
+import fumin0201 from "../../images/works/Fu-min/06-02-01.png";
+import fumin0202 from "../../images/works/Fu-min/06-02-02.png";
+import fumin0203 from "../../images/works/Fu-min/06-02-03.png";
+import fumin0301 from "../../images/works/Fu-min/06-03-01.png";
+import fumin0302 from "../../images/works/Fu-min/06-03-02.png";
+import fumin0401 from "../../images/works/Fu-min/06-04-01.png";
+import fumin0402 from "../../images/works/Fu-min/06-04-02.png";
+import fumin0403 from "../../images/works/Fu-min/06-04-03.png";
+import fumin0501 from "../../images/works/Fu-min/06-05-01.png";
+import fumin0502 from "../../images/works/Fu-min/06-05-02.png";
+import fumin0503 from "../../images/works/Fu-min/06-05-03.png";
+import fumin0504 from "../../images/works/Fu-min/06-05-04.png";
+import fumin0601 from "../../images/works/Fu-min/06-06-01.png";
+import fumin0602 from "../../images/works/Fu-min/06-06-02.png";
+import fumin0603 from "../../images/works/Fu-min/06-06-03.png";
+import fumin0604 from "../../images/works/Fu-min/06-06-04.png";
 
 const {
   src,
@@ -91,8 +113,8 @@ const Fumin: React.FC = () => {
             <BorderSpan>Process</BorderSpan>
           </ChapterTitle>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarousel
+              captionImages={[fumin0101, fumin0102, fumin0103, fumin0104]}
               captionTitleJP={workCaptionTitle1JP}
               captionTitleEN={workCaptionTitle1EN}
               captionMessageJP={workCaptionMessage1JP}
@@ -100,8 +122,8 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarousel
+              captionImages={[fumin0201, fumin0202, fumin0203]}
               captionTitleJP={workCaptionTitle2JP}
               captionTitleEN={workCaptionTitle2EN}
               captionMessageJP={workCaptionMessage2JP}
@@ -109,17 +131,21 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarouselImgOnly
+              captionImages={[fumin0301, fumin0302]}
+            />
+            <WorksCaptionYoutube
+              captionImage={"https://www.youtube.com/embed/oKKxsPIA680"}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}
               captionMessageJP={workCaptionMessage3JP}
               captionMessageEN={workCaptionMessage3EN}
             />
           </WorkCaptionDiv>
+
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarousel
+              captionImages={[fumin0401, fumin0402, fumin0403]}
               captionTitleJP={workCaptionTitle4JP}
               captionTitleEN={workCaptionTitle4EN}
               captionMessageJP={workCaptionMessage4JP}
@@ -127,8 +153,8 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarousel
+              captionImages={[fumin0501, fumin0502, fumin0503, fumin0504]}
               captionTitleJP={workCaptionTitle5JP}
               captionTitleEN={workCaptionTitle5EN}
               captionMessageJP={workCaptionMessage5JP}
@@ -136,8 +162,8 @@ const Fumin: React.FC = () => {
             />
           </WorkCaptionDiv>
           <WorkCaptionDiv>
-            <WorkCaption
-              captionImage={""}
+            <WorkCaptionCarousel
+              captionImages={[fumin0601, fumin0602, fumin0603, fumin0604]}
               captionTitleJP={workCaptionTitle6JP}
               captionTitleEN={workCaptionTitle6EN}
               captionMessageJP={workCaptionMessage6JP}
