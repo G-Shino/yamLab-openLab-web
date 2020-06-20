@@ -136,10 +136,10 @@ const Fumin: React.FC = () => {
             />
             <WorksCaptionYoutube
               captionImage={"https://www.youtube.com/embed/oKKxsPIA680"}
-              captionTitleJP={workCaptionTitle6JP}
-              captionTitleEN={workCaptionTitle6EN}
-              captionMessageJP={workCaptionMessage6JP}
-              captionMessageEN={workCaptionMessage6EN}
+              captionTitleJP={workCaptionTitle3JP}
+              captionTitleEN={workCaptionTitle3EN}
+              captionMessageJP={workCaptionMessage3JP}
+              captionMessageEN={workCaptionMessage3EN}
             />
           </WorkCaptionDiv>
 
@@ -164,10 +164,10 @@ const Fumin: React.FC = () => {
           <WorkCaptionDiv>
             <WorkCaptionCarousel
               captionImages={[fumin0601, fumin0602, fumin0603, fumin0604]}
-              captionTitleJP={workCaptionTitle3JP}
-              captionTitleEN={workCaptionTitle3EN}
-              captionMessageJP={workCaptionMessage3JP}
-              captionMessageEN={workCaptionMessage3EN}
+              captionTitleJP={workCaptionTitle6JP}
+              captionTitleEN={workCaptionTitle6EN}
+              captionMessageJP={workCaptionMessage6JP}
+              captionMessageEN={workCaptionMessage6EN}
             />
           </WorkCaptionDiv>
         </MainDiv>
