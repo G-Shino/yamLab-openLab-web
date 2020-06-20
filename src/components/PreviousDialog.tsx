@@ -19,7 +19,7 @@ const PreviousDialog: React.FC = () => {
           <HonBunENCSS>
             The concept of the exhibition is to create a place for dialogue
             between the designers of the prototypes and visitors, and students
-            took the initiative in planning the exhibition "Dialog". However,
+            took the initiative in planning the exhibition "DiaLog". However,
             due to the influence of COVID-19, we have decided to postpone the
             exhibition to the public indefinitely.
           </HonBunENCSS>
