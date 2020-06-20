@@ -30,9 +30,26 @@ import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
-import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
-import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
-import WorkCaptionCarouselYoutube from "../../components/WorkCaptionYoutubeCarousel";
+
+import dynamic from "next/dynamic";
+const WorkCaptionCarousel = dynamic(
+  import("../../components/WorkCaptionCarousel"),
+  {
+    ssr: false,
+  }
+);
+const WorkCaptionCarouselImgOnly = dynamic(
+  import("../../components/WorkCaptionCarouselImgOnly"),
+  {
+    ssr: false,
+  }
+);
+const WorkCaptionCarouselYoutube = dynamic(
+  import("../../components/WorkCaptionYoutubeCarousel"),
+  {
+    ssr: false,
+  }
+);
 
 const {
   src,

@@ -1,7 +1,10 @@
 import React from "react";
 import css from "@emotion/css";
 import styled from "@emotion/styled";
-import FooterCarousel from "./FooterCarousel";
+import dynamic from "next/dynamic";
+const FooterCarousel = dynamic(import("./FooterCarousel"), {
+  ssr: false,
+});
 import { Color } from "../constants/Color";
 import { WebURL } from "../constants/Url";
 import {

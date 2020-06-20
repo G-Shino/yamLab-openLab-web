@@ -4,9 +4,6 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
-import WorksCaptionYoutube from "../../components/WorkCaptionYoutube";
-import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
 import HandWritingImage from "../../images/works/Fu-min/fu-min_handwriting.png";
 import OGPImage from "../../images/works/Fu-min/fu-min_ogp.png";
 import {
@@ -33,6 +30,22 @@ import fumin0601 from "../../images/works/Fu-min/06-06-01.png";
 import fumin0602 from "../../images/works/Fu-min/06-06-02.png";
 import fumin0603 from "../../images/works/Fu-min/06-06-03.png";
 import fumin0604 from "../../images/works/Fu-min/06-06-04.png";
+
+import dynamic from "next/dynamic";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
+const WorkCaptionCarouselImgOnly = dynamic(
+  import("../../components/WorkCaptionCarouselImgOnly"),
+  {
+    ssr: false,
+  }
+);
+
+const WorkCaptionCarousel = dynamic(
+  import("../../components/WorkCaptionCarousel"),
+  {
+    ssr: false,
+  }
+);
 
 const {
   src,
@@ -134,7 +147,7 @@ const Fumin: React.FC = () => {
             <WorkCaptionCarouselImgOnly
               captionImages={[fumin0301, fumin0302]}
             />
-            <WorksCaptionYoutube
+            <WorkCaptionYoutube
               captionImage={"https://www.youtube.com/embed/oKKxsPIA680"}
               captionTitleJP={workCaptionTitle3JP}
               captionTitleEN={workCaptionTitle3EN}

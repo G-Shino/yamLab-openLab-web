@@ -4,7 +4,7 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaptionYoutubeCarousel from "../../components/WorkCaptionYoutubeCarousel";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 import Image1_1 from "../../images/works/Oto/08-01-01.png";
 import Image1_2 from "../../images/works/Oto/08-01-02.png";
 import HandWritingImage from "../../images/works/Oto/oto_handwriting.png";
@@ -13,8 +13,20 @@ import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
-import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
-import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
+
+import dynamic from "next/dynamic";
+const WorkCaptionCarousel = dynamic(
+  import("../../components/WorkCaptionCarousel"),
+  {
+    ssr: false,
+  }
+);
+const WorkCaptionYoutubeCarousel = dynamic(
+  import("../../components/WorkCaptionYoutubeCarousel"),
+  {
+    ssr: false,
+  }
+);
 
 const {
   src,
