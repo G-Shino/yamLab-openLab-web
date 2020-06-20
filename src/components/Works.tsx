@@ -7,7 +7,7 @@ const Works: React.FC = () => {
   return (
     <WrapperCSS>
       <SectionTitleDiv>
-        <SectionTitle>- Works -</SectionTitle>
+        <SectionTitle>Works</SectionTitle>
       </SectionTitleDiv>
       <SectionWorksDiv>
         {LIST_WORKS_BASE_INFO.map((imgObj) => (
@@ -31,14 +31,15 @@ const WrapperCSS = styled.div`
   max-width: 1400px;
 `;
 
-const SectionTitleDiv = styled.div`
+const SectionTitleDiv = styled.h1`
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
 `;
 
 const SectionTitle = styled.span`
-  font-size: 4rem;
+  display: inline-block;
+  height: 100%;
   border-bottom: 5px solid;
 `;
 

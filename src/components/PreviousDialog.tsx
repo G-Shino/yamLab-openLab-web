@@ -8,6 +8,8 @@ const PreviousDialog: React.FC = () => {
       <LogoCSS src={Logo} />
       <ContentCSS>
         <ContentWrapperCSS>
+          <TitleCSS>DiaLog</TitleCSS>
+          <SubTitleCSS>きく、はなす、すすむ</SubTitleCSS>
           <DateCSS>2020.02.22 sat - 03.01 sun</DateCSS>
           <PlaceCSS>東京大学生産技術研究所S棟1階ギャラリー</PlaceCSS>
           <HonBunJPCSS>
@@ -63,9 +65,24 @@ line-height:3rem;
 const ContentWrapperCSS = Styled.div`
   margin:10%;
   `;
-const DateCSS = Styled.div`
+const TitleCSS = Styled.div`
 font-size:4rem;
+margin-bottom:5%;
+@media (max-width: 1200px){
+  font-size:1.6rem;
+  margin-bottom:0%;
+}
+`;
+const SubTitleCSS = Styled.div`
+font-size:4rem;
+margin-bottom:10%;
+@media (max-width: 1200px){
+  font-size:1.6rem;
   margin-bottom:5%;
+}
+`;
+const DateCSS = Styled.div`
+font-size:1.6rem;
   font-weight:normal;
   @media (max-width: 1200px){
     font-size:1.6rem;
@@ -73,9 +90,11 @@ font-size:4rem;
   }
   `;
 const PlaceCSS = Styled.div`
+font-size:1.6rem;
   margin-bottom:5%;
   display:flex;
   @media (max-width: 1200px){
+    font-size:1.6rem;
     flex-direction:column;
   }
   `;

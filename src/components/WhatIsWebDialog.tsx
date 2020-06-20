@@ -8,8 +8,10 @@ const WhatIsWebDialog: React.FC = () => {
       <LogoCSS src={Logo} />
       <ContentCSS>
         <ContentWrapperCSS>
-          <TitleJapaneseCSS>Web Dialogとは</TitleJapaneseCSS>
-          <TitleEnglishCSS>What is Web Dialog?</TitleEnglishCSS>
+          <TitleCSS>DiaLog</TitleCSS>
+          <SubTitleCSS>きづく、つづる、つながる</SubTitleCSS>
+          <DateCSS>2020.06.20 sat - 06.27 sat</DateCSS>
+          <PlaceCSS>展示会特設ウェブサイト</PlaceCSS>
           <WebDialogIntroductionJPCSS>
             展示会を通して実際に作品に触れて頂くことを研究発表の主な手段としてきた私達ですが、新たな発表方法を模索することを目的に、対話をコンセプトとしたオンライン展示『Dialog
             きづく、つづる、つながる』を企画しました。東京大学大学院情報学環・学際情報学府主催のオープンラボ・ウィークの期間、先行公開致します。また、オフライン展示『Dialog
@@ -41,9 +43,9 @@ align-content:center;
 }
 `;
 const ContentWrapperCSS = Styled.div`
-margin:15%`;
+margin:10%`;
 const LogoCSS = Styled.img`
-width:400px;
+width:350px;
 @media (max-width: 1200px){
   margin-top:30%;
   width:50%;
@@ -57,7 +59,7 @@ font-weight:bold;
 font-size:1.6rem;
 font-kerning:3.5rem;
 line-height:3rem;
-width:700px;
+width:775px;
 margin-top:20%;
 margin-bottom:20%;
 @media (max-width: 1200px){
@@ -66,7 +68,15 @@ margin-bottom:20%;
   margin:5%;
 }
 `;
-const TitleJapaneseCSS = Styled.div`
+const TitleCSS = Styled.div`
+font-size:4rem;
+margin-bottom:5%;
+@media (max-width: 1200px){
+  font-size:1.6rem;
+  margin-bottom:0%;
+}
+`;
+const SubTitleCSS = Styled.div`
 font-size:4rem;
 margin-bottom:10%;
 @media (max-width: 1200px){
@@ -74,14 +84,23 @@ margin-bottom:10%;
   margin-bottom:5%;
 }
 `;
-const TitleEnglishCSS = Styled.div`
-font-size:4rem;
-text-align:right;
-margin-bottom:10%;
-@media (max-width: 1200px){
+const DateCSS = Styled.div`
+font-size:1.6rem;
+  font-weight:normal;
+  @media (max-width: 1200px){
+    font-size:1.6rem;
+    font-weight:bold;
+  }
+  `;
+const PlaceCSS = Styled.div`
+  margin-bottom:5%;
   font-size:1.6rem;
-}
-`;
+  display:flex;
+  @media (max-width: 1200px){
+    font-size:1.6rem;
+    flex-direction:column;
+  }
+  `;
 const WebDialogIntroductionJPCSS = Styled.div`
 margin-bottom:10%;
 text-align:justify;

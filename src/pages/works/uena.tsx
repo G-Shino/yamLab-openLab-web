@@ -48,8 +48,8 @@ const workCaptionMessage2EN = `To express its bio-likeness with only its leg-ben
 
 const workCaptionTitle3JP = `ゆらゆら`;
 const workCaptionTitle3EN = `solid swing`;
-const workCaptionMessage3JP = `重力との釣り合いに注目し、柔らかさの表現を試みる中でこの作品は生まれました。動力を使わず、ヤジロベエが複数連なった構造だけで生み出されるふるまいは、モーメントが釣り合っていれば、どのような硬さや比重の素材でも同じ柔らかい動きを示します。`;
-const workCaptionMessage3EN = `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component.`;
+const workCaptionMessage3JP = `着地というしなやかな動きを、生物の模倣とは異なるアプローチで再現しようとしました。素材の柔らかさを用いず、新しい機構のダンパーを試作していた過程で生まれたものがこの機構になります。`;
+const workCaptionMessage3EN = `We tried to recreate the flexibility of the landing motion with a different approach than imitating living organisms. This mechanism was born out of the process of prototyping a new type of damper without using the softness of the material.`;
 const Uena: React.FC = () => {
   return (
     <>
