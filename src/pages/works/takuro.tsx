@@ -25,7 +25,14 @@ import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
-import WorkCaptionCarousel from "../../components/WorkCaptionCarousel";
+
+import dynamic from "next/dynamic";
+const WorkCaptionCarousel = dynamic(
+  import("../../components/WorkCaptionCarousel"),
+  {
+    ssr: false,
+  }
+);
 import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 
 const {

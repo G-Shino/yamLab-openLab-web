@@ -4,7 +4,7 @@ import texture from "../../images/mdftexture.jpg";
 import OGPHead from "../../components/OGPHead";
 import WorkOverView from "../../components/WorkOverView";
 import FootSpace from "../../components/FootSpace";
-import WorkCaptionYoutubeCarousel from "../../components/WorkCaptionYoutubeCarousel";
+import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
 import HandWritingImage from "../../images/works/Uena/uena_handwriting.png";
 import OGPImage from "../../images/works/Uena/uena_ogp.png";
 
@@ -15,8 +15,20 @@ import {
   WorksBaseInfoWithPrevAndNextLink,
   getWorksInfoByAuthor,
 } from "../../constants/WorksList";
-import WorkCaptionYoutube from "../../components/WorkCaptionYoutube";
-import WorkCaptionCarouselImgOnly from "../../components/WorkCaptionCarouselImgOnly";
+
+import dynamic from "next/dynamic";
+const WorkCaptionYoutubeCarousel = dynamic(
+  import("../../components/WorkCaptionYoutubeCarousel"),
+  {
+    ssr: false,
+  }
+);
+const WorkCaptionCarouselImgOnly = dynamic(
+  import("../../components/WorkCaptionCarouselImgOnly"),
+  {
+    ssr: false,
+  }
+);
 
 const {
   src,
