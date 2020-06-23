@@ -5,6 +5,11 @@ import { Global } from "@emotion/core";
 import globalCSS from "./../styles/global";
 import Head from "next/head";
 
+import Router from "next/router";
+import * as gtag from "../lib/gtag";
+
+Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
+
 const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
   pageProps,
