@@ -10,7 +10,10 @@ const CloseWebSite: React.FC = () => {
       <CloseMessageDiv>
         <CaptionImg src={LogoWhite} />
         <MessageDiv>
-          本期間の開催は終了しました。またご来場をお待ちしております。
+          DiaLog
+          きづく、つづる、つながるの先行公開は終了致しました。今後の案内はSNS(
+          <StyledLink href="https://twitter.com/YamLabEx">@YamLabEX</StyledLink>
+          ) を通して発信させて頂きます。
         </MessageDiv>
       </CloseMessageDiv>
     </WrapperDiv>
@@ -49,6 +52,14 @@ const CaptionImg = styled.img`
   }
 `;
 
+const StyledLink = styled.a`
+  color: ${Color.CAPTION_FONT_COLOR};
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+
 const MessageDiv = styled.p`
-  margin: 0 16px 32px;
+  width: 80%;
+  margin-bottom: 40px;
 `;
