@@ -101,7 +101,8 @@ const Comment: React.FC = () => {
       .ref()
       .once("value")
       .then((snap) => {
-        const databaseRef = snap.val();
+        let databaseRef: Object;
+        databaseRef = snap.val();
         let comments = Object.entries(databaseRef);
         for (let i = comments.length - 1; i > 0; i--) {
           let r = Math.floor(Math.random() * (i + 1));
@@ -109,7 +110,8 @@ const Comment: React.FC = () => {
           comments[i] = comments[r];
           comments[r] = tmp;
         }
-        let commentsSelected = comments.slice(0, 3);
+        let commentsSelected: [string, { content: string; good: number }][];
+        commentsSelected = comments.slice(0, 3);
         setcomment0({
           ...comment0,
           key: commentsSelected[0][0],
