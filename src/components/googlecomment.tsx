@@ -132,39 +132,46 @@ const Comment: React.FC = () => {
   return (
     <CommentBox>
       <form onSubmit={handleSubmit}>
+        <CommentOptionWrapper>
+          <div>共感するコメントにチェックしてください(複数可)</div>
+          <CommentOptionIntro>
+            観覧者が記入したコメントからランダムに三つ選び、選択肢として提供します。画面をリフレッシュすると選択肢が変わります。
+          </CommentOptionIntro>
+          <label>
+            {comment0.content}
+            <input
+              type="checkbox"
+              name={"0"}
+              checked={checkbox0}
+              onChange={(e) => setCheckbox0(e.target.checked)}
+            />
+          </label>
+          <label>
+            {comment1.content}
+            <input
+              type="checkbox"
+              name={"1"}
+              checked={checkbox1}
+              onChange={(e) => setCheckbox1(e.target.checked)}
+            />
+          </label>
+          <label>
+            {comment2.content}
+            <input
+              type="checkbox"
+              name={"2"}
+              checked={checkbox2}
+              onChange={(e) => setCheckbox2(e.target.checked)}
+            />
+          </label>
+        </CommentOptionWrapper>
+        <div>その他コメント等ございましたら、こちらにご記入ください。</div>
         <label>
           Comment:
           <input
             type="text"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-          />
-        </label>
-        <label>
-          {comment0.content}
-          <input
-            type="checkbox"
-            name={"0"}
-            checked={checkbox0}
-            onChange={(e) => setCheckbox0(e.target.checked)}
-          />
-        </label>
-        <label>
-          {comment1.content}
-          <input
-            type="checkbox"
-            name={"1"}
-            checked={checkbox1}
-            onChange={(e) => setCheckbox1(e.target.checked)}
-          />
-        </label>
-        <label>
-          {comment2.content}
-          <input
-            type="checkbox"
-            name={"2"}
-            checked={checkbox2}
-            onChange={(e) => setCheckbox2(e.target.checked)}
           />
         </label>
         <input type="submit" value="送信" />
@@ -175,7 +182,27 @@ const Comment: React.FC = () => {
 
 const CommentBox = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: #555555;
+  height: 50vh;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-kerning: 3.5rem;
+  line-height: 3rem;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-content: center;
+`;
+
+const CommentOptionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 5%;
+`;
+const CommentOptionIntro = styled.div`
+  margin-bottom: 2%;
 `;
 export default Comment;
