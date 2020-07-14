@@ -7,6 +7,7 @@ import FootSpace from "../../components/FootSpace";
 import WorkCaption from "../../components/WorkCaption";
 import HandWritingImage from "../../images/works/Heejun/heejun_handwriting.png";
 import OGPImage from "../../images/works/Heejun/heejun_ogp.png";
+import Comment from "../../components/googlecomment";
 
 import heejun0101 from "../../images/works/Heejun/09-01-01.png";
 import heejun0102 from "../../images/works/Heejun/09-01-02.png";
@@ -193,6 +194,7 @@ const Heejun: React.FC = () => {
           nextImg={nextImg}
         />
       </WrapperDiv>
+      <Comment />
     </>
   );
 };
