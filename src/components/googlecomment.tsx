@@ -121,17 +121,17 @@ const Comment: React.FC<Props> = ({ author }) => {
         commentsSelected = comments.slice(0, 3);
         setcomment0({
           ...comment0,
-          key: commentsSelected[0][0],
+          key: author + "/" + commentsSelected[0][0],
           content: commentsSelected[0][1].content,
         });
         setcomment1({
           ...comment1,
-          key: commentsSelected[1][0],
+          key: author + "/" + commentsSelected[1][0],
           content: commentsSelected[1][1].content,
         });
         setcomment2({
           ...comment2,
-          key: commentsSelected[2][0],
+          key: author + "/" + commentsSelected[2][0],
           content: commentsSelected[2][1].content,
         });
       });
