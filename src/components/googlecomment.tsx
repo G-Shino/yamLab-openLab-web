@@ -15,8 +15,15 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
+firebase
+  .auth()
+  .signInAnonymously()
+  .catch((error) => console.log(error));
 
-const Comment: React.FC = () => {
+interface Props {
+  author: string;
+}
+const Comment: React.FC<Props> = ({ author }) => {
   const [comment, setComment] = React.useState("");
   const [checkbox0, setCheckbox0] = React.useState(false);
   const [checkbox1, setCheckbox1] = React.useState(false);
@@ -37,7 +44,7 @@ const Comment: React.FC = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (comment !== "") {
-      firebase.database().ref().push({ content: comment, good: 0 });
+      firebase.database().ref(author).push({ content: comment, good: 0 });
       setComment("");
     }
 
@@ -98,7 +105,7 @@ const Comment: React.FC = () => {
   useEffect(() => {
     firebase
       .database()
-      .ref()
+      .ref(author)
       .once("value")
       .then((snap) => {
         let databaseRef: Object;

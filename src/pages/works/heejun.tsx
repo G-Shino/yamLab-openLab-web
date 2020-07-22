@@ -194,7 +194,7 @@ const Heejun: React.FC = () => {
           nextImg={nextImg}
         />
       </WrapperDiv>
-      <Comment />
+      <Comment author="Heejun" />
     </>
   );
 };
