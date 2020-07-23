@@ -209,7 +209,7 @@ const Comment: React.FC<Props> = ({ author }) => {
         <input type="submit" value="送信" />
       </form>
       <UploadButton onChange={handleImageSubmit}>
-        <input type="file" accept="image/*" capture="camera" multiple={true} />
+        <input type="file" accept="image/*" multiple={true} />
         <input type="submit" name="save" value="画像を送信" />
       </UploadButton>
     </CommentBox>
