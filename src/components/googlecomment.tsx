@@ -30,6 +30,7 @@ interface Props {
 const Comment: React.FC<Props> = ({ author }) => {
   //ユーザが書いたコメントを格納
   const [comment, setComment] = React.useState("");
+  const imgCache = React.useRef<HTMLInputElement>();
 
   //いいねのチェックボックスの値(boolean)
   const [checkbox0, setCheckbox0] = React.useState(false);
@@ -115,6 +116,13 @@ const Comment: React.FC<Props> = ({ author }) => {
   //画像アップロードイベント
   const handleImageSet = (e) => {
     const file = e.target.files[0]; //選ばれたファイル
+    if (file.size > 1e7) {
+      alert("画像サイズは10Mb以内に収めてください");
+    }
+  };
+  const handleImageSubmit = (e) => {
+    e.preventDefault();
+    const file = imgCache.current.files[0];
     const storageRef = firebase.storage().ref(); //firebase storageのrootパス
     if (file.size > 1e7) {
       alert("画像サイズは10Mb以内に収めてください");
@@ -138,6 +146,7 @@ const Comment: React.FC<Props> = ({ author }) => {
           });
         }
       );
+      imgCache.current.value = "";
     }
   };
   //データベースよりランダムにコメントを抜粋し、stateとして格納する
@@ -227,8 +236,14 @@ const Comment: React.FC<Props> = ({ author }) => {
         </label>
         <input type="submit" value="送信" />
       </form>
-      <UploadButton onChange={handleImageSet}>
-        <input type="file" accept="image/*" required id="fileform" />
+      <UploadButton onChange={handleImageSet} onSubmit={handleImageSubmit}>
+        <input
+          type="file"
+          accept="image/*"
+          required
+          id="fileform"
+          ref={imgCache}
+        />
         <input type="submit" name="save" value="画像を送信" />
       </UploadButton>
     </CommentBox>
