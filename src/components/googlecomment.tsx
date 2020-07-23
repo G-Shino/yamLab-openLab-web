@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import firebase from "firebase";
-
+import uuid from "react-uuid";
 const firebaseConfig = {
   apiKey: "AIzaSyDx9tzYwvDgTJOXIvkLrbqh1YAJ8XNOrys",
   authDomain: "yamlab-3f326.firebaseapp.com",
@@ -108,7 +108,7 @@ const Comment: React.FC<Props> = ({ author }) => {
     const storageRef = firebase.storage().ref();
 
     const uploadTask = storageRef
-      .child(`${author}/comments/${file.name}`)
+      .child(`${author}/comments/${uuid()}`)
       .put(file);
     uploadTask.on(
       "state_changed",

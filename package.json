@@ -30,6 +30,7 @@
     "react-share": "^4.2.0",
     "react-slick": "^0.26.1",
     "react-three-fiber": "^4.2.10",
+    "react-uuid": "^1.0.2",
     "slick-carousel": "^1.8.1",
     "three": "^0.117.1"
   },
