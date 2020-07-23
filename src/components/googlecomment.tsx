@@ -140,7 +140,6 @@ const Comment: React.FC<Props> = ({ author }) => {
       );
     }
   };
-  const handleImageSubmit = (e) => {};
   //データベースよりランダムにコメントを抜粋し、stateとして格納する
   useEffect(() => {
     firebase
@@ -228,7 +227,7 @@ const Comment: React.FC<Props> = ({ author }) => {
         </label>
         <input type="submit" value="送信" />
       </form>
-      <UploadButton onChange={handleImageSet} onSubmit={handleImageSubmit}>
+      <UploadButton onChange={handleImageSet}>
         <input type="file" accept="image/*" required id="fileform" />
         <input type="submit" name="save" value="画像を送信" />
       </UploadButton>
