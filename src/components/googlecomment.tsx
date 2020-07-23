@@ -101,7 +101,32 @@ const Comment: React.FC<Props> = ({ author }) => {
         console.log(snap.val());
       });
   };
+  const handleImageSubmit = (e) => {
+    e.preventDefault();
 
+    const file = e.target.files[0];
+    const storageRef = firebase.storage().ref();
+
+    const uploadTask = storageRef
+      .child(`${author}/comments/${file.name}`)
+      .put(file);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        console.log("snapshot", snapshot);
+      },
+      (error) => {
+        console.log("err", error);
+      },
+      () => {
+        // Handle successful uploads on complete
+        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+          console.log("File available at", downloadURL);
+        });
+      }
+    );
+  };
   useEffect(() => {
     firebase
       .database()
@@ -183,6 +208,10 @@ const Comment: React.FC<Props> = ({ author }) => {
         </label>
         <input type="submit" value="送信" />
       </form>
+      <UploadButton onChange={handleImageSubmit}>
+        <input type="file" accept="image/*" capture="camera" multiple={true} />
+        <input type="submit" name="save" value="画像を送信" />
+      </UploadButton>
     </CommentBox>
   );
 };
@@ -211,5 +240,13 @@ const CommentOptionWrapper = styled.div`
 `;
 const CommentOptionIntro = styled.div`
   margin-bottom: 2%;
+`;
+const UploadButton = styled.form`
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  background-color: #222222;
 `;
 export default Comment;
