@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import firebase from "firebase";
 import uuid from "react-uuid";
+
+//firebaseの設定
 const firebaseConfig = {
   apiKey: "AIzaSyDx9tzYwvDgTJOXIvkLrbqh1YAJ8XNOrys",
   authDomain: "yamlab-3f326.firebaseapp.com",
@@ -20,15 +22,22 @@ firebase
   .signInAnonymously()
   .catch((error) => console.log(error));
 
+//作者名ごとのデータベースを作成するため、作者名を宣言
 interface Props {
   author: string;
 }
+
 const Comment: React.FC<Props> = ({ author }) => {
+  //ユーザが書いたコメントを格納
   const [comment, setComment] = React.useState("");
+  const [imgFile, setImgFile] = React.useState("");
+
+  //いいねのチェックボックスの値(boolean)
   const [checkbox0, setCheckbox0] = React.useState(false);
   const [checkbox1, setCheckbox1] = React.useState(false);
   const [checkbox2, setCheckbox2] = React.useState(false);
 
+  //データベースよりランダムに抜き出された三つのコメント
   const [comment0, setcomment0] = React.useState({
     key: "",
     content: "",
@@ -41,13 +50,22 @@ const Comment: React.FC<Props> = ({ author }) => {
     key: "",
     content: "",
   });
+
+  //コメント、いいねの送信イベント
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    //新しいコメントの文字列をデータベースに格納
     if (comment !== "") {
-      firebase.database().ref(author).push({ content: comment, good: 0 });
-      setComment("");
+      if (comment.length > 100) {
+        alert("コメントは100文字以内にしてください。");
+      } else {
+        firebase.database().ref(author).push({ content: comment, good: 0 });
+        setComment("");
+      }
     }
 
+    //いいねをデータベースに反映
     if (checkbox0 === true) {
       firebase
         .database()
@@ -93,40 +111,38 @@ const Comment: React.FC<Props> = ({ author }) => {
         });
       setCheckbox2(false);
     }
-    firebase
-      .database()
-      .ref()
-      .once("value")
-      .then((snap) => {
-        console.log(snap.val());
-      });
   };
-  const handleImageSubmit = (e) => {
-    e.preventDefault();
 
-    const file = e.target.files[0];
-    const storageRef = firebase.storage().ref();
-
-    const uploadTask = storageRef
-      .child(`${author}/comments/${uuid()}`)
-      .put(file);
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        console.log("snapshot", snapshot);
-      },
-      (error) => {
-        console.log("err", error);
-      },
-      () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-          console.log("File available at", downloadURL);
-        });
-      }
-    );
+  //画像アップロードイベント
+  const handleImageSet = (e) => {
+    const file = e.target.files[0]; //選ばれたファイル
+    const storageRef = firebase.storage().ref(); //firebase storageのrootパス
+    if (file.size > 1e7) {
+      alert("画像サイズは10Mb以内に収めてください");
+    } else {
+      const uploadTask = storageRef
+        .child(`${author}/comments/${uuid()}`) //ファイル名をuniqueにするためuuidで指定
+        .put(file);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          console.log("snapshot", snapshot);
+        },
+        (error) => {
+          console.log("err", error);
+        },
+        () => {
+          // Handle successful uploads on complete
+          // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+          uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+            console.log("File available at", downloadURL);
+          });
+        }
+      );
+    }
   };
+  const handleImageSubmit = (e) => {};
+  //データベースよりランダムにコメントを抜粋し、stateとして格納する
   useEffect(() => {
     firebase
       .database()
@@ -135,32 +151,37 @@ const Comment: React.FC<Props> = ({ author }) => {
       .then((snap) => {
         let databaseRef: Object;
         databaseRef = snap.val();
-        let comments = Object.entries(databaseRef);
+        let comments = Object.entries(databaseRef); //データベースのobjectを配列として格納(シャッフルするため)
+
+        //シャッフル
         for (let i = comments.length - 1; i > 0; i--) {
           let r = Math.floor(Math.random() * (i + 1));
           let tmp = comments[i];
           comments[i] = comments[r];
           comments[r] = tmp;
         }
+
         let commentsSelected: [string, { content: string; good: number }][];
-        commentsSelected = comments.slice(0, 3);
+        commentsSelected = comments.slice(0, 3); //シャッフルされた配列から三つ取り出す
         setcomment0({
           ...comment0,
-          key: author + "/" + commentsSelected[0][0],
+          key: `${author}/${commentsSelected[0][0]}`,
           content: commentsSelected[0][1].content,
         });
         setcomment1({
           ...comment1,
-          key: author + "/" + commentsSelected[1][0],
+          key: `${author}/${commentsSelected[1][0]}`,
           content: commentsSelected[1][1].content,
         });
         setcomment2({
           ...comment2,
-          key: author + "/" + commentsSelected[2][0],
+          key: `${author}/${commentsSelected[2][0]}`,
           content: commentsSelected[2][1].content,
         });
       });
   }, []);
+
+  //出力jsx
   return (
     <CommentBox>
       <form onSubmit={handleSubmit}>
@@ -208,8 +229,8 @@ const Comment: React.FC<Props> = ({ author }) => {
         </label>
         <input type="submit" value="送信" />
       </form>
-      <UploadButton onChange={handleImageSubmit}>
-        <input type="file" accept="image/*" multiple={true} />
+      <UploadButton onChange={handleImageSet} onSubmit={handleImageSubmit}>
+        <input type="file" accept="image/*" required id="fileform" />
         <input type="submit" name="save" value="画像を送信" />
       </UploadButton>
     </CommentBox>
@@ -250,3 +271,31 @@ const UploadButton = styled.form`
   background-color: #222222;
 `;
 export default Comment;
+
+/*
+const file = e.target.files[0]; //選ばれたファイル
+    const storageRef = firebase.storage().ref(); //firebase storageのrootパス
+    if (file.size > 1e7) {
+      alert("画像サイズは10Mb以内に収めてください");
+    } else {
+      const uploadTask = storageRef
+        .child(`${author}/comments/${uuid()}`) //ファイル名をuniqueにするためuuidで指定
+        .put(file);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          console.log("snapshot", snapshot);
+        },
+        (error) => {
+          console.log("err", error);
+        },
+        () => {
+          // Handle successful uploads on complete
+          // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+          uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+            console.log("File available at", downloadURL);
+          });
+        }
+      );
+    }
+    */
