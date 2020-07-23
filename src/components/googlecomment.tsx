@@ -30,7 +30,6 @@ interface Props {
 const Comment: React.FC<Props> = ({ author }) => {
   //ユーザが書いたコメントを格納
   const [comment, setComment] = React.useState("");
-  const [imgFile, setImgFile] = React.useState("");
 
   //いいねのチェックボックスの値(boolean)
   const [checkbox0, setCheckbox0] = React.useState(false);
