@@ -31,6 +31,7 @@ const Comment: React.FC<Props> = ({ author }) => {
   //ユーザが書いたコメントを格納
   const [comment, setComment] = React.useState("");
   const imgCache = React.useRef<HTMLInputElement>();
+  const [imgUrl, setImgUrl] = React.useState("");
 
   //いいねのチェックボックスの値(boolean)
   const [checkbox0, setCheckbox0] = React.useState(false);
@@ -50,6 +51,12 @@ const Comment: React.FC<Props> = ({ author }) => {
     key: "",
     content: "",
   });
+  useEffect(() => {
+    const blankImgRef = firebase.storage().ref().child("black.png");
+    blankImgRef.getDownloadURL().then((url) => {
+      setImgUrl(url);
+    });
+  }, []);
 
   //コメント、いいねの送信イベント
   const handleSubmit = (e) => {
@@ -115,9 +122,20 @@ const Comment: React.FC<Props> = ({ author }) => {
 
   //画像アップロードイベント
   const handleImageSet = (e) => {
-    const file = e.target.files[0]; //選ばれたファイル
-    if (file.size > 1e7) {
-      alert("画像サイズは10Mb以内に収めてください");
+    if (e.target.files.length > 0) {
+      const file = e.target.files[0]; //選ばれたファイル
+      if (file.size > 1e7) {
+        alert("画像サイズは10Mb以内に収めてください");
+        imgCache.current.value = "";
+      } else {
+        const objectUrl = URL.createObjectURL(file);
+        setImgUrl(objectUrl);
+      }
+    } else {
+      const blankImgRef = firebase.storage().ref().child("black.png");
+      blankImgRef.getDownloadURL().then((url) => {
+        setImgUrl(url);
+      });
     }
   };
   const handleImageSubmit = (e) => {
@@ -147,6 +165,10 @@ const Comment: React.FC<Props> = ({ author }) => {
         }
       );
       imgCache.current.value = "";
+      const blankImgRef = firebase.storage().ref().child("black.png");
+      blankImgRef.getDownloadURL().then((url) => {
+        setImgUrl(url);
+      });
     }
   };
   //データベースよりランダムにコメントを抜粋し、stateとして格納する
@@ -246,6 +268,7 @@ const Comment: React.FC<Props> = ({ author }) => {
         />
         <input type="submit" name="save" value="画像を送信" />
       </UploadButton>
+      <Thumbnail src={imgUrl} />
     </CommentBox>
   );
 };
@@ -282,6 +305,11 @@ const UploadButton = styled.form`
   line-height: 100px;
   color: white;
   background-color: #222222;
+`;
+
+const Thumbnail = styled.img`
+  width: 200px;
+  height: 200px;
 `;
 export default Comment;
 
