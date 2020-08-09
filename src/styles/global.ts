@@ -16,8 +16,8 @@ const globalCSS = css`
     width: 100%;
     color: ${Color.FONT_COLOR};
     font-size: 1.4rem;
-    font-family: "Jost", "YuGothic", "Yu Gothic", "游ゴシック", "Meiryo",
-      "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
+    font-family: "Jost", "Noto Sans JP", "YuGothic", "Yu Gothic", "游ゴシック",
+      "Meiryo", "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",
       -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     background-color: ${Color.BASE_COLOR};
   }
@@ -40,7 +40,6 @@ const globalCSS = css`
   h3 {
     font-size: 2.4rem;
     line-height: 3.2rem;
-    font-weight: bold;
   }
 
   button {
