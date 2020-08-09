@@ -85,7 +85,39 @@ import fumin0602 from "../images/works/Fu-min/06-06-02.png";
 import fumin0603 from "../images/works/Fu-min/06-06-03.png";
 import fumin0604 from "../images/works/Fu-min/06-06-04.png";
 
+const authors = ["oga", "shinogu", "hazuki", "kana", "fu-min"] as const;
+type Authors = typeof authors;
+
 const Page: React.FC = () => {
+  const targets = React.useRef<
+    { [key in keyof Authors]?: React.RefObject<HTMLDivElement> }
+  >({});
+  authors.forEach((author) => {
+    targets.current[author] = React.createRef();
+  });
+  const [author, setAuthor] = React.useState("");
+  React.useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "-50% 0px",
+      threshold: 0,
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setAuthor(entry.target.id);
+      }
+    }, options);
+    console.log(targets);
+    Object.values(targets.current).forEach((target) => {
+      observer.observe(target.current);
+    });
+    return () => {
+      Object.values(targets.current).forEach((target) => {
+        observer.unobserve(target.current);
+      });
+    };
+  }, []);
+
   return (
     <WrapperDiv>
       <WrapperMainDiv>
@@ -103,7 +135,7 @@ const Page: React.FC = () => {
         </Header>
         <Main>
           <WorkTitle>Scalable hand</WorkTitle>
-          <WorksDiv>
+          <WorksDiv ref={targets.current[authors[0]]} id={authors[0]}>
             <WorkImg src={oga0101} alt="" width="802" height="535" />
             <WorkImg src={oga0102} alt="" width="802" height="535" />
             <WorkImg src={oga0103} alt="" width="802" height="535" />
@@ -128,7 +160,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
           </WorksDiv>
           <WorkTitle>流点</WorkTitle>
-          <WorksDiv>
+          <WorksDiv ref={targets.current[authors[1]]} id={authors[1]}>
             <WorkImg src={shinogu0201} alt="" width="802" height="535" />
             <WorkImg src={shinogu0202} alt="" width="802" height="535" />
             <WorkImg src={shinogu0301} alt="" width="802" height="535" />
@@ -154,9 +186,9 @@ const Page: React.FC = () => {
           </WorksDiv>
           <WorkTitle>
             Reduce Unconscious Gender Bias through Workshop with Co-Speculative
-            Design"
+            Design
           </WorkTitle>
-          <WorksDiv>
+          <WorksDiv ref={targets.current[authors[2]]} id={authors[2]}>
             <WorkImg src={hazuki_1_1} alt="" />
             <WorkImg src={hazuki_1_2} alt="" />
             <WorkImg src={hazuki_2} alt="" />
@@ -173,7 +205,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
           </WorksDiv>
           <WorkTitle>OTT: OTTOTTO</WorkTitle>
-          <WorksDiv>
+          <WorksDiv ref={targets.current[authors[3]]} id={authors[3]}>
             <WorkImg src={kana0301} alt="" />
             <WorkImg src={kana0302} alt="" />
             <WorkImg src={kana0303} alt="" />
@@ -190,7 +222,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
           </WorksDiv>
           <WorkTitle>ヴァイオリン用顎・肩当て</WorkTitle>
-          <WorksDiv>
+          <WorksDiv ref={targets.current[authors[4]]} id={authors[4]}>
             <WorkImg src={fumin0101} alt="" />
             <WorkImg src={fumin0102} alt="" />
             <WorkImg src={fumin0103} alt="" />
@@ -221,7 +253,7 @@ const Page: React.FC = () => {
       <AsideDiv>
         <h3>Message</h3>
         <StyledUL>
-          <li></li>
+          <li>{author}</li>
         </StyledUL>
       </AsideDiv>
     </WrapperDiv>
