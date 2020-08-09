@@ -413,9 +413,9 @@ const HeaderLogoDiv = styled.img`
   left: 8px;
   z-index: 10;
   border-radius: 8px;
+  transition: 0.3s ease-in-out;
   &:hover {
     background-color: black;
-    transition: 0.5s ease-in-out;
   }
 `;
 
@@ -449,9 +449,9 @@ const WorkImg = styled.img`
   @media (max-width: 320px) {
     width: 90%;
   }
+  transition: 0.3s;
   &:hover {
     opacity: 0.8;
-    transition: 0.3s;
   }
 `;
 
