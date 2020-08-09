@@ -85,17 +85,54 @@ import fumin0602 from "../images/works/Fu-min/06-06-02.png";
 import fumin0603 from "../images/works/Fu-min/06-06-03.png";
 import fumin0604 from "../images/works/Fu-min/06-06-04.png";
 
-const authors = ["oga", "shinogu", "hazuki", "kana", "fu-min"] as const;
-type Authors = typeof authors;
+type Authors = "oga" | "shinogu" | "hazuki" | "kana" | "fumin";
+const authors: Authors[] = ["oga", "shinogu", "hazuki", "kana", "fumin"];
+
+type Info = {
+  title: string;
+  overViewCaptionJP: string;
+  overViewCaptionEN: string;
+};
+
+const worksInfo: { [key in Authors]: Info } = {
+  oga: {
+    title: "Scalable hand",
+    overViewCaptionJP: `人にはそれぞれ、少しずつ違う手の大きさがあります。しかし、従来の義手やロボットハンドは大きさが段階的で、必ずしもあなたの欲しい手の大きさではないかもしれません。そこで私は、細かなサイズ調整を簡単に行える『Scalable hand』を制作しました。本来は硬いナイロン樹脂から形状を工夫することで、シリコンのように柔らかい指先・バネのような反発性のある関節を再現。これらの部品を3Dプリンタを用いて一度に造形することで組み立てにネジを使う必要がなく、3Dモデルを拡大・縮小するだけでサイズ調整が可能となります。`,
+    overViewCaptionEN: `There are many sizes of hand depending on people. However, the size of current humanoid hands are still limited and may not be a perfect size for each individual.  This scalable hand is a non-assembled robot hand that is created using PBF (Powder Bed Fusion) a type of 3D-printer. The changes of the size can be made limitlessly.  Nylon, the material used here is normally stiff. But, by devising its geometric shape, it can be very soft and supple. `,
+  },
+  shinogu: {
+    title: "流点",
+    overViewCaptionJP: `水の動きに見入ってしまった経験はありますか？雄大にしぶきを上げ流れ落ちる滝も、繊細に静かに滴り落ちる水滴も、思わず鑑賞し続けたくなる魅力があります。そしてこの魅力は、水の持つ「不定形さ」によってもたらされるのではないかと考えました。この作品では、小さな塊となった色水が、ひとつひとつ、流路に沿って滑らかに進みます。それは規則的でありながらどこか不安定さを感じさせる、不思議に満ちた動きです。しなやかな水が生み出す優美さを是非ご覧ください。`,
+    overViewCaptionEN: `There is some indescribable aesthetic inflow of water, ranging from breathtaking, giant waterfall to a single, tiny waterdrop. We thought what makes it such beautiful is the amorphous nature of liquid water. In this prototype, a tiny droplet of colored water travels through the channel smoothly, and calmly. It is well-regulated motion yet looks unstable in some respects. Please enjoy the elegance created by the sophisticated flow of the water.`,
+  },
+  hazuki: {
+    title:
+      "Reduce Unconscious Gender Bias through Workshop with Co-Speculative Design",
+    overViewCaptionJP: `無意識のバイアスに気づくことは、簡単ではありません。生まれ育った環境や文化を通して、積み重なる学習によって根付いたものです。性別へのバイアスによって様々な可能性が阻まれている現状に対し、Co-Speculative Desginと言う理論を取り入れ、固定概念を覆し、内省を促すワークショップを設計しました。ワークショップ内では、起こりうる未来を想定しながらペルソナを作る過程でバイアスが露呈される仕掛けを用意し、参加者同士が対話することでバイアスに対する新たな問題への気づきを促しました。`,
+    overViewCaptionEN: `It is quite difficult to realize our unconscious bias. It develops in our subconsciousness, while we live through our own culture and environment. We designed a workshop to discover and self-examine our inner gender bias, by introducing co-speculative design theory. In this workshop, we designed to expose an individual's bias while each participant build persona simulating close future of themselves. And by each participant's conversation, we were able to make them perceive some new problems about bias.`,
+  },
+  kana: {
+    title: "TT: OTTOTTO",
+    overViewCaptionJP: `生物は安定した状態となるよう重力などの物理法則の上で常に均衡を保つようにしており、例えばひとたび不安定な姿勢になると、様々な反応や動作を即座に行うことで安定した姿勢に戻ろうとします。この作品では、こうした安定と不安定な姿勢を行き来する際の反応・動作の中から生命感や愛おしさを感じるふるまいを抽出し、人工物に適用しました。ふるまいにより生まれる、生き物らしさにご注目ください。`,
+    overViewCaptionEN: `Living creatures, tend to balance themselves against the surrounding force such as gravity, to maintain their stable position. For instance, if one became unstable due to external interference, it tries to recover its stable state by properly reacting with their limbs. In this project, we tried to extract the essence of bio-likeness and adorableness from the behavior oscillating its state between stable and unstable and implemented it to this artifact. You would be able to observe bio-likeness through the behavior of our prototype.`,
+  },
+  fumin: {
+    title: "ヴァイオリン用顎・肩当て",
+    overViewCaptionJP: `ヴァイオリンを弾くときには一般的に顎当てと肩当てが使われますが、長時間演奏していると首元にあざができ、痛みを生じることがあります。また顎当て・肩当ては、身体と楽器が唯一つながる部分であり、身体から出る曲への想いを楽器に十分に伝えることが求められます。この作品では、演奏時の痛みを減らすとともに心地よく演奏できることを目指しました。演奏者の身体を3Dスキャンし身体にフィットした形状を作成、そして曲げ木の弾性を利用することで顎・肩当ての美しい一体構造を実現しました。`,
+    overViewCaptionEN: `This project is motivated by realizing the soft, flexible expression of an object’s property without involving elastic or damping material. The movement of the structure created by a series of Yajirobei(Japanese traditional balance toy), consistently expresses soft-looking animation regardless of the mechanical property of its component. Please enjoy the mysterious, both soft and rigid behavior of our prototype.`,
+  },
+};
 
 const Page: React.FC = () => {
+  const [author, setAuthor] = React.useState("oga");
+
   const targets = React.useRef<
-    { [key in keyof Authors]?: React.RefObject<HTMLDivElement> }
+    { [key in Authors]?: React.RefObject<HTMLDivElement> }
   >({});
   authors.forEach((author) => {
     targets.current[author] = React.createRef();
   });
-  const [author, setAuthor] = React.useState("");
+
   React.useEffect(() => {
     const options = {
       root: null,
@@ -131,10 +168,10 @@ const Page: React.FC = () => {
                 width="800"
               />
             </h1>
-          </Link>{" "}
+          </Link>
         </Header>
         <Main>
-          <WorkTitle>Scalable hand</WorkTitle>
+          <WorkTitle>{worksInfo.oga.title}</WorkTitle>
           <WorksDiv ref={targets.current[authors[0]]} id={authors[0]}>
             <WorkImg src={oga0101} alt="" width="802" height="535" />
             <WorkImg src={oga0102} alt="" width="802" height="535" />
@@ -159,7 +196,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
             <AdjusterDiv />
           </WorksDiv>
-          <WorkTitle>流点</WorkTitle>
+          <WorkTitle>{worksInfo.shinogu.title}</WorkTitle>
           <WorksDiv ref={targets.current[authors[1]]} id={authors[1]}>
             <WorkImg src={shinogu0201} alt="" width="802" height="535" />
             <WorkImg src={shinogu0202} alt="" width="802" height="535" />
@@ -184,10 +221,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
             <AdjusterDiv />
           </WorksDiv>
-          <WorkTitle>
-            Reduce Unconscious Gender Bias through Workshop with Co-Speculative
-            Design
-          </WorkTitle>
+          <WorkTitle>{worksInfo.hazuki.title}</WorkTitle>
           <WorksDiv ref={targets.current[authors[2]]} id={authors[2]}>
             <WorkImg src={hazuki_1_1} alt="" />
             <WorkImg src={hazuki_1_2} alt="" />
@@ -204,7 +238,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
             <AdjusterDiv />
           </WorksDiv>
-          <WorkTitle>OTT: OTTOTTO</WorkTitle>
+          <WorkTitle>{worksInfo.kana.title}</WorkTitle>
           <WorksDiv ref={targets.current[authors[3]]} id={authors[3]}>
             <WorkImg src={kana0301} alt="" />
             <WorkImg src={kana0302} alt="" />
@@ -221,7 +255,7 @@ const Page: React.FC = () => {
             <AdjusterDiv />
             <AdjusterDiv />
           </WorksDiv>
-          <WorkTitle>ヴァイオリン用顎・肩当て</WorkTitle>
+          <WorkTitle>{worksInfo.fumin.title}</WorkTitle>
           <WorksDiv ref={targets.current[authors[4]]} id={authors[4]}>
             <WorkImg src={fumin0101} alt="" />
             <WorkImg src={fumin0102} alt="" />
@@ -251,10 +285,13 @@ const Page: React.FC = () => {
         </Main>
       </WrapperMainDiv>
       <AsideDiv>
-        <h3>Message</h3>
-        <StyledUL>
-          <li>{author}</li>
-        </StyledUL>
+        <AsideWorkTitle>{worksInfo[author].title}</AsideWorkTitle>
+        <AsideWorkContent>
+          {worksInfo[author].overViewCaptionJP}
+        </AsideWorkContent>
+        <AsideWorkContent>
+          {worksInfo[author].overViewCaptionEN}
+        </AsideWorkContent>
       </AsideDiv>
     </WrapperDiv>
   );
@@ -270,7 +307,7 @@ const WrapperDiv = styled.div`
 `;
 
 const WrapperMainDiv = styled.div`
-  width: calc(100% - 320px);
+  width: calc(100% - 400px);
   @media (max-width: 1000px) {
     width: 100%;
   }
@@ -322,6 +359,10 @@ const WorkImg = styled.img`
   @media (max-width: 320px) {
     width: 90%;
   }
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 `;
 
 const AdjusterDiv = styled.div`
@@ -338,18 +379,23 @@ const AsideDiv = styled.aside`
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 400px;
   height: 100vh;
   padding-top: 24px;
   padding-left: 24px;
+  padding-right: 24px;
   background-color: black;
   color: white;
+  overflow: scroll;
   @media (max-width: 1000px) {
     display: none;
   }
 `;
 
-const StyledUL = styled.ul`
-  width: 80%;
-  color: white;
+const AsideWorkTitle = styled.h3`
+  margin-bottom: 5rem;
+`;
+
+const AsideWorkContent = styled.p`
+  margin-bottom: 1rem;
 `;
