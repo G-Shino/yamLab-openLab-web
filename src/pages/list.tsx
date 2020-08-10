@@ -326,7 +326,6 @@ const Page: React.FC = () => {
         setSelectedAuthor(entry.target.id);
       }
     }, options);
-    console.log(targets);
     Object.values(targets.current).forEach((target) => {
       observer.observe(target.current);
     });
@@ -351,9 +350,9 @@ const Page: React.FC = () => {
           </h1>
         </Link>
         <Main>
-          {authors.map((author) => {
+          {authors.map((author, index) => {
             return (
-              <>
+              <div key={index}>
                 <WorkTitle>{worksInfo[author].title}</WorkTitle>
                 <WorksDiv ref={targets.current[author]} id={author}>
                   {worksInfo[author].imgList.map((src, index) => (
@@ -370,7 +369,7 @@ const Page: React.FC = () => {
                   <AdjusterDiv />
                   <AdjusterDiv />
                 </WorksDiv>
-              </>
+              </div>
             );
           })}
         </Main>
