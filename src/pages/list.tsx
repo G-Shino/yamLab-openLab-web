@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import texture from "../images/mdftexture.jpg";
 import HeaderLogo from "../images/logo_white.png";
 
@@ -375,13 +376,29 @@ const Page: React.FC = () => {
         </Main>
       </WrapperMainDiv>
       <AsideDiv>
-        <AsideWorkTitle>{worksInfo[selectedAuthor].title}</AsideWorkTitle>
-        <AsideWorkContent>
-          {worksInfo[selectedAuthor].overViewCaptionJP}
-        </AsideWorkContent>
-        <AsideWorkContent>
-          {worksInfo[selectedAuthor].overViewCaptionEN}
-        </AsideWorkContent>
+        <AnimatePresence>
+          {authors.map((author) => {
+            return (
+              author === selectedAuthor && (
+                <WrapperMotionDiv
+                  key={author}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7 }}
+                >
+                  <AsideWorkTitle>{worksInfo[author].title}</AsideWorkTitle>
+                  <AsideWorkContent>
+                    {worksInfo[author].overViewCaptionJP}
+                  </AsideWorkContent>
+                  <AsideWorkContent>
+                    {worksInfo[author].overViewCaptionEN}
+                  </AsideWorkContent>
+                </WrapperMotionDiv>
+              )
+            );
+          })}
+        </AnimatePresence>
       </AsideDiv>
     </WrapperDiv>
   );
@@ -481,10 +498,15 @@ const AsideDiv = styled.aside`
   }
 `;
 
-const AsideWorkTitle = styled.h3`
+const WrapperMotionDiv = styled(motion.div)`
+  position: fixed;
+  width: calc(400px - 48px);
+`;
+
+const AsideWorkTitle = styled(motion.h3)`
   margin-bottom: 4rem;
 `;
 
-const AsideWorkContent = styled.p`
+const AsideWorkContent = styled(motion.p)`
   margin-bottom: 2rem;
 `;
