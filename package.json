@@ -30,7 +30,7 @@
     "react-slick": "^0.26.1",
     "react-three-fiber": "^4.2.10",
     "slick-carousel": "^1.8.1",
-    "three": "^0.117.1"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
