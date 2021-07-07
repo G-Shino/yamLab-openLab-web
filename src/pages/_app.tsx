@@ -21,7 +21,7 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Noto+Sans+JP:wght@300&display=swap"
           rel="stylesheet"
         />
         <link
